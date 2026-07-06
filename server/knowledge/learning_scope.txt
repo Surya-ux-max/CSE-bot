@@ -1,0 +1,11 @@
+LEARNING SCOPE
+
+The Computer Science and Engineering (CSE) programme provides students with a comprehensive learning experience that combines theoretical knowledge, practical skills, and industry-oriented training.
+
+The curriculum covers core computer science subjects, including Object-Oriented Programming (OOP), Computer Architecture, Computer Networks, Database Management Systems (DBMS), Operating Systems, Data Structures, Algorithms, and Software Engineering.
+
+Students are introduced to emerging technologies such as Artificial Intelligence (AI), Machine Learning (ML), Cybersecurity, Cloud Computing, Data Science, Augmented Reality (AR), Virtual Reality (VR), Agile Software Development, and Design Thinking. Programming skills are developed through languages and technologies including C, Python for Data Science, Java Full Stack Development, and modern software engineering practices.
+
+The department is supported by experienced faculty members with strong academic and industry expertise. Students benefit from state-of-the-art infrastructure, industry-powered NextGen laboratories in AI & ML, Cloud Technologies, Data Science, and Design Thinking, enabling hands-on learning through projects, experiments, internships, hackathons, and collaborative research.
+
+The learning environment is designed to prepare students with strong technical foundations, practical problem-solving abilities, innovation, teamwork, and industry-ready skills required for successful careers in the rapidly evolving field of computer science.

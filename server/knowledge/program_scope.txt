@@ -1,0 +1,9 @@
+PROGRAMME SCOPE
+
+The Computer Science and Engineering (CSE) programme prepares students to build innovative software solutions and solve real-world technological challenges. Computer Science is one of the fastest-growing engineering disciplines and forms the foundation of today's digital world.
+
+The programme covers fundamental and advanced concepts in software development, algorithms, databases, computer networks, operating systems, artificial intelligence, machine learning, cloud computing, cybersecurity, and emerging technologies.
+
+Students gain strong theoretical knowledge along with practical experience through laboratories, industry projects, internships, hackathons, and research activities. The curriculum is designed to meet current industry standards and prepare graduates for future technological advancements.
+
+As automation, artificial intelligence, and digital transformation continue to reshape industries, the CSE programme equips students with the technical skills, problem-solving ability, and innovation mindset required to build next-generation software systems and contribute to the evolving technology landscape.
