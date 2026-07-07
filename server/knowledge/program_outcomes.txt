@@ -1,0 +1,40 @@
+PROGRAMME OUTCOMES (POs)
+
+Programme Outcomes (POs) describe the knowledge, skills, professional competencies, and attitudes that students are expected to acquire by the time they graduate from the Computer Science and Engineering (CSE) programme.
+
+PO1: Engineering Knowledge
+Graduates apply knowledge of mathematics, natural sciences, computing fundamentals, engineering principles, and computer science specialization to solve complex engineering problems and develop effective computing solutions.
+
+PO2: Problem Analysis
+Graduates identify, formulate, investigate, and analyze complex engineering problems by reviewing research literature, applying analytical thinking, and considering sustainability to arrive at well-supported solutions.
+
+PO3: Design and Development of Solutions
+Graduates design, develop, and implement innovative software systems, applications, and engineering solutions that address real-world problems while considering public health, safety, sustainability, environmental impact, cultural values, societal needs, and economic factors.
+
+PO4: Investigation of Complex Problems
+Graduates conduct research-based investigations by designing experiments, developing models, collecting and analyzing data, interpreting results, and drawing valid conclusions to solve engineering challenges.
+
+PO5: Engineering Tool Usage
+Graduates effectively select and utilize modern engineering tools, software technologies, programming frameworks, simulation tools, and IT resources for designing, developing, testing, and maintaining computing systems while understanding their capabilities and limitations.
+
+PO6: The Engineer and Society
+Graduates evaluate the societal, environmental, legal, economic, cultural, and sustainability impacts of engineering solutions and make responsible decisions that benefit individuals, organizations, and society.
+
+PO7: Ethics and Professional Responsibility
+Graduates demonstrate professional ethics, integrity, human values, inclusiveness, and social responsibility while complying with national and international laws, standards, and engineering practices.
+
+PO8: Individual and Teamwork
+Graduates work effectively as individuals, team members, and leaders in multidisciplinary and diverse environments by demonstrating collaboration, responsibility, leadership, and interpersonal skills.
+
+PO9: Communication
+Graduates communicate technical and non-technical information effectively through reports, documentation, presentations, discussions, and digital communication while considering cultural, linguistic, and learning differences.
+
+PO10: Project Management and Finance
+Graduates apply engineering management principles, project planning, resource management, financial decision-making, and leadership skills to successfully execute projects individually and within multidisciplinary teams.
+
+PO11: Life-Long Learning
+Graduates recognize the importance of continuous learning, self-improvement, adaptability to emerging technologies, critical thinking, and professional development throughout their careers.
+
+Summary
+
+The Programme Outcomes ensure that graduates possess strong technical knowledge, analytical thinking, ethical responsibility, communication skills, teamwork, leadership, project management abilities, and a commitment to lifelong learning, enabling them to become competent and globally competitive software professionals.

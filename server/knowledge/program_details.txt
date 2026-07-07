@@ -1,0 +1,16 @@
+PROGRAMME DETAILS
+
+Programme Educational Objectives (PEOs)
+
+The Programme Educational Objectives (PEOs) define the long-term achievements expected from graduates of the Computer Science and Engineering (CSE) programme after completing their degree. These objectives emphasize technical competence, continuous learning, innovation, ethical responsibility, and professional growth.
+
+PEO1: Professional Career Development
+Graduates will build successful careers in computing and information technology by applying strong foundations in engineering principles, computer science fundamentals, software development, problem-solving, and professional best practices.
+
+PEO2: Lifelong Learning and Higher Education
+Graduates will pursue higher education, research, professional certifications, and entrepreneurial ventures by demonstrating self-directed learning, adaptability, and the ability to continuously learn emerging technologies, industry trends, and evolving societal needs.
+
+PEO3: Innovation and Ethical Computing
+Graduates will conceive, design, develop, and implement innovative computing solutions that address real-world industrial and societal challenges while maintaining ethical standards, professional responsibility, sustainability, and social awareness.
+
+The Programme Educational Objectives ensure that graduates become technically skilled professionals, lifelong learners, responsible innovators, and contributors to the advancement of technology and society.
