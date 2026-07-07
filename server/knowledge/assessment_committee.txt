@@ -1,0 +1,121 @@
+PROGRAMME ASSESSMENT COMMITTEE (PAC)
+
+Academic Year: 2024–2025
+
+The Programme Assessment Committee (PAC) of the Department of Computer Science and Engineering is responsible for monitoring academic quality, coordinating curriculum delivery, evaluating programme outcomes, supporting continuous improvement, and ensuring effective implementation of Outcome-Based Education (OBE).
+
+--------------------------------------------------
+Department Leadership
+
+Head of the Department
+• Dr. R. Subha
+  Professor and Head, Department of Computer Science and Engineering
+
+UG Programme Assessment Committee (PAC) Coordinator
+• Dr. T. Sivakumar
+  Professor, Department of Computer Science and Engineering
+
+--------------------------------------------------
+Module Coordinators
+
+Module Coordinator 1
+Course: Discrete Mathematics
+Faculty: Ms. A. Revathy
+Designation: Assistant Professor, Department of Mathematics
+
+Module Coordinator 2
+Course: Design and Analysis of Algorithms (Theory and Practical)
+Faculty: Ms. B. Suchithra
+Designation: Assistant Professor, Department of Computer Science and Engineering
+
+Module Coordinator 3
+Course: Database Management Systems (Theory and Practical)
+Faculty: Ms. N. Gayathri
+Designation: Assistant Professor, Department of Computer Science and Engineering
+
+Module Coordinator 4
+Course: Software Engineering
+Faculty: Dr. S. K. Hari Karthik
+Designation: Associate Professor, Department of Computer Science and Engineering
+
+Module Coordinator 5
+Course: Digital Principles and Computer Organization
+Faculty: Dr. V. V. Teresa
+Designation: Associate Professor, Department of Electronics and Communication Engineering
+
+Module Coordinator 6
+Course: Java Programming (Theory and Practical)
+Faculty: Mr. R. Giridharan
+Designation: Assistant Professor, Department of Computer Science and Engineering
+
+Module Coordinator 7
+Course: Automata Theory and Compiler Design
+Faculty: Dr. S. Sampath Kumar
+Designation: Associate Professor, Department of Computer Science and Engineering
+
+Module Coordinator 8
+Course: Cloud Computing (Theory and Practical)
+Faculty: Dr. S. Ananthi
+Designation: Assistant Professor, Department of Computer Science and Engineering
+
+Module Coordinator 9
+Course: Artificial Intelligence and Machine Learning (Theory and Practical)
+Faculty: Ms. V. Niranjani
+Designation: Assistant Professor, Department of Computer Science and Engineering
+
+Module Coordinator 10
+Course: Computer Networks
+Faculty: Dr. N. Kumareshan
+Designation: Professor, Department of Electronics and Communication Engineering
+
+Module Coordinator 11
+Course: Principles of Management
+Faculty: Dr. G. Gokilakrishnan
+Designation: Associate Professor, Department of Mechanical Engineering
+
+Module Coordinator 12
+Course: Cryptography and Network Security
+Faculty: Mr. M. Praveen Kumar
+Designation: Assistant Professor, Department of Computer Science and Engineering
+
+Module Coordinator 13
+Course: Ethical Hacking
+Faculty: Dr. A. Sarfaraz Ahmed
+Designation: Assistant Professor, Department of Computer Science and Engineering
+
+Module Coordinator 14
+Course: Software Project Management
+Faculty: Ms. M. Abinaya
+Designation: Assistant Professor, Department of Computer Science and Engineering
+
+--------------------------------------------------
+Academic Coordinators
+
+Board of Studies (BoS) Coordinator
+• Dr. S. Yuvaraj
+  Assistant Professor, Department of Computer Science and Engineering
+
+Events Coordinator
+• Ms. V. Niranjani
+  Assistant Professor, Department of Computer Science and Engineering
+
+Examination Cell Coordinator
+• Mr. P. Arun Prakash
+  Assistant Professor, Department of Computer Science and Engineering
+
+Placement Coordinator
+• Ms. A. Mohanraj
+  Assistant Professor, Department of Computer Science and Engineering
+
+NPTEL Coordinator
+• Ms. N. Gayathri
+  Assistant Professor, Department of Computer Science and Engineering
+
+Industrial Visit Coordinator
+• Mr. B. Saravanan
+  Assistant Professor, Department of Computer Science and Engineering
+
+--------------------------------------------------
+Summary
+
+The Programme Assessment Committee consists of the Head of the Department, PAC Coordinator, module coordinators for core courses, and academic coordinators responsible for curriculum implementation, assessment, examinations, placements, industry interaction, NPTEL activities, and continuous quality improvement of the Computer Science and Engineering programme.

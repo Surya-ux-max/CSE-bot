@@ -1,0 +1,44 @@
+CORPORATE ADVISORY BOARD
+
+The Corporate Advisory Board of the Department of Computer Science and Engineering (CSE) comprises experienced professionals from leading technology companies. The board provides industry insights, technical guidance, and strategic recommendations to ensure that the curriculum remains aligned with current industry requirements and emerging technologies.
+
+The advisory board actively contributes to curriculum development, knowledge sharing, industry-academia collaboration, mentoring, and preparing students with the skills required for successful careers in the software and information technology sectors.
+
+--------------------------------------------------
+Corporate Advisory Board Members
+
+1. Mr. Sachin Sharma
+Position: Software Development Engineer (SDE)
+Organization: Microsoft
+
+2. Mr. Akhil Anand
+Organization: Amazon
+
+3. Mr. UmaShankar
+Position: Chief Technology Officer (CTO)
+Organization: 1CloudHub
+
+4. Mr. Vishnu Prasad
+Organization: Zoho Corporation
+
+--------------------------------------------------
+Roles and Contributions
+
+The Corporate Advisory Board supports the department by:
+
+• Providing guidance on curriculum design and revision based on industry requirements.
+
+• Recommending emerging technologies and industry best practices for inclusion in academic programmes.
+
+• Bridging the gap between academia and industry through collaboration and knowledge sharing.
+
+• Supporting internships, industrial training, workshops, guest lectures, and mentoring initiatives.
+
+• Enhancing students' employability by aligning academic learning with real-world software engineering practices.
+
+• Advising the department on future technology trends, innovation, and research opportunities.
+
+--------------------------------------------------
+Summary
+
+The Corporate Advisory Board strengthens the Computer Science and Engineering programme by ensuring that students receive industry-relevant education, exposure to modern technologies, and guidance from professionals working in leading global technology companies. Their expertise helps prepare graduates to become industry-ready software professionals capable of meeting evolving technological and business challenges.
