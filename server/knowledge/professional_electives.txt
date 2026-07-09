@@ -1,0 +1,20 @@
+============================================================
+PROFESSIONAL ELECTIVES
+============================================================
+
+Students can specialize through Professional Electives.
+
+============================================================
+SPECIALIZATION
+Programming
+============================================================
+
+Courses
+
+- Advanced Java Programming
+- Advanced Data Structures
+- Advanced Algorithm Techniques
+- Competitive Programming
+- C# and .NET
+- Golang
+- R Programming

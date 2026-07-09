@@ -1,0 +1,141 @@
+============================================================
+SEMESTER I
+Foundation of Engineering and Programming
+============================================================
+
+Semester:
+1
+
+Title:
+Foundation of Engineering and Programming
+
+Core Subjects
+
+- Calculus and Linear Algebra
+- Problem Solving using C
+- Technical English
+- Physics for Information Science
+- Application Design and Development
+
+Laboratories
+
+- Problem Solving using C Laboratory
+- Engineering Practices Laboratory
+
+Professional Development
+
+- Soft Skills
+
+Mandatory Course
+
+- Heritage of Tamils
+
+
+
+============================================================
+SEMESTER II
+Programming and Data Structures
+============================================================
+
+Semester:
+2
+
+Core Subjects
+
+- Data Structures
+- Object-Oriented Programming using C++
+- Electronics and Microprocessors
+- Python Programming
+- Language Elective
+  - Corporate Communication
+  - Japanese
+  - German
+
+Laboratories
+
+- Data Structures Laboratory
+- Object-Oriented Programming using C++ Laboratory
+
+Professional Development
+
+- Logical Thinking
+
+Mandatory Course
+
+- Tamils and Technology
+
+
+============================================================
+SEMESTER III
+Algorithms and Databases
+============================================================
+
+Semester:
+3
+
+Title:
+Algorithms and Databases
+
+Overview:
+The third semester focuses on algorithm design, databases, software engineering, Java programming, and computer organization.
+
+Core Subjects
+
+- Discrete Mathematics
+- Design and Analysis of Algorithms
+- Database Management Systems
+- Software Engineering
+- Digital Principles and Computer Organization
+- Java Programming
+
+Laboratories
+
+- Algorithms Laboratory
+- Database Management Systems Laboratory
+
+Professional Development
+
+- Advanced Logical Thinking
+
+Mandatory Course
+
+- Universal Human Values
+
+Learning Areas
+
+- Mathematical Foundations
+- Algorithm Design
+- Database Systems
+- Software Development
+- Computer Organization
+- Java Programming
+
+Skills Developed
+
+- Problem Solving
+- Algorithm Analysis
+- Database Design
+- SQL Programming
+- Software Engineering Principles
+- Java Application Development
+
+Keywords
+
+Semester III
+Semester 3
+Third Semester
+Algorithms
+DAA
+Design and Analysis of Algorithms
+Discrete Mathematics
+Database Management Systems
+DBMS
+Software Engineering
+Java Programming
+Algorithms Laboratory
+DBMS Laboratory
+Digital Principles and Computer Organization
+DPCO
+Universal Human Values
+Advanced Logical Thinking
+

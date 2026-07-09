@@ -1,0 +1,19 @@
+============================================================
+INDUSTRY ORIENTED COURSES
+============================================================
+
+Purpose
+
+Industry-Oriented Courses provide students with practical exposure to current industry technologies.
+
+Example Technologies
+
+- AngularJS
+- TensorFlow
+- LLMs in Content Management
+- Ethical Hacking
+- Kotlin
+- Network Administration
+- Platform as a Service (PaaS)
+- Virtualization
+- Customer Relationship Management (CRM)

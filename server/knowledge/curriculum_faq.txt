@@ -1,0 +1,126 @@
+What regulation does the CSE curriculum follow?
+
+The curriculum follows Regulation 2023.
+
+--------------------------------------------------
+
+Does the curriculum follow OBE?
+
+Yes.
+The curriculum follows Outcome-Based Education (OBE).
+
+--------------------------------------------------
+
+What credit system is followed?
+
+Choice Based Credit System (CBCS).
+
+--------------------------------------------------
+
+How many semesters are there?
+
+Eight semesters.
+
+--------------------------------------------------
+
+How many credits are required?
+
+163 credits.
+
+--------------------------------------------------
+
+Which semester teaches Python?
+
+Semester II.
+
+--------------------------------------------------
+
+Which semester teaches Java?
+
+Semester III.
+
+--------------------------------------------------
+
+Which semester teaches Cloud Computing?
+
+Semester IV.
+
+--------------------------------------------------
+
+Which semester teaches Artificial Intelligence and Machine Learning?
+
+Semester V.
+
+--------------------------------------------------
+
+Which semester includes Operating Systems?
+
+Semester IV.
+
+--------------------------------------------------
+
+Which semester includes Blockchain Technologies?
+
+Semester VII.
+
+--------------------------------------------------
+
+When is the Summer Internship?
+
+Semester V.
+
+--------------------------------------------------
+
+When do students complete Project Phase I?
+
+Semester VII.
+
+--------------------------------------------------
+
+When do students complete Project Phase II?
+
+Semester VIII.
+
+--------------------------------------------------
+
+Which semester has Full Stack Development?
+
+Semester IV.
+
+--------------------------------------------------
+
+Which semester has Data Science?
+
+Semester V.
+
+--------------------------------------------------
+
+Which semester includes Cryptography and Cyber Security?
+
+Semester VI.
+
+--------------------------------------------------
+
+Does the curriculum include internships?
+
+Yes.
+Students complete a Summer Internship during Semester V.
+
+--------------------------------------------------
+
+Does the curriculum include professional electives?
+
+Yes.
+
+--------------------------------------------------
+
+Does the curriculum include open electives?
+
+Yes.
+
+--------------------------------------------------
+
+Does the curriculum include laboratories?
+
+Yes.
+Every semester includes laboratory components where applicable.
