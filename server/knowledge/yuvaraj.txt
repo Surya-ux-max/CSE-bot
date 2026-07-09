@@ -1,143 +1,84 @@
 ============================================================
-FACULTY PROFILE
+DR. S. YUVARAJ — FACULTY PROFILE
 ============================================================
 
-Full Name:
-Dr. S. Yuvaraj
+Category: Faculty Profile
+Department: Computer Science and Engineering (CSE)
 
-Designation:
-Assistant Professor (Senior Grade)
+Summary:
+Dr. S. Yuvaraj is an Assistant Professor (Senior Grade) in the Department of Computer Science and Engineering with over 11 years of experience, specializing in Artificial Intelligence, Machine Learning, and Cognitive Computing.
 
-Department:
-Computer Science and Engineering (CSE)
+Description:
+Dr. S. Yuvaraj is an Assistant Professor (Senior Grade) in the Department of Computer Science and Engineering. He has more than 11 years of experience in engineering education.
 
-Qualifications:
-M.E.
-Ph.D.
+His qualifications are M.E. and he is currently pursuing a Ph.D. in Information and Communication Engineering at Anna University, Chennai. He completed both his Bachelor's degree and Master's degree in Computer Science and Engineering from Anna University, Chennai.
 
-Current Status:
-Pursuing Ph.D. in Information and Communication Engineering at Anna University, Chennai.
+Specialization: His areas of specialization are Artificial Intelligence, Machine Learning, and Cognitive Computing. His research interests also include these three domains.
 
-Education:
-- Bachelor's Degree in Computer Science and Engineering from Anna University, Chennai.
-- Master's Degree in Computer Science and Engineering from Anna University, Chennai.
-- Currently pursuing Ph.D. in Information and Communication Engineering at Anna University, Chennai.
+Research contributions: Dr. S. Yuvaraj has authored 17 research articles published in reputed conferences and peer-reviewed journals. He has also published 6 Indian patents.
 
-Experience:
-Dr. S. Yuvaraj has over 11 years of experience in Engineering Education.
+Professional memberships: He is a member of IEEE and a Life Member of ISTE.
 
-Areas of Specialization:
-- Artificial Intelligence (AI)
-- Machine Learning (ML)
-- Cognitive Computing
+Academic responsibilities: Dr. S. Yuvaraj serves as the Coordinator of the Board of Studies (BoS) of the Computer Science and Engineering Department and as the Coordinator of the Centre of Excellence (CoE) for Full Stack Application Development. He has also mentored external participants in the Smart India Hackathon (SIH).
 
-Research Interests:
-His research focuses on:
-- Artificial Intelligence
-- Machine Learning
-- Cognitive Computing
+Related:
+Board of Studies (BoS)
+Centre of Excellence in Full Stack Application Development
+Programme Assessment Committee
+Artificial Intelligence
+Machine Learning
+Cognitive Computing
+Smart India Hackathon
+Department of Computer Science and Engineering
 
-Research Contributions:
-- Authored 17 research articles in reputed conferences.
-- Published research papers in peer-reviewed journals.
-- Published 6 Indian patents.
-
-Professional Memberships:
-- IEEE Member
-- ISTE Life Member
-
-Academic Responsibilities:
-Dr. S. Yuvaraj serves as:
-- Coordinator of the Board of Studies (BoS) of the Computer Science and Engineering Department.
-- Coordinator of the Centre of Excellence (CoE) for Full Stack Application Development.
-
-Mentorship:
-He has served as a mentor for external participants in the Smart India Hackathon (SIH).
-
-============================================================
-FREQUENTLY ASKED INFORMATION
-============================================================
-
-Who is Dr. S. Yuvaraj?
-Dr. S. Yuvaraj is an Assistant Professor (Senior Grade) in the Department of Computer Science and Engineering with more than 11 years of teaching experience.
-
-What is Dr. S. Yuvaraj's designation?
-He is an Assistant Professor (Senior Grade) in the Department of Computer Science and Engineering.
-
-Which department does Dr. S. Yuvaraj belong to?
-He belongs to the Computer Science and Engineering (CSE) Department.
-
-What are Dr. S. Yuvaraj's areas of specialization?
-His areas of specialization are Artificial Intelligence, Machine Learning, and Cognitive Computing.
-
-What are Dr. S. Yuvaraj's research interests?
-His research interests include Artificial Intelligence, Machine Learning, and Cognitive Computing.
-
-How many years of teaching experience does Dr. S. Yuvaraj have?
-He has more than 11 years of experience in Engineering Education.
-
-Where did Dr. S. Yuvaraj complete his Bachelor's degree?
-He completed his Bachelor's degree in Computer Science and Engineering from Anna University, Chennai.
-
-Where did Dr. S. Yuvaraj complete his Master's degree?
-He completed his Master's degree in Computer Science and Engineering from Anna University, Chennai.
-
-Is Dr. S. Yuvaraj pursuing a Ph.D.?
-Yes. He is pursuing a Ph.D. in Information and Communication Engineering from Anna University, Chennai.
-
-How many research papers has Dr. S. Yuvaraj published?
-He has authored 17 research articles published in reputed conferences and peer-reviewed journals.
-
-How many patents does Dr. S. Yuvaraj have?
-He has published 6 Indian patents.
-
-Is Dr. S. Yuvaraj an IEEE member?
-Yes. He is a member of IEEE.
-
-Is Dr. S. Yuvaraj an ISTE member?
-Yes. He is a Life Member of ISTE.
-
-What academic responsibilities does Dr. S. Yuvaraj handle?
-He is the Coordinator of the Board of Studies (BoS) and the Coordinator of the Centre of Excellence (CoE) for Full Stack Application Development.
-
-Has Dr. S. Yuvaraj mentored Smart India Hackathon teams?
-Yes. He has served as a mentor for external participants in the Smart India Hackathon.
-
-============================================================
-KEYWORDS
-============================================================
-
+Aliases:
 Dr S Yuvaraj
 S Yuvaraj
 Yuvaraj
 Yuvaraj Sir
 Dr Yuvaraj
-Assistant Professor
+BoS Coordinator
+Board of Studies Coordinator
+CoE Coordinator for Full Stack
+
+User Questions:
+Who is Dr. S. Yuvaraj?
+Tell me about Yuvaraj sir.
+What does Dr. Yuvaraj specialize in?
+How many years of experience does Dr. Yuvaraj have?
+Who is the BoS Coordinator?
+Who coordinates the Full Stack CoE?
+How many research papers has Dr. Yuvaraj published?
+How many patents does Dr. Yuvaraj have?
+Is Dr. Yuvaraj an IEEE member?
+Where did Dr. Yuvaraj study?
+
+Keywords:
+Dr. S. Yuvaraj
+S Yuvaraj
+Yuvaraj
+Yuvaraj Sir
+Dr Yuvaraj
 Assistant Professor Senior Grade
-Senior Grade Faculty
-CSE Faculty
-Computer Science Faculty
-Computer Science and Engineering
 Artificial Intelligence
 AI
 Machine Learning
 ML
 Cognitive Computing
-Anna University
-Information and Communication Engineering
-IEEE
-ISTE
-Board of Studies
 BoS Coordinator
+Board of Studies
+CoE Full Stack
 Centre of Excellence
-CoE
-Full Stack Application Development
-Full Stack
 Smart India Hackathon
 SIH Mentor
-Research Papers
-Publications
-Indian Patents
-Faculty Profile
-Teaching Experience
+IEEE
+ISTE
+Anna University
+17 Research Articles
+6 Indian Patents
+Ph.D.
+Information and Communication Engineering
 Engineering Education
+11 Years Experience
+Faculty Profile
+CSE Faculty

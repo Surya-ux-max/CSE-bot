@@ -1,19 +1,75 @@
 ============================================================
-INDUSTRY ORIENTED COURSES
+INDUSTRY ORIENTED COURSES — OVERVIEW
 ============================================================
 
-Purpose
+Category: Industry Oriented Courses
+Department: Computer Science and Engineering (CSE)
 
-Industry-Oriented Courses provide students with practical exposure to current industry technologies.
+Summary:
+Industry-Oriented Courses in the CSE programme are elective subjects offered in Semesters VII and VIII that provide students with practical exposure to technologies like AngularJS, TensorFlow, LLMs, Ethical Hacking, Kotlin, PaaS, Virtualization, CRM, and Network Administration that are actively used in the technology industry.
 
-Example Technologies
+Description:
+Industry-Oriented Courses are specialized elective subjects in the B.E. Computer Science and Engineering programme. They provide students with practical exposure to current industry technologies, tools, frameworks, and real-world practices. These courses are designed to bridge the gap between academic learning and industry requirements, making students job-ready with technology skills that companies need.
 
-- AngularJS
-- TensorFlow
-- LLMs in Content Management
-- Ethical Hacking
-- Kotlin
-- Network Administration
-- Platform as a Service (PaaS)
-- Virtualization
-- Customer Relationship Management (CRM)
+Industry-Oriented Courses are offered in Semester VII (Industry-Oriented Course I) and Semester VIII (Industry-Oriented Course II). Students choose from the available list based on their interests and career goals.
+
+Purpose: Expose students to industry-relevant technologies, develop practical hands-on technical skills, prepare students for professional roles in IT companies, bridge academic knowledge with industry requirements, and enhance employability.
+
+Technologies and subjects available include:
+AngularJS, TensorFlow, Large Language Models (LLMs) in Content Management, Ethical Hacking, Kotlin, Network Administration, Platform as a Service (PaaS), Virtualization, and Customer Relationship Management (CRM).
+
+Benefits: Students gain exposure to tools used by leading IT companies, increase their employability, learn from industry-aligned content, and build expertise in in-demand technology areas.
+
+Related:
+Semester VII
+Semester VIII
+Professional Electives
+Enhanced Learning
+
+Aliases:
+Industry Courses
+Industry-Oriented Subjects
+Industry Training Courses
+Applied Technology Courses
+Real-World Technology Courses
+What are industry courses in CSE
+Industry subjects Semester 7
+Industry subjects Semester 8
+
+User Questions:
+What are Industry-Oriented Courses in CSE?
+When are Industry-Oriented Courses offered?
+What technologies are covered in Industry-Oriented Courses?
+Are Industry-Oriented Courses mandatory?
+Can students choose their Industry-Oriented Course?
+Why are Industry-Oriented Courses important?
+
+Keywords:
+Industry Oriented Courses
+Industry Courses
+Applied Technology
+AngularJS
+Angular
+TensorFlow
+Deep Learning
+Large Language Models
+LLMs
+GPT
+Ethical Hacking
+Kotlin
+Android Development
+Network Administration
+Platform as a Service
+PaaS
+Virtualization
+Customer Relationship Management
+CRM
+Semester VII
+Semester VIII
+Industry-Oriented Course I
+Industry-Oriented Course II
+Employability
+Career Ready
+Practical Skills
+Industry Gap
+Industry Exposure

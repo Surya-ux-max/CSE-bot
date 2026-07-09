@@ -1,141 +1,552 @@
 ============================================================
-SEMESTER I
-Foundation of Engineering and Programming
+SEMESTER I — FOUNDATION OF ENGINEERING AND PROGRAMMING
 ============================================================
 
-Semester:
-1
+Category: Semester Curriculum
+Department: Computer Science and Engineering (CSE)
+Semester: 1
 
-Title:
-Foundation of Engineering and Programming
+Summary:
+Semester I introduces students to engineering fundamentals, C programming, mathematics, technical English, and physics, laying the foundation for all future coursework in the CSE programme.
 
-Core Subjects
+Description:
+Semester I is the first semester of the B.E. Computer Science and Engineering programme under Regulation 2023. It is titled Foundation of Engineering and Programming. The semester builds mathematical, programming, and communication fundamentals.
 
-- Calculus and Linear Algebra
-- Problem Solving using C
-- Technical English
-- Physics for Information Science
-- Application Design and Development
+Core Subjects taught in Semester I are:
+Calculus and Linear Algebra, Problem Solving using C, Technical English, Physics for Information Science, and Application Design and Development.
 
-Laboratories
+Laboratories offered in Semester I are:
+Problem Solving using C Laboratory and Engineering Practices Laboratory.
 
-- Problem Solving using C Laboratory
-- Engineering Practices Laboratory
+Professional Development activity in Semester I is:
+Soft Skills.
 
-Professional Development
+Mandatory Course in Semester I is:
+Heritage of Tamils.
 
-- Soft Skills
+Students develop skills in C programming, mathematical thinking, technical communication, and basic problem-solving during Semester I.
 
-Mandatory Course
+Related:
+Semester II
+Problem Solving using C (Subject)
+Calculus and Linear Algebra (Subject)
+C Programming Laboratory
 
-- Heritage of Tamils
+Aliases:
+Sem 1
+First Semester
+1st Semester
+Semester One
+Initial Semester
+What is taught in Semester 1
 
+User Questions:
+What subjects are taught in Semester 1?
+What is studied in the first semester?
+Is C taught in the first semester?
+What lab is there in Semester I?
 
+Keywords:
+Semester I
+Semester 1
+First Semester
+Calculus
+Linear Algebra
+Problem Solving using C
+C Programming
+Technical English
+Physics for Information Science
+Application Design and Development
+C Laboratory
+Engineering Practices Laboratory
+Soft Skills
+Heritage of Tamils
+Foundation of Engineering
 
 ============================================================
-SEMESTER II
-Programming and Data Structures
+SEMESTER II — PROGRAMMING AND DATA STRUCTURES
 ============================================================
 
-Semester:
-2
+Category: Semester Curriculum
+Department: Computer Science and Engineering (CSE)
+Semester: 2
 
-Core Subjects
+Summary:
+Semester II focuses on data structures, object-oriented programming using C++, Python programming, and electronics, building on the programming foundations of Semester I.
 
-- Data Structures
-- Object-Oriented Programming using C++
-- Electronics and Microprocessors
-- Python Programming
-- Language Elective
-  - Corporate Communication
-  - Japanese
-  - German
+Description:
+Semester II is the second semester of the B.E. Computer Science and Engineering programme. It is titled Programming and Data Structures and advances students into core computer science topics.
 
-Laboratories
+Core Subjects taught in Semester II are:
+Data Structures, Object-Oriented Programming using C++, Electronics and Microprocessors, Python Programming, and a Language Elective (Corporate Communication, Japanese, or German).
 
-- Data Structures Laboratory
-- Object-Oriented Programming using C++ Laboratory
+Laboratories offered in Semester II are:
+Data Structures Laboratory and Object-Oriented Programming using C++ Laboratory.
 
-Professional Development
+Professional Development activity in Semester II is:
+Logical Thinking.
 
-- Logical Thinking
+Mandatory Course in Semester II is:
+Tamils and Technology.
 
-Mandatory Course
+Students develop skills in data structure implementation, C++ and object-oriented programming, Python scripting, and logical thinking during Semester II.
 
-- Tamils and Technology
+Related:
+Semester I
+Semester III
+Data Structures Laboratory
+Object-Oriented Programming using C++ Laboratory
+Python Programming (Subject)
 
+Aliases:
+Sem 2
+Second Semester
+2nd Semester
+Semester Two
+When is Python taught
+When is OOP taught
+Which semester has Data Structures
+
+User Questions:
+What subjects are in Semester 2?
+When is Python taught?
+Which semester teaches Data Structures?
+Is C++ taught in Semester 2?
+
+Keywords:
+Semester II
+Semester 2
+Second Semester
+Data Structures
+Object-Oriented Programming
+OOP
+C++
+Python Programming
+Python
+Electronics
+Microprocessors
+Language Elective
+Corporate Communication
+Data Structures Laboratory
+OOP Laboratory
+Logical Thinking
+Tamils and Technology
 
 ============================================================
-SEMESTER III
-Algorithms and Databases
+SEMESTER III — ALGORITHMS AND DATABASES
 ============================================================
 
-Semester:
-3
+Category: Semester Curriculum
+Department: Computer Science and Engineering (CSE)
+Semester: 3
 
-Title:
-Algorithms and Databases
+Summary:
+Semester III covers algorithms, database management systems, software engineering, Java programming, and computer organization, forming the core of classical computer science education.
 
-Overview:
-The third semester focuses on algorithm design, databases, software engineering, Java programming, and computer organization.
+Description:
+Semester III is the third semester of the B.E. Computer Science and Engineering programme. It is titled Algorithms and Databases. This is a critical semester that introduces Java, databases, and algorithm design.
 
-Core Subjects
+Core Subjects taught in Semester III are:
+Discrete Mathematics, Design and Analysis of Algorithms (DAA), Database Management Systems (DBMS), Software Engineering, Digital Principles and Computer Organization (DPCO), and Java Programming.
 
-- Discrete Mathematics
-- Design and Analysis of Algorithms
-- Database Management Systems
-- Software Engineering
-- Digital Principles and Computer Organization
-- Java Programming
+Laboratories offered in Semester III are:
+Design and Analysis of Algorithms Laboratory (DAA Lab) and Database Management Systems Laboratory (DBMS Lab).
 
-Laboratories
+Professional Development activity in Semester III is:
+Advanced Logical Thinking.
 
-- Algorithms Laboratory
-- Database Management Systems Laboratory
+Mandatory Course in Semester III is:
+Universal Human Values.
 
-Professional Development
+Students develop skills in algorithm analysis, database design, SQL programming, Java application development, and software engineering principles during Semester III.
 
-- Advanced Logical Thinking
+Related:
+Semester II
+Semester IV
+Design and Analysis of Algorithms Laboratory
+Database Management Systems Laboratory
+Java Programming (Subject)
+DBMS (Subject)
+DAA (Subject)
+Dr. S. Sampath Kumar (DAA coordinator)
+Ms. N. Gayathri (DBMS coordinator)
+Mr. R. Giridharan (Java coordinator)
 
-Mandatory Course
+Aliases:
+Sem 3
+Third Semester
+3rd Semester
+Semester Three
+Which semester has Java
+Which semester has DBMS
+When is Algorithms taught
 
-- Universal Human Values
+User Questions:
+What subjects are in Semester 3?
+Which semester teaches Java Programming?
+Which semester has Database Management Systems?
+When is Design and Analysis of Algorithms taught?
+Is Discrete Mathematics in Semester 3?
 
-Learning Areas
-
-- Mathematical Foundations
-- Algorithm Design
-- Database Systems
-- Software Development
-- Computer Organization
-- Java Programming
-
-Skills Developed
-
-- Problem Solving
-- Algorithm Analysis
-- Database Design
-- SQL Programming
-- Software Engineering Principles
-- Java Application Development
-
-Keywords
-
+Keywords:
 Semester III
 Semester 3
 Third Semester
-Algorithms
-DAA
-Design and Analysis of Algorithms
 Discrete Mathematics
+Design and Analysis of Algorithms
+DAA
 Database Management Systems
 DBMS
 Software Engineering
-Java Programming
-Algorithms Laboratory
-DBMS Laboratory
 Digital Principles and Computer Organization
 DPCO
-Universal Human Values
+Java Programming
+Java
+Algorithms Laboratory
+DBMS Laboratory
 Advanced Logical Thinking
+Universal Human Values
 
+============================================================
+SEMESTER IV — SYSTEMS AND WEB TECHNOLOGIES
+============================================================
+
+Category: Semester Curriculum
+Department: Computer Science and Engineering (CSE)
+Semester: 4
+
+Summary:
+Semester IV introduces operating systems, cloud computing, computer networks, full stack web development, and probability and statistics, connecting systems knowledge with modern web and cloud technologies.
+
+Description:
+Semester IV is the fourth semester of the B.E. Computer Science and Engineering programme. It is titled Systems and Web Technologies. Students transition from classical computing into modern systems and web development topics.
+
+Core Subjects taught in Semester IV are:
+Operating Systems, Cloud Computing, Computer Networks, Full Stack Development, and Probability and Statistics.
+
+Laboratories offered in Semester IV are:
+Operating Systems Laboratory, Cloud Computing Laboratory, and Full Stack Development Laboratory.
+
+Professional Development activity in Semester IV is:
+Aptitude and Reasoning.
+
+Mandatory Course in Semester IV is:
+Environmental Science and Sustainability.
+
+Students develop skills in OS concepts, cloud deployment, network configuration, web application development, and statistical analysis during Semester IV.
+
+Related:
+Semester III
+Semester V
+Cloud Computing Laboratory
+Full Stack Development Laboratory
+Operating Systems Laboratory
+Cloud Computing Centre of Excellence
+Dr. S. Ananthi (Cloud Computing coordinator)
+
+Aliases:
+Sem 4
+Fourth Semester
+4th Semester
+Semester Four
+Which semester has Cloud Computing
+Which semester has Full Stack
+When is Operating Systems taught
+Which semester has Computer Networks
+
+User Questions:
+What subjects are in Semester 4?
+Which semester teaches Cloud Computing?
+Which semester has Full Stack Development?
+When is Operating Systems taught?
+Is Computer Networks in Semester 4?
+
+Keywords:
+Semester IV
+Semester 4
+Fourth Semester
+Operating Systems
+OS
+Cloud Computing
+Computer Networks
+CN
+Full Stack Development
+Full Stack
+Probability and Statistics
+OS Laboratory
+Cloud Computing Laboratory
+Full Stack Development Laboratory
+Aptitude and Reasoning
+Environmental Science
+
+============================================================
+SEMESTER V — INTELLIGENT SYSTEMS AND DATA
+============================================================
+
+Category: Semester Curriculum
+Department: Computer Science and Engineering (CSE)
+Semester: 5
+
+Summary:
+Semester V focuses on artificial intelligence, machine learning, data science, and embedded systems, and includes the summer internship, marking the students' transition into advanced and emerging technology domains.
+
+Description:
+Semester V is the fifth semester of the B.E. Computer Science and Engineering programme. It is titled Intelligent Systems and Data. This is the semester where students study AI and ML, and they also complete their Summer Internship.
+
+Core Subjects taught in Semester V are:
+Artificial Intelligence and Machine Learning (AIML), Data Science, Computer Networks, Microprocessors and Embedded Systems, and Open Elective I.
+
+Laboratories offered in Semester V are:
+Artificial Intelligence and Machine Learning Laboratory and Data Science Laboratory.
+
+Professional Development activity in Semester V is:
+Communication Skills and Presentation.
+
+The Summer Internship is a mandatory component completed during Semester V or the break following Semester V.
+
+Students develop skills in AI model development, machine learning algorithms, data analysis, Python for data science, embedded systems, and professional communication during Semester V.
+
+Related:
+Semester IV
+Semester VI
+AI and ML Laboratory
+Data Science Laboratory
+Summer Internship
+Ms. V. Niranjani (AIML coordinator)
+
+Aliases:
+Sem 5
+Fifth Semester
+5th Semester
+Semester Five
+Which semester has AI
+Which semester has Machine Learning
+When is Data Science taught
+When is the internship
+
+User Questions:
+What subjects are in Semester 5?
+Which semester teaches Artificial Intelligence?
+Which semester teaches Machine Learning?
+When is Data Science taught?
+When is the Summer Internship?
+
+Keywords:
+Semester V
+Semester 5
+Fifth Semester
+Artificial Intelligence
+Machine Learning
+AIML
+AI
+ML
+AI and Machine Learning
+Data Science
+Computer Networks
+Microprocessors
+Embedded Systems
+Summer Internship
+Internship
+AI Laboratory
+Data Science Laboratory
+Communication Skills
+
+============================================================
+SEMESTER VI — SECURITY AND ADVANCED COMPUTING
+============================================================
+
+Category: Semester Curriculum
+Department: Computer Science and Engineering (CSE)
+Semester: 6
+
+Summary:
+Semester VI covers cryptography, network security, ethical hacking, software project management, and principles of management, building expertise in cybersecurity and project leadership.
+
+Description:
+Semester VI is the sixth semester of the B.E. Computer Science and Engineering programme. It is titled Security and Advanced Computing. This semester provides deep expertise in cybersecurity and project management.
+
+Core Subjects taught in Semester VI are:
+Cryptography and Network Security (CNS), Ethical Hacking, Software Project Management (SPM), Principles of Management (POM), and Professional Elective I.
+
+Laboratories offered in Semester VI are:
+Cryptography and Cyber Security Laboratory and Ethical Hacking Laboratory.
+
+Professional Development activity in Semester VI is:
+Industry Interaction.
+
+Students develop skills in cryptographic techniques, ethical hacking, penetration testing, project management, and leadership during Semester VI.
+
+Related:
+Semester V
+Semester VII
+Cryptography and Cyber Security Laboratory
+Mr. M. Praveen Kumar (CNS coordinator)
+Dr. A. Sarfaraz Ahmed (Ethical Hacking coordinator)
+Ms. M. Abinaya (SPM coordinator)
+
+Aliases:
+Sem 6
+Sixth Semester
+6th Semester
+Semester Six
+Which semester has Cryptography
+Which semester has Ethical Hacking
+When is Network Security taught
+Which semester has SPM
+
+User Questions:
+What subjects are in Semester 6?
+Which semester teaches Cryptography?
+Which semester has Ethical Hacking?
+When is Software Project Management taught?
+Is Principles of Management in Semester 6?
+
+Keywords:
+Semester VI
+Semester 6
+Sixth Semester
+Cryptography and Network Security
+CNS
+Cryptography
+Network Security
+Ethical Hacking
+Software Project Management
+SPM
+Principles of Management
+POM
+Professional Elective I
+Cyber Security Laboratory
+Industry Interaction
+
+============================================================
+SEMESTER VII — ADVANCED TOPICS AND PROJECT PHASE I
+============================================================
+
+Category: Semester Curriculum
+Department: Computer Science and Engineering (CSE)
+Semester: 7
+
+Summary:
+Semester VII covers blockchain technologies, internet of things, advanced professional electives, and an industry-oriented course, and also marks the beginning of the final year project with Project Phase I.
+
+Description:
+Semester VII is the seventh semester of the B.E. Computer Science and Engineering programme. It is titled Advanced Topics and Project Phase I. Students begin their final year project work in this semester.
+
+Core Subjects taught in Semester VII are:
+Blockchain Technologies, Internet of Things (IoT), Professional Elective II, Professional Elective III, and Industry-Oriented Course I.
+
+Laboratories offered in Semester VII are:
+Blockchain Technologies Laboratory and IoT Laboratory.
+
+Project Work in Semester VII:
+Students begin Project Phase I, which is the first half of their final year project.
+
+Students develop skills in blockchain development, smart contract programming, IoT system integration, and research-based project development during Semester VII.
+
+Related:
+Semester VI
+Semester VIII
+Project Phase II
+Blockchain Technologies Laboratory
+IoT Laboratory
+Industry-Oriented Courses
+
+Aliases:
+Sem 7
+Seventh Semester
+7th Semester
+Semester Seven
+Pre-final Semester
+Which semester has Blockchain
+Which semester has IoT
+When does Project Phase 1 start
+Final year project Semester 7
+
+User Questions:
+What subjects are in Semester 7?
+Which semester teaches Blockchain?
+Which semester has Internet of Things?
+When does Project Phase I start?
+Is Semester 7 the pre-final semester?
+
+Keywords:
+Semester VII
+Semester 7
+Seventh Semester
+Blockchain Technologies
+Blockchain
+Internet of Things
+IoT
+Professional Elective II
+Professional Elective III
+Industry-Oriented Course I
+Blockchain Laboratory
+IoT Laboratory
+Project Phase I
+Final Year Project
+Pre-final Semester
+
+============================================================
+SEMESTER VIII — FINAL YEAR AND PROJECT PHASE II
+============================================================
+
+Category: Semester Curriculum
+Department: Computer Science and Engineering (CSE)
+Semester: 8
+
+Summary:
+Semester VIII is the final semester of the CSE programme, where students complete Project Phase II (their final year project), along with a professional elective, an industry-oriented course, and an open elective.
+
+Description:
+Semester VIII is the eighth and final semester of the B.E. Computer Science and Engineering programme. It is titled Final Year and Project Phase II. The highlight of this semester is the completion of the final year project.
+
+Core Subjects taught in Semester VIII are:
+Professional Elective IV, Industry-Oriented Course II, and Open Elective II.
+
+Project Work in Semester VIII:
+Students complete Project Phase II, which is the final, completed version of their full-year capstone project.
+
+Students develop skills in complete software system development, project deployment, technical documentation, and professional presentation during Semester VIII.
+
+Related:
+Semester VII
+Project Phase I
+Professional Electives
+Industry-Oriented Courses
+
+Aliases:
+Sem 8
+Eighth Semester
+8th Semester
+Semester Eight
+Final Semester
+Last Semester
+Final Year
+Final Year Project
+Capstone Project
+Major Project
+FYP
+Project Phase 2
+
+User Questions:
+What subjects are in Semester 8?
+What happens in the final semester?
+When is Project Phase II?
+Is the final year project in Semester 8?
+What is the last semester of CSE?
+
+Keywords:
+Semester VIII
+Semester 8
+Eighth Semester
+Final Semester
+Final Year
+Last Semester
+Professional Elective IV
+Industry-Oriented Course II
+Open Elective II
+Project Phase II
+Final Year Project
+FYP
+Capstone Project
+Major Project

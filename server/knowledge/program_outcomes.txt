@@ -1,490 +1,530 @@
 ============================================================
-PROGRAMME OUTCOMES (POs)
-Department of Computer Science and Engineering (CSE)
+PROGRAMME OUTCOMES (POs) — OVERVIEW
 ============================================================
 
-Category:
-Programme Outcomes (POs)
+Category: Programme Outcomes
+Department: Computer Science and Engineering (CSE)
 
-Department:
-Computer Science and Engineering (CSE)
-
-Overview:
-Programme Outcomes (POs) describe the knowledge, skills, professional competencies, and attitudes that students are expected to acquire by the time they graduate from the Computer Science and Engineering (CSE) programme.
-
-Purpose:
-The Programme Outcomes ensure that graduates possess technical expertise, professional competence, ethical responsibility, leadership, communication skills, teamwork, and lifelong learning abilities required for successful careers in engineering and technology.
-
-============================================================
-PROGRAMME OUTCOME (PO) 1
-============================================================
-
-PO Number:
-PO1
-
-Title:
-Engineering Knowledge
+Summary:
+The CSE programme has eleven Programme Outcomes (PO1 to PO11) that describe the knowledge, skills, and professional competencies graduates are expected to possess, covering engineering knowledge, problem solving, design, research, tool usage, ethics, teamwork, communication, project management, and lifelong learning.
 
 Description:
-Graduates apply knowledge of mathematics, natural sciences, computing fundamentals, engineering principles, and computer science specialization to solve complex engineering problems and develop effective computing solutions.
-
-Key Focus Areas:
-
-- Mathematics
-- Natural Sciences
-- Computing Fundamentals
-- Engineering Principles
-- Computer Science
-- Problem Solving
-- Computing Solutions
-
-Expected Competencies:
-
-- Strong Technical Foundation
-- Engineering Knowledge
-- Analytical Skills
-- Computing Expertise
-
-============================================================
-PROGRAMME OUTCOME (PO) 2
-============================================================
-
-PO Number:
-PO2
-
-Title:
-Problem Analysis
-
-Description:
-Graduates identify, formulate, investigate, and analyze complex engineering problems by reviewing research literature, applying analytical thinking, and considering sustainability to arrive at well-supported solutions.
-
-Key Focus Areas:
-
-- Problem Identification
-- Problem Formulation
-- Research Literature
-- Analytical Thinking
-- Sustainability
-- Engineering Analysis
-
-Expected Competencies:
-
-- Critical Thinking
-- Research Skills
-- Analytical Ability
-- Problem Solving
-
-============================================================
-PROGRAMME OUTCOME (PO) 3
-============================================================
-
-PO Number:
-PO3
-
-Title:
-Design and Development of Solutions
-
-Description:
-Graduates design, develop, and implement innovative software systems, applications, and engineering solutions that address real-world problems while considering public health, safety, sustainability, environmental impact, cultural values, societal needs, and economic factors.
-
-Key Focus Areas:
-
-- Software Design
-- Software Development
-- Engineering Solutions
-- Innovation
-- Sustainability
-- Public Safety
-- Environmental Impact
-- Societal Needs
-
-Expected Competencies:
-
-- System Design
-- Software Development
-- Innovation
-- Solution Development
-
-============================================================
-PROGRAMME OUTCOME (PO) 4
-============================================================
-
-PO Number:
-PO4
-
-Title:
-Investigation of Complex Problems
-
-Description:
-Graduates conduct research-based investigations by designing experiments, developing models, collecting and analyzing data, interpreting results, and drawing valid conclusions to solve engineering challenges.
-
-Key Focus Areas:
-
-- Research
-- Experiment Design
-- Data Collection
-- Data Analysis
-- Model Development
-- Interpretation
-- Engineering Investigation
-
-Expected Competencies:
-
-- Research Ability
-- Investigation Skills
-- Data Analysis
-- Experimental Design
-
-============================================================
-PROGRAMME OUTCOME (PO) 5
-============================================================
-
-PO Number:
-PO5
-
-Title:
-Engineering Tool Usage
-
-Description:
-Graduates effectively select and utilize modern engineering tools, software technologies, programming frameworks, simulation tools, and IT resources for designing, developing, testing, and maintaining computing systems while understanding their capabilities and limitations.
-
-Key Focus Areas:
-
-- Engineering Tools
-- Software Technologies
-- Programming Frameworks
-- Simulation Tools
-- IT Resources
-- Software Development
-- Software Testing
-
-Expected Competencies:
-
-- Tool Selection
-- Technology Usage
-- Software Development
-- Technical Proficiency
-
-============================================================
-PROGRAMME OUTCOME (PO) 6
-============================================================
-
-PO Number:
-PO6
-
-Title:
-The Engineer and Society
-
-Description:
-Graduates evaluate the societal, environmental, legal, economic, cultural, and sustainability impacts of engineering solutions and make responsible decisions that benefit individuals, organizations, and society.
-
-Key Focus Areas:
-
-- Society
-- Environment
-- Law
-- Economics
-- Culture
-- Sustainability
-- Responsible Engineering
-
-Expected Competencies:
-
-- Social Responsibility
-- Sustainable Development
-- Responsible Decision Making
-
-============================================================
-PROGRAMME OUTCOME (PO) 7
-============================================================
-
-PO Number:
-PO7
-
-Title:
-Ethics and Professional Responsibility
-
-Description:
-Graduates demonstrate professional ethics, integrity, human values, inclusiveness, and social responsibility while complying with national and international laws, standards, and engineering practices.
-
-Key Focus Areas:
-
-- Ethics
-- Integrity
-- Human Values
-- Professional Responsibility
-- Inclusiveness
-- Engineering Standards
-- Legal Compliance
-
-Expected Competencies:
-
-- Ethical Behaviour
-- Professional Integrity
-- Responsible Engineering
-
-============================================================
-PROGRAMME OUTCOME (PO) 8
-============================================================
-
-PO Number:
-PO8
-
-Title:
-Individual and Teamwork
-
-Description:
-Graduates work effectively as individuals, team members, and leaders in multidisciplinary and diverse environments by demonstrating collaboration, responsibility, leadership, and interpersonal skills.
-
-Key Focus Areas:
-
-- Teamwork
-- Leadership
-- Collaboration
-- Responsibility
-- Communication
-- Interpersonal Skills
-
-Expected Competencies:
-
-- Leadership
-- Team Collaboration
-- Professional Behaviour
-
-============================================================
-PROGRAMME OUTCOME (PO) 9
-============================================================
-
-PO Number:
-PO9
-
-Title:
-Communication
-
-Description:
-Graduates communicate technical and non-technical information effectively through reports, documentation, presentations, discussions, and digital communication while considering cultural, linguistic, and learning differences.
-
-Key Focus Areas:
-
-- Technical Communication
-- Reports
-- Documentation
-- Presentations
-- Discussions
-- Digital Communication
-
-Expected Competencies:
-
-- Written Communication
-- Oral Communication
-- Technical Documentation
-- Presentation Skills
-
-============================================================
-PROGRAMME OUTCOME (PO) 10
-============================================================
-
-PO Number:
-PO10
-
-Title:
-Project Management and Finance
-
-Description:
-Graduates apply engineering management principles, project planning, resource management, financial decision-making, and leadership skills to successfully execute projects individually and within multidisciplinary teams.
-
-Key Focus Areas:
-
-- Project Management
-- Finance
-- Resource Management
-- Leadership
-- Planning
-- Engineering Management
-
-Expected Competencies:
-
-- Project Planning
-- Financial Awareness
-- Team Leadership
-- Resource Management
-
-============================================================
-PROGRAMME OUTCOME (PO) 11
-============================================================
-
-PO Number:
-PO11
-
-Title:
-Life-Long Learning
-
-Description:
-Graduates recognize the importance of continuous learning, self-improvement, adaptability to emerging technologies, critical thinking, and professional development throughout their careers.
-
-Key Focus Areas:
-
-- Lifelong Learning
-- Self Improvement
-- Adaptability
-- Emerging Technologies
-- Critical Thinking
-- Professional Development
-
-Expected Competencies:
-
-- Continuous Learning
-- Adaptability
-- Career Growth
-- Professional Excellence
-
-============================================================
-PROGRAMME OUTCOMES SUMMARY
-============================================================
-
-The Programme Outcomes prepare graduates with:
-
-- Engineering Knowledge
-- Problem Solving
-- Software Design
-- Research Skills
-- Engineering Tool Usage
-- Social Responsibility
-- Professional Ethics
-- Teamwork
-- Communication Skills
-- Project Management
-- Lifelong Learning
-
-These outcomes enable graduates to become competent, ethical, innovative, industry-ready, and globally competitive software professionals.
-
-============================================================
-FREQUENTLY ASKED QUESTIONS
-============================================================
-
-What are Programme Outcomes (POs)?
-
-Programme Outcomes describe the knowledge, skills, competencies, and professional attributes students are expected to achieve by the time they graduate.
-
-------------------------------------------------------------
-
-How many Programme Outcomes are there?
-
-There are eleven Programme Outcomes (PO1 to PO11).
-
-------------------------------------------------------------
-
-What is PO1?
-
-PO1 focuses on Engineering Knowledge and the application of mathematics, engineering principles, computing fundamentals, and computer science knowledge to solve engineering problems.
-
-------------------------------------------------------------
-
-What is PO2?
-
-PO2 focuses on Problem Analysis through analytical thinking, research, and engineering investigation.
-
-------------------------------------------------------------
-
-What is PO3?
-
-PO3 focuses on designing and developing innovative software systems and engineering solutions for real-world problems.
-
-------------------------------------------------------------
-
-Which Programme Outcome focuses on research?
-
-PO4 focuses on Investigation of Complex Problems through research, experimentation, and data analysis.
-
-------------------------------------------------------------
-
-Which Programme Outcome focuses on engineering tools?
-
-PO5 focuses on Engineering Tool Usage.
-
-------------------------------------------------------------
-
-Which Programme Outcome focuses on society?
-
-PO6 focuses on The Engineer and Society.
-
-------------------------------------------------------------
-
-Which Programme Outcome focuses on ethics?
-
-PO7 focuses on Ethics and Professional Responsibility.
-
-------------------------------------------------------------
-
-Which Programme Outcome focuses on teamwork?
-
-PO8 focuses on Individual and Teamwork.
-
-------------------------------------------------------------
-
-Which Programme Outcome focuses on communication?
-
-PO9 focuses on Communication.
-
-------------------------------------------------------------
-
-Which Programme Outcome focuses on project management?
-
-PO10 focuses on Project Management and Finance.
-
-------------------------------------------------------------
-
-Which Programme Outcome focuses on lifelong learning?
-
-PO11 focuses on Life-Long Learning.
-
-============================================================
-KEYWORDS
-============================================================
-
+Programme Outcomes (POs) describe the knowledge, skills, professional competencies, and attitudes that students are expected to acquire by the time they graduate from the Computer Science and Engineering programme. There are eleven Programme Outcomes, from PO1 to PO11.
+
+The Programme Outcomes ensure that graduates possess technical expertise, professional competence, ethical responsibility, leadership, communication skills, teamwork, and lifelong learning abilities for successful careers in engineering and technology.
+
+Related:
+PO1 — Engineering Knowledge
+PO2 — Problem Analysis
+PO3 — Design and Development of Solutions
+PO4 — Investigation of Complex Problems
+PO5 — Engineering Tool Usage
+PO6 — The Engineer and Society
+PO7 — Ethics and Professional Responsibility
+PO8 — Individual and Teamwork
+PO9 — Communication
+PO10 — Project Management and Finance
+PO11 — Life-Long Learning
+Programme Educational Objectives (PEOs)
+
+Aliases:
+PO
+POs
+Programme Outcomes
+Graduate Outcomes
+What are POs
+How many POs are there
+Graduate Competencies
+
+User Questions:
+What are Programme Outcomes?
+How many Programme Outcomes are there in CSE?
+What is the difference between PEO and PO?
+What do the Programme Outcomes cover?
+
+Keywords:
 Programme Outcomes
 PO
-PO1
+POs
+11 Programme Outcomes
+Graduate Attributes
+Engineering Competencies
+CSE Programme Outcomes
+
+============================================================
+PO1 — ENGINEERING KNOWLEDGE
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO1 focuses on Engineering Knowledge, requiring graduates to apply knowledge of mathematics, natural sciences, computing fundamentals, and engineering principles to solve complex engineering problems and develop effective computing solutions.
+
+Description:
+PO1 is the first Programme Outcome of the Computer Science and Engineering programme. PO1 is titled Engineering Knowledge.
+
+PO1 description: Graduates apply knowledge of mathematics, natural sciences, computing fundamentals, engineering principles, and computer science specialization to solve complex engineering problems and develop effective computing solutions.
+
+Key focus areas: Mathematics, Natural Sciences, Computing Fundamentals, Engineering Principles, Computer Science, Problem Solving, and Computing Solutions.
+
+Expected competencies: Strong Technical Foundation, Engineering Knowledge, Analytical Skills, and Computing Expertise.
+
+Related:
+Programme Outcomes
 PO2
+Mathematics
+
+Aliases:
+PO 1
+Programme Outcome 1
+First Programme Outcome
+Engineering Knowledge PO
+
+User Questions:
+What is PO1?
+What does PO1 focus on?
+Which programme outcome is about engineering knowledge?
+
+Keywords:
+PO1
+Engineering Knowledge
+Mathematics
+Natural Sciences
+Computing Fundamentals
+Engineering Principles
+Computer Science
+Analytical Skills
+Technical Foundation
+
+============================================================
+PO2 — PROBLEM ANALYSIS
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO2 focuses on Problem Analysis, requiring graduates to identify, formulate, investigate, and analyze complex engineering problems by applying analytical thinking and reviewing research literature.
+
+Description:
+PO2 is the second Programme Outcome of the Computer Science and Engineering programme. PO2 is titled Problem Analysis.
+
+PO2 description: Graduates identify, formulate, investigate, and analyze complex engineering problems by reviewing research literature, applying analytical thinking, and considering sustainability to arrive at well-supported solutions.
+
+Key focus areas: Problem Identification, Problem Formulation, Research Literature, Analytical Thinking, Sustainability, and Engineering Analysis.
+
+Expected competencies: Critical Thinking, Research Skills, Analytical Ability, and Problem Solving.
+
+Related:
+PO1
 PO3
 PO4
-PO5
-PO6
-PO7
-PO8
-PO9
-PO10
-PO11
-Engineering Knowledge
+
+Aliases:
+PO 2
+Programme Outcome 2
+Problem Analysis PO
+
+User Questions:
+What is PO2?
+Which programme outcome focuses on problem analysis?
+
+Keywords:
+PO2
 Problem Analysis
+Problem Identification
+Analytical Thinking
+Research Literature
+Critical Thinking
+Engineering Analysis
+
+============================================================
+PO3 — DESIGN AND DEVELOPMENT OF SOLUTIONS
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO3 focuses on Design and Development of Solutions, requiring graduates to design, develop, and implement innovative software systems and engineering solutions that address real-world problems while considering safety, sustainability, and societal needs.
+
+Description:
+PO3 is the third Programme Outcome of the Computer Science and Engineering programme. PO3 is titled Design and Development of Solutions.
+
+PO3 description: Graduates design, develop, and implement innovative software systems, applications, and engineering solutions that address real-world problems while considering public health, safety, sustainability, environmental impact, cultural values, societal needs, and economic factors.
+
+Key focus areas: Software Design, Software Development, Engineering Solutions, Innovation, Sustainability, Public Safety, Environmental Impact, and Societal Needs.
+
+Expected competencies: System Design, Software Development, Innovation, and Solution Development.
+
+Related:
+PO2
+PO5
+Programme Outcomes
+
+Aliases:
+PO 3
+Programme Outcome 3
+Design and Development PO
+Software Design PO
+
+User Questions:
+What is PO3?
+Which programme outcome is about software design?
+Which PO focuses on developing solutions?
+
+Keywords:
+PO3
 Design and Development
 Software Design
+Software Development
 Engineering Solutions
+Innovation
+Sustainability
+Real-World Problems
+
+============================================================
+PO4 — INVESTIGATION OF COMPLEX PROBLEMS
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO4 focuses on Investigation of Complex Problems, requiring graduates to conduct research-based investigations by designing experiments, analyzing data, and drawing valid conclusions to solve engineering challenges.
+
+Description:
+PO4 is the fourth Programme Outcome of the Computer Science and Engineering programme. PO4 is titled Investigation of Complex Problems.
+
+PO4 description: Graduates conduct research-based investigations by designing experiments, developing models, collecting and analyzing data, interpreting results, and drawing valid conclusions to solve engineering challenges.
+
+Key focus areas: Research, Experiment Design, Data Collection, Data Analysis, Model Development, Interpretation, and Engineering Investigation.
+
+Expected competencies: Research Ability, Investigation Skills, Data Analysis, and Experimental Design.
+
+Related:
+PO2
+Programme Outcomes
+
+Aliases:
+PO 4
+Programme Outcome 4
+Research PO
+Investigation PO
+
+User Questions:
+What is PO4?
+Which programme outcome focuses on research?
+Which PO is about investigation?
+
+Keywords:
+PO4
+Investigation
 Research
+Experiment Design
+Data Analysis
+Data Collection
 Engineering Investigation
-Engineering Tools
+
+============================================================
+PO5 — ENGINEERING TOOL USAGE
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO5 focuses on Engineering Tool Usage, requiring graduates to effectively select and utilize modern engineering tools, software technologies, programming frameworks, and IT resources for computing system development.
+
+Description:
+PO5 is the fifth Programme Outcome of the Computer Science and Engineering programme. PO5 is titled Engineering Tool Usage.
+
+PO5 description: Graduates effectively select and utilize modern engineering tools, software technologies, programming frameworks, simulation tools, and IT resources for designing, developing, testing, and maintaining computing systems while understanding their capabilities and limitations.
+
+Key focus areas: Engineering Tools, Software Technologies, Programming Frameworks, Simulation Tools, IT Resources, Software Development, and Software Testing.
+
+Expected competencies: Tool Selection, Technology Usage, Software Development, and Technical Proficiency.
+
+Related:
+PO3
+Programme Outcomes
+
+Aliases:
+PO 5
+Programme Outcome 5
+Engineering Tools PO
+Software Tools PO
+
+User Questions:
+What is PO5?
+Which programme outcome focuses on engineering tools?
+
+Keywords:
+PO5
+Engineering Tool Usage
 Software Technologies
 Programming Frameworks
 Simulation Tools
+IT Resources
+Software Testing
+Technical Proficiency
+
+============================================================
+PO6 — THE ENGINEER AND SOCIETY
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO6 focuses on The Engineer and Society, requiring graduates to evaluate the societal, environmental, legal, economic, and sustainability impacts of engineering solutions and make responsible decisions.
+
+Description:
+PO6 is the sixth Programme Outcome of the Computer Science and Engineering programme. PO6 is titled The Engineer and Society.
+
+PO6 description: Graduates evaluate the societal, environmental, legal, economic, cultural, and sustainability impacts of engineering solutions and make responsible decisions that benefit individuals, organizations, and society.
+
+Key focus areas: Society, Environment, Law, Economics, Culture, Sustainability, and Responsible Engineering.
+
+Expected competencies: Social Responsibility, Sustainable Development, and Responsible Decision Making.
+
+Related:
+PO7
+Programme Outcomes
+
+Aliases:
+PO 6
+Programme Outcome 6
+Society PO
+Social Responsibility PO
+
+User Questions:
+What is PO6?
+Which programme outcome focuses on society?
+Which PO is about social responsibility?
+
+Keywords:
+PO6
 The Engineer and Society
-Society
+Societal Impact
+Environmental Impact
 Sustainability
+Social Responsibility
+Legal Compliance
+Responsible Engineering
+
+============================================================
+PO7 — ETHICS AND PROFESSIONAL RESPONSIBILITY
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO7 focuses on Ethics and Professional Responsibility, requiring graduates to demonstrate professional ethics, integrity, human values, and social responsibility while complying with engineering standards and laws.
+
+Description:
+PO7 is the seventh Programme Outcome of the Computer Science and Engineering programme. PO7 is titled Ethics and Professional Responsibility.
+
+PO7 description: Graduates demonstrate professional ethics, integrity, human values, inclusiveness, and social responsibility while complying with national and international laws, standards, and engineering practices.
+
+Key focus areas: Ethics, Integrity, Human Values, Professional Responsibility, Inclusiveness, Engineering Standards, and Legal Compliance.
+
+Expected competencies: Ethical Behaviour, Professional Integrity, and Responsible Engineering.
+
+Related:
+PO6
+PEO3 — Innovation and Ethical Computing
+
+Aliases:
+PO 7
+Programme Outcome 7
+Ethics PO
+Professional Responsibility PO
+
+User Questions:
+What is PO7?
+Which programme outcome focuses on ethics?
+Which PO is about professional responsibility?
+
+Keywords:
+PO7
 Ethics
 Professional Responsibility
 Integrity
 Human Values
+Inclusiveness
+Ethical Behaviour
+Engineering Standards
+
+============================================================
+PO8 — INDIVIDUAL AND TEAMWORK
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO8 focuses on Individual and Teamwork, requiring graduates to work effectively as individuals, team members, and leaders in multidisciplinary and diverse environments.
+
+Description:
+PO8 is the eighth Programme Outcome of the Computer Science and Engineering programme. PO8 is titled Individual and Teamwork.
+
+PO8 description: Graduates work effectively as individuals, team members, and leaders in multidisciplinary and diverse environments by demonstrating collaboration, responsibility, leadership, and interpersonal skills.
+
+Key focus areas: Teamwork, Leadership, Collaboration, Responsibility, Communication, and Interpersonal Skills.
+
+Expected competencies: Leadership, Team Collaboration, and Professional Behaviour.
+
+Related:
+PO9
+Programme Outcomes
+
+Aliases:
+PO 8
+Programme Outcome 8
+Teamwork PO
+Leadership PO
+
+User Questions:
+What is PO8?
+Which programme outcome focuses on teamwork?
+Which PO is about leadership?
+
+Keywords:
+PO8
 Individual and Teamwork
+Teamwork
 Leadership
+Collaboration
+Interpersonal Skills
+Team Building
+
+============================================================
+PO9 — COMMUNICATION
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO9 focuses on Communication, requiring graduates to effectively communicate technical and non-technical information through reports, presentations, and documentation.
+
+Description:
+PO9 is the ninth Programme Outcome of the Computer Science and Engineering programme. PO9 is titled Communication.
+
+PO9 description: Graduates communicate technical and non-technical information effectively through reports, documentation, presentations, discussions, and digital communication while considering cultural, linguistic, and learning differences.
+
+Key focus areas: Technical Communication, Reports, Documentation, Presentations, Discussions, and Digital Communication.
+
+Expected competencies: Written Communication, Oral Communication, Technical Documentation, and Presentation Skills.
+
+Related:
+PO8
+Programme Outcomes
+
+Aliases:
+PO 9
+Programme Outcome 9
+Communication PO
+Presentation PO
+
+User Questions:
+What is PO9?
+Which programme outcome focuses on communication?
+
+Keywords:
+PO9
 Communication
 Technical Communication
+Reports
 Documentation
+Presentations
+Written Communication
+Oral Communication
+
+============================================================
+PO10 — PROJECT MANAGEMENT AND FINANCE
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO10 focuses on Project Management and Finance, requiring graduates to apply engineering management principles, project planning, resource management, and financial decision-making to successfully execute projects.
+
+Description:
+PO10 is the tenth Programme Outcome of the Computer Science and Engineering programme. PO10 is titled Project Management and Finance.
+
+PO10 description: Graduates apply engineering management principles, project planning, resource management, financial decision-making, and leadership skills to successfully execute projects individually and within multidisciplinary teams.
+
+Key focus areas: Project Management, Finance, Resource Management, Leadership, Planning, and Engineering Management.
+
+Expected competencies: Project Planning, Financial Awareness, Team Leadership, and Resource Management.
+
+Related:
+PO8
+Programme Outcomes
+
+Aliases:
+PO 10
+Programme Outcome 10
+Project Management PO
+
+User Questions:
+What is PO10?
+Which programme outcome focuses on project management?
+
+Keywords:
+PO10
 Project Management
 Finance
 Resource Management
+Leadership
+Planning
+Engineering Management
+
+============================================================
+PO11 — LIFE-LONG LEARNING
+============================================================
+
+Category: Programme Outcome
+Department: Computer Science and Engineering (CSE)
+
+Summary:
+PO11 focuses on Life-Long Learning, requiring graduates to recognize the importance of continuous learning, adaptability to emerging technologies, and professional development throughout their careers.
+
+Description:
+PO11 is the eleventh Programme Outcome of the Computer Science and Engineering programme. PO11 is titled Life-Long Learning.
+
+PO11 description: Graduates recognize the importance of continuous learning, self-improvement, adaptability to emerging technologies, critical thinking, and professional development throughout their careers.
+
+Key focus areas: Lifelong Learning, Self Improvement, Adaptability, Emerging Technologies, Critical Thinking, and Professional Development.
+
+Expected competencies: Continuous Learning, Adaptability, Career Growth, and Professional Excellence.
+
+Related:
+PEO2 — Lifelong Learning and Higher Education
+Programme Outcomes
+
+Aliases:
+PO 11
+Programme Outcome 11
+Lifelong Learning PO
+Continuous Learning PO
+
+User Questions:
+What is PO11?
+Which programme outcome focuses on lifelong learning?
+Which PO is about continuous learning?
+
+Keywords:
+PO11
 Life-Long Learning
+Lifelong Learning
 Continuous Learning
+Adaptability
+Emerging Technologies
 Professional Development
-Graduate Attributes
-Engineering Competencies
-Computer Science and Engineering
-CSE
+Career Growth
