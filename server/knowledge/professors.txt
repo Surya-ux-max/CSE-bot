@@ -1,122 +1,666 @@
+============================================================
 FACULTY MEMBERS
+Department of Computer Science and Engineering (CSE)
+============================================================
 
-The Department of Computer Science and Engineering consists of experienced faculty members with expertise in computer science, software engineering, artificial intelligence, cloud computing, cybersecurity, data science, and emerging technologies. The faculty actively contribute to teaching, research, curriculum development, industry collaboration, mentoring, and student development.
+Category:
+Faculty Members
 
---------------------------------------------------
-Head of the Department
+Department:
+Computer Science and Engineering (CSE)
 
+Overview:
+The Department of Computer Science and Engineering consists of experienced faculty members with expertise in computer science, software engineering, artificial intelligence, cloud computing, cybersecurity, data science, and emerging technologies.
+
+The faculty actively contribute to:
+
+- Teaching
+- Research
+- Curriculum Development
+- Industry Collaboration
+- Student Mentoring
+- Project Guidance
+- Academic Administration
+- Innovation
+
+============================================================
+HEAD OF THE DEPARTMENT
+============================================================
+
+Faculty Name:
 Dr. R. Subha
-Designation: Professor and Head of the Department
 
---------------------------------------------------
-Professors
+Designation:
+Professor and Head of the Department
 
+Role:
+Head of Department (HOD)
+
+Department:
+Computer Science and Engineering
+
+============================================================
+PROFESSORS
+============================================================
+
+Faculty Name:
 Dr. H. Anandakumar
-Designation: Professor and Associate Dean
 
+Designation:
+Professor
+
+Additional Role:
+Associate Dean
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. V. S. Akshaya
-Designation: Professor
 
---------------------------------------------------
-Associate Professors
+Designation:
+Professor
 
+Department:
+Computer Science and Engineering
+
+============================================================
+ASSOCIATE PROFESSORS
+============================================================
+
+Faculty Name:
 Dr. S. Sampath Kumar
 
+Designation:
+Associate Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. S. K. Harikarthik
 
+Designation:
+Associate Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. M. Suriya
 
+Designation:
+Associate Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. K. Sureshkumar
 
---------------------------------------------------
-Assistant Professors
+Designation:
+Associate Professor
 
+Department:
+Computer Science and Engineering
+
+============================================================
+ASSISTANT PROFESSORS
+============================================================
+
+Faculty Name:
 Dr. A. Anandaraj
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. Gowtham Chakravarthy
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. S. Ananthi
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. A. Sarfaraz Ahmed
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. S. Yuvaraj
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. J. Sreemathy
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. M. Praveen Kumar
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. N. Saranya
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. V. Niranjani
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Dr. A. Mohanraj
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. T. M. Ishwarya
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. S. Saradha
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. R. Giridharan
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. M. Kalaiselvi
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. N. Gayathri
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. B. Gomathi
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. B. Saravanan
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. J. Keerthika
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. D. Mohanapriya
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. V. Lakshmanan
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. K. Agalya
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. M. Karthick Raja
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. E. Saranya
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. A. Suganyamahalakshmi
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. M. Abinaya
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. P. Arun Prakash
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. N. Priyanka
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. R. Kirubakaran
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. K. Sabarigirivason
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. R. Karthick
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. N. Lavanya
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. Sowbarnika
 
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Ms. R. Rajeswari
 
---------------------------------------------------
-Professors of Practice
+Designation:
+Assistant Professor
 
+Department:
+Computer Science and Engineering
+
+============================================================
+PROFESSORS OF PRACTICE
+============================================================
+
+Faculty Name:
 Mr. V. Chandran
-Designation: Professor of Practice
 
+Designation:
+Professor of Practice
+
+Department:
+Computer Science and Engineering
+
+------------------------------------------------------------
+
+Faculty Name:
 Mr. A. Jeeva
-Designation: Professor of Practice
 
---------------------------------------------------
-Faculty Summary
+Designation:
+Professor of Practice
 
-The Computer Science and Engineering department is led by the Head of the Department and supported by Professors, Associate Professors, Assistant Professors, and Professors of Practice. The faculty deliver undergraduate education, mentor students, conduct research, guide projects, collaborate with industry, and contribute to curriculum development across various domains of computer science and engineering.
+Department:
+Computer Science and Engineering
 
+============================================================
+FACULTY RESPONSIBILITIES
+============================================================
+
+Faculty members contribute to:
+
+- Undergraduate Teaching
+- Student Mentoring
+- Academic Advising
+- Research
+- Curriculum Development
+- Project Guidance
+- Industry Collaboration
+- Innovation
+- Professional Development
+
+============================================================
+FACULTY STRENGTH
+============================================================
+
+Head of Department:
+1
+
+Professors:
+2
+
+Associate Professors:
+4
+
+Assistant Professors:
+33
+
+Professors of Practice:
+2
+
+Total Faculty Members:
+42
+
+============================================================
+SUMMARY
+============================================================
+
+The Computer Science and Engineering department is led by the Head of the Department and supported by Professors, Associate Professors, Assistant Professors, and Professors of Practice.
+
+Faculty members contribute to teaching, research, mentoring, project guidance, curriculum development, industry collaboration, and innovation while preparing students for careers in Computer Science and Engineering.
+
+============================================================
+FREQUENTLY ASKED QUESTIONS
+============================================================
+
+Who is the Head of the Computer Science and Engineering Department?
+
+Dr. R. Subha is the Professor and Head of the Department.
+
+------------------------------------------------------------
+
+Who is the HOD of CSE?
+
+Dr. R. Subha.
+
+------------------------------------------------------------
+
+Who is the Associate Dean?
+
+Dr. H. Anandakumar serves as Professor and Associate Dean.
+
+------------------------------------------------------------
+
+Who are the Professors in the department?
+
+The Professors are:
+
+- Dr. H. Anandakumar
+- Dr. V. S. Akshaya
+
+------------------------------------------------------------
+
+Who are the Associate Professors?
+
+The Associate Professors are:
+
+- Dr. S. Sampath Kumar
+- Dr. S. K. Harikarthik
+- Dr. M. Suriya
+- Dr. K. Sureshkumar
+
+------------------------------------------------------------
+
+Who are the Professors of Practice?
+
+- Mr. V. Chandran
+- Mr. A. Jeeva
+
+------------------------------------------------------------
+
+How many faculty members are there?
+
+There are 42 faculty members.
+
+------------------------------------------------------------
+
+How many Assistant Professors are there?
+
+33 Assistant Professors.
+
+------------------------------------------------------------
+
+How many Professors are there?
+
+2 Professors.
+
+------------------------------------------------------------
+
+How many Associate Professors are there?
+
+4 Associate Professors.
+
+============================================================
+KEYWORDS
+============================================================
+
+Faculty
+Faculty Members
+CSE Faculty
+Computer Science Faculty
+Computer Science and Engineering
+Teaching Staff
+Academic Staff
+Faculty Directory
+Professor
+Associate Professor
+Assistant Professor
+Professor of Practice
+HOD
+Head of Department
+Associate Dean
+Dr R Subha
+Dr H Anandakumar
+Dr V S Akshaya
+Dr S Sampath Kumar
+Dr S K Harikarthik
+Dr M Suriya
+Dr K Sureshkumar
+Dr A Anandaraj
+Dr Gowtham Chakravarthy
+Dr S Ananthi
+Dr A Sarfaraz Ahmed
+Dr S Yuvaraj
+Dr J Sreemathy
+Dr M Praveen Kumar
+Dr N Saranya
+Dr V Niranjani
+Dr A Mohanraj
+Mr V Chandran
+Mr A Jeeva
 Faculty Strength
-
-• Head of the Department: 1
-• Professors: 2
-• Associate Professors: 4
-• Assistant Professors: 33
-• Professors of Practice: 2
-
-Total Faculty Members: 42
+Teaching
+Research
+Mentoring
+Industry Collaboration
+Curriculum Development
+Project Guidance
+Innovation
