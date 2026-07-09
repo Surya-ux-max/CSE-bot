@@ -1,44 +1,262 @@
+============================================================
 CORPORATE ADVISORY BOARD
+Department of Computer Science and Engineering (CSE)
+============================================================
 
+Committee Name:
+Corporate Advisory Board
+
+Department:
+Computer Science and Engineering (CSE)
+
+Overview:
 The Corporate Advisory Board of the Department of Computer Science and Engineering (CSE) comprises experienced professionals from leading technology companies. The board provides industry insights, technical guidance, and strategic recommendations to ensure that the curriculum remains aligned with current industry requirements and emerging technologies.
 
-The advisory board actively contributes to curriculum development, knowledge sharing, industry-academia collaboration, mentoring, and preparing students with the skills required for successful careers in the software and information technology sectors.
+Purpose:
+The Corporate Advisory Board supports the department by connecting academia with industry. The board helps improve curriculum quality, promotes industry collaboration, recommends modern technologies, and prepares students with the practical skills required for successful careers in software engineering and information technology.
 
---------------------------------------------------
-Corporate Advisory Board Members
+Objectives:
+- Provide industry insights.
+- Offer technical guidance.
+- Recommend curriculum improvements.
+- Support industry-academia collaboration.
+- Share knowledge and best practices.
+- Prepare students for industry careers.
+- Promote innovation and emerging technologies.
 
-1. Mr. Sachin Sharma
-Position: Software Development Engineer (SDE)
-Organization: Microsoft
+============================================================
+CORPORATE ADVISORY BOARD MEMBERS
+============================================================
 
-2. Mr. Akhil Anand
-Organization: Amazon
+Board Member
 
-3. Mr. UmaShankar
-Position: Chief Technology Officer (CTO)
-Organization: 1CloudHub
+Full Name:
+Mr. Sachin Sharma
 
-4. Mr. Vishnu Prasad
-Organization: Zoho Corporation
+Position:
+Software Development Engineer (SDE)
 
---------------------------------------------------
-Roles and Contributions
+Organization:
+Microsoft
 
-The Corporate Advisory Board supports the department by:
+Role:
+Corporate Advisory Board Member
 
-• Providing guidance on curriculum design and revision based on industry requirements.
+Industry:
+Software Engineering
 
-• Recommending emerging technologies and industry best practices for inclusion in academic programmes.
+------------------------------------------------------------
 
-• Bridging the gap between academia and industry through collaboration and knowledge sharing.
+Board Member
 
-• Supporting internships, industrial training, workshops, guest lectures, and mentoring initiatives.
+Full Name:
+Mr. Akhil Anand
 
-• Enhancing students' employability by aligning academic learning with real-world software engineering practices.
+Organization:
+Amazon
 
-• Advising the department on future technology trends, innovation, and research opportunities.
+Role:
+Corporate Advisory Board Member
 
---------------------------------------------------
-Summary
+Industry:
+Technology
 
-The Corporate Advisory Board strengthens the Computer Science and Engineering programme by ensuring that students receive industry-relevant education, exposure to modern technologies, and guidance from professionals working in leading global technology companies. Their expertise helps prepare graduates to become industry-ready software professionals capable of meeting evolving technological and business challenges.
+------------------------------------------------------------
+
+Board Member
+
+Full Name:
+Mr. UmaShankar
+
+Position:
+Chief Technology Officer (CTO)
+
+Organization:
+1CloudHub
+
+Role:
+Corporate Advisory Board Member
+
+Industry:
+Technology Leadership
+
+------------------------------------------------------------
+
+Board Member
+
+Full Name:
+Mr. Vishnu Prasad
+
+Organization:
+Zoho Corporation
+
+Role:
+Corporate Advisory Board Member
+
+Industry:
+Software Development
+
+============================================================
+ROLES AND RESPONSIBILITIES
+============================================================
+
+The Corporate Advisory Board supports the Department of Computer Science and Engineering by:
+
+Curriculum Development:
+- Providing guidance on curriculum design.
+- Recommending curriculum revisions based on industry requirements.
+- Aligning academic programmes with current industry expectations.
+
+Emerging Technologies:
+- Recommending emerging technologies.
+- Suggesting industry best practices.
+- Supporting technology-driven curriculum enhancement.
+
+Industry-Academia Collaboration:
+- Bridging the gap between academia and industry.
+- Encouraging collaboration between educational institutions and technology companies.
+- Promoting knowledge sharing.
+
+Student Development:
+- Supporting internships.
+- Encouraging industrial training.
+- Organizing workshops.
+- Delivering guest lectures.
+- Providing mentoring opportunities.
+
+Employability Enhancement:
+- Improving students' employability.
+- Aligning academic learning with real-world software engineering practices.
+- Preparing students for careers in software and information technology.
+
+Innovation and Research:
+- Advising the department on future technology trends.
+- Supporting innovation.
+- Encouraging research opportunities.
+- Identifying future industry requirements.
+
+============================================================
+BENEFITS TO STUDENTS
+============================================================
+
+Students benefit from the Corporate Advisory Board through:
+
+- Industry-relevant curriculum.
+- Exposure to emerging technologies.
+- Guidance from experienced technology professionals.
+- Internship opportunities.
+- Industrial training.
+- Guest lectures.
+- Professional mentoring.
+- Knowledge of software engineering best practices.
+- Improved employability.
+- Better career readiness.
+
+============================================================
+SUMMARY
+============================================================
+
+The Corporate Advisory Board strengthens the Computer Science and Engineering programme by ensuring that students receive industry-relevant education, exposure to modern technologies, and guidance from professionals working in leading global technology companies.
+
+The board contributes to curriculum development, technical guidance, industry collaboration, mentoring, innovation, internships, industrial training, workshops, and career readiness. Their expertise helps prepare graduates to become industry-ready software professionals capable of meeting evolving technological and business challenges.
+
+============================================================
+FREQUENTLY ASKED QUESTIONS
+============================================================
+
+What is the Corporate Advisory Board?
+
+The Corporate Advisory Board is a committee consisting of experienced professionals from leading technology companies who provide industry guidance, technical expertise, and strategic recommendations to the Department of Computer Science and Engineering.
+
+What is the purpose of the Corporate Advisory Board?
+
+The board helps align the curriculum with industry requirements, promotes industry-academia collaboration, supports student development, and prepares students for successful careers in software engineering and information technology.
+
+Who are the members of the Corporate Advisory Board?
+
+The members are:
+- Mr. Sachin Sharma
+- Mr. Akhil Anand
+- Mr. UmaShankar
+- Mr. Vishnu Prasad
+
+Who is Sachin Sharma?
+
+Mr. Sachin Sharma is a Software Development Engineer (SDE) at Microsoft and serves as a member of the Corporate Advisory Board.
+
+Who works at Microsoft on the Corporate Advisory Board?
+
+Mr. Sachin Sharma serves as a Software Development Engineer (SDE) at Microsoft and is a member of the Corporate Advisory Board.
+
+Who represents Amazon on the Corporate Advisory Board?
+
+Mr. Akhil Anand represents Amazon as a member of the Corporate Advisory Board.
+
+Who is the CTO on the Corporate Advisory Board?
+
+Mr. UmaShankar is the Chief Technology Officer (CTO) at 1CloudHub and serves as a member of the Corporate Advisory Board.
+
+Who represents Zoho Corporation on the Corporate Advisory Board?
+
+Mr. Vishnu Prasad represents Zoho Corporation as a member of the Corporate Advisory Board.
+
+How does the Corporate Advisory Board help students?
+
+The board supports students through internships, industrial training, mentoring, workshops, guest lectures, industry guidance, and curriculum improvements aligned with industry needs.
+
+How does the Corporate Advisory Board support the department?
+
+The board supports curriculum development, industry collaboration, technology recommendations, innovation, research opportunities, mentoring, and employability enhancement.
+
+============================================================
+KEYWORDS
+============================================================
+
+Corporate Advisory Board
+Corporate Board
+Industry Advisory Board
+Industry Experts
+Industry Professionals
+Corporate Members
+Board Members
+CSE Corporate Advisory Board
+Computer Science and Engineering
+Department of Computer Science and Engineering
+Industry Collaboration
+Academia Industry Collaboration
+Industry Academia Partnership
+Curriculum Development
+Curriculum Revision
+Industry Guidance
+Technical Guidance
+Strategic Recommendations
+Emerging Technologies
+Technology Trends
+Innovation
+Research Opportunities
+Knowledge Sharing
+Student Mentoring
+Internships
+Industrial Training
+Guest Lectures
+Workshops
+Career Development
+Employability
+Software Engineering
+Information Technology
+Microsoft
+Amazon
+1CloudHub
+Zoho
+Zoho Corporation
+Sachin Sharma
+Akhil Anand
+UmaShankar
+Vishnu Prasad
+Software Development Engineer
+SDE
+Chief Technology Officer
+CTO
+Industry Ready
+Software Professional
+Technology Companies
