@@ -1,121 +1,616 @@
+============================================================
 PROGRAMME ASSESSMENT COMMITTEE (PAC)
-
+Department of Computer Science and Engineering
 Academic Year: 2024–2025
+============================================================
 
+Committee Name:
+Programme Assessment Committee (PAC)
+
+Academic Year:
+2024–2025
+
+Department:
+Computer Science and Engineering (CSE)
+
+Overview:
 The Programme Assessment Committee (PAC) of the Department of Computer Science and Engineering is responsible for monitoring academic quality, coordinating curriculum delivery, evaluating programme outcomes, supporting continuous improvement, and ensuring effective implementation of Outcome-Based Education (OBE).
 
---------------------------------------------------
-Department Leadership
+Primary Responsibilities:
+- Monitor academic quality.
+- Coordinate curriculum delivery.
+- Evaluate Programme Outcomes (POs).
+- Support continuous academic improvement.
+- Ensure effective implementation of Outcome-Based Education (OBE).
 
-Head of the Department
-• Dr. R. Subha
-  Professor and Head, Department of Computer Science and Engineering
+============================================================
+DEPARTMENT LEADERSHIP
+============================================================
+
+Head of the Department (HOD)
+
+Faculty Name:
+Dr. R. Subha
+
+Designation:
+Professor and Head
+
+Department:
+Computer Science and Engineering
+
+Role:
+Head of the Department (HOD)
+
+Responsibilities:
+- Leads the Department of Computer Science and Engineering.
+- Oversees academic administration.
+- Guides departmental activities.
+
+------------------------------------------------------------
 
 UG Programme Assessment Committee (PAC) Coordinator
-• Dr. T. Sivakumar
-  Professor, Department of Computer Science and Engineering
 
---------------------------------------------------
-Module Coordinators
+Faculty Name:
+Dr. T. Sivakumar
 
-Module Coordinator 1
-Course: Discrete Mathematics
-Faculty: Ms. A. Revathy
-Designation: Assistant Professor, Department of Mathematics
+Designation:
+Professor
 
-Module Coordinator 2
-Course: Design and Analysis of Algorithms (Theory and Practical)
-Faculty: Ms. B. Suchithra
-Designation: Assistant Professor, Department of Computer Science and Engineering
+Department:
+Computer Science and Engineering
 
-Module Coordinator 3
-Course: Database Management Systems (Theory and Practical)
-Faculty: Ms. N. Gayathri
-Designation: Assistant Professor, Department of Computer Science and Engineering
+Role:
+UG Programme Assessment Committee (PAC) Coordinator
 
-Module Coordinator 4
-Course: Software Engineering
-Faculty: Dr. S. K. Hari Karthik
-Designation: Associate Professor, Department of Computer Science and Engineering
+Responsibilities:
+- Coordinates Programme Assessment Committee activities.
+- Oversees programme assessment.
+- Supports Outcome-Based Education implementation.
 
-Module Coordinator 5
-Course: Digital Principles and Computer Organization
-Faculty: Dr. V. V. Teresa
-Designation: Associate Professor, Department of Electronics and Communication Engineering
+============================================================
+MODULE COORDINATORS
+============================================================
 
-Module Coordinator 6
-Course: Java Programming (Theory and Practical)
-Faculty: Mr. R. Giridharan
-Designation: Assistant Professor, Department of Computer Science and Engineering
+Module Coordinator
 
-Module Coordinator 7
-Course: Automata Theory and Compiler Design
-Faculty: Dr. S. Sampath Kumar
-Designation: Associate Professor, Department of Computer Science and Engineering
+Course Name:
+Discrete Mathematics
 
-Module Coordinator 8
-Course: Cloud Computing (Theory and Practical)
-Faculty: Dr. S. Ananthi
-Designation: Assistant Professor, Department of Computer Science and Engineering
+Faculty:
+Ms. A. Revathy
 
-Module Coordinator 9
-Course: Artificial Intelligence and Machine Learning (Theory and Practical)
-Faculty: Ms. V. Niranjani
-Designation: Assistant Professor, Department of Computer Science and Engineering
+Designation:
+Assistant Professor
 
-Module Coordinator 10
-Course: Computer Networks
-Faculty: Dr. N. Kumareshan
-Designation: Professor, Department of Electronics and Communication Engineering
+Department:
+Department of Mathematics
 
-Module Coordinator 11
-Course: Principles of Management
-Faculty: Dr. G. Gokilakrishnan
-Designation: Associate Professor, Department of Mechanical Engineering
+Role:
+Module Coordinator
 
-Module Coordinator 12
-Course: Cryptography and Network Security
-Faculty: Mr. M. Praveen Kumar
-Designation: Assistant Professor, Department of Computer Science and Engineering
+------------------------------------------------------------
 
-Module Coordinator 13
-Course: Ethical Hacking
-Faculty: Dr. A. Sarfaraz Ahmed
-Designation: Assistant Professor, Department of Computer Science and Engineering
+Module Coordinator
 
-Module Coordinator 14
-Course: Software Project Management
-Faculty: Ms. M. Abinaya
-Designation: Assistant Professor, Department of Computer Science and Engineering
+Course Name:
+Design and Analysis of Algorithms
 
---------------------------------------------------
-Academic Coordinators
+Also Known As:
+DAA
+Design and Analysis of Algorithms Theory
+Design and Analysis of Algorithms Practical
+
+Faculty:
+Ms. B. Suchithra
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Database Management Systems
+
+Also Known As:
+DBMS
+Database Management Systems Theory
+Database Management Systems Practical
+
+Faculty:
+Ms. N. Gayathri
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Software Engineering
+
+Faculty:
+Dr. S. K. Hari Karthik
+
+Designation:
+Associate Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Digital Principles and Computer Organization
+
+Also Known As:
+DPCO
+
+Faculty:
+Dr. V. V. Teresa
+
+Designation:
+Associate Professor
+
+Department:
+Electronics and Communication Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Java Programming
+
+Also Known As:
+Java
+Java Theory
+Java Practical
+
+Faculty:
+Mr. R. Giridharan
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Automata Theory and Compiler Design
+
+Also Known As:
+ATCD
+
+Faculty:
+Dr. S. Sampath Kumar
+
+Designation:
+Associate Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Cloud Computing
+
+Also Known As:
+Cloud Computing Theory
+Cloud Computing Practical
+
+Faculty:
+Dr. S. Ananthi
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Artificial Intelligence and Machine Learning
+
+Also Known As:
+AI
+ML
+AIML
+Artificial Intelligence
+Machine Learning
+AI and ML
+Artificial Intelligence and Machine Learning Theory
+Artificial Intelligence and Machine Learning Practical
+
+Faculty:
+Ms. V. Niranjani
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Computer Networks
+
+Also Known As:
+CN
+
+Faculty:
+Dr. N. Kumareshan
+
+Designation:
+Professor
+
+Department:
+Electronics and Communication Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Principles of Management
+
+Also Known As:
+POM
+
+Faculty:
+Dr. G. Gokilakrishnan
+
+Designation:
+Associate Professor
+
+Department:
+Mechanical Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Cryptography and Network Security
+
+Also Known As:
+CNS
+Cryptography
+Network Security
+
+Faculty:
+Mr. M. Praveen Kumar
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Ethical Hacking
+
+Faculty:
+Dr. A. Sarfaraz Ahmed
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+------------------------------------------------------------
+
+Module Coordinator
+
+Course Name:
+Software Project Management
+
+Also Known As:
+SPM
+
+Faculty:
+Ms. M. Abinaya
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Module Coordinator
+
+============================================================
+ACADEMIC COORDINATORS
+============================================================
 
 Board of Studies (BoS) Coordinator
-• Dr. S. Yuvaraj
-  Assistant Professor, Department of Computer Science and Engineering
+
+Faculty:
+Dr. S. Yuvaraj
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Board of Studies Coordinator
+
+Abbreviation:
+BoS Coordinator
+
+------------------------------------------------------------
 
 Events Coordinator
-• Ms. V. Niranjani
-  Assistant Professor, Department of Computer Science and Engineering
+
+Faculty:
+Ms. V. Niranjani
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Events Coordinator
+
+------------------------------------------------------------
 
 Examination Cell Coordinator
-• Mr. P. Arun Prakash
-  Assistant Professor, Department of Computer Science and Engineering
+
+Faculty:
+Mr. P. Arun Prakash
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Examination Cell Coordinator
+
+------------------------------------------------------------
 
 Placement Coordinator
-• Ms. A. Mohanraj
-  Assistant Professor, Department of Computer Science and Engineering
+
+Faculty:
+Ms. A. Mohanraj
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Placement Coordinator
+
+------------------------------------------------------------
 
 NPTEL Coordinator
-• Ms. N. Gayathri
-  Assistant Professor, Department of Computer Science and Engineering
+
+Faculty:
+Ms. N. Gayathri
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+NPTEL Coordinator
+
+------------------------------------------------------------
 
 Industrial Visit Coordinator
-• Mr. B. Saravanan
-  Assistant Professor, Department of Computer Science and Engineering
 
---------------------------------------------------
-Summary
+Also Known As:
+IV Coordinator
 
-The Programme Assessment Committee consists of the Head of the Department, PAC Coordinator, module coordinators for core courses, and academic coordinators responsible for curriculum implementation, assessment, examinations, placements, industry interaction, NPTEL activities, and continuous quality improvement of the Computer Science and Engineering programme.
+Faculty:
+Mr. B. Saravanan
+
+Designation:
+Assistant Professor
+
+Department:
+Computer Science and Engineering
+
+Role:
+Industrial Visit Coordinator
+
+============================================================
+SUMMARY
+============================================================
+
+The Programme Assessment Committee (PAC) consists of:
+
+- Head of the Department
+- UG PAC Coordinator
+- Module Coordinators
+- Academic Coordinators
+
+The committee is responsible for:
+
+- Academic Quality
+- Curriculum Delivery
+- Programme Outcome Assessment
+- Outcome-Based Education (OBE)
+- Continuous Quality Improvement
+- Examination Coordination
+- Placement Activities
+- Industry Interaction
+- Industrial Visits
+- NPTEL Coordination
+- Academic Events
+
+============================================================
+FREQUENTLY ASKED QUESTIONS
+============================================================
+
+What is PAC?
+PAC stands for Programme Assessment Committee.
+
+What does PAC do?
+The Programme Assessment Committee monitors academic quality, curriculum delivery, programme outcomes, Outcome-Based Education, and continuous improvement.
+
+Who is the HOD of CSE?
+Dr. R. Subha is the Professor and Head of the Department of Computer Science and Engineering.
+
+Who is the PAC Coordinator?
+Dr. T. Sivakumar is the UG Programme Assessment Committee Coordinator.
+
+Who is the BoS Coordinator?
+Dr. S. Yuvaraj is the Board of Studies (BoS) Coordinator.
+
+Who is the Events Coordinator?
+Ms. V. Niranjani.
+
+Who is the Placement Coordinator?
+Ms. A. Mohanraj.
+
+Who is the Examination Cell Coordinator?
+Mr. P. Arun Prakash.
+
+Who is the NPTEL Coordinator?
+Ms. N. Gayathri.
+
+Who is the Industrial Visit Coordinator?
+Mr. B. Saravanan.
+
+Who teaches Database Management Systems?
+Ms. N. Gayathri.
+
+Who teaches Cloud Computing?
+Dr. S. Ananthi.
+
+Who teaches Artificial Intelligence and Machine Learning?
+Ms. V. Niranjani.
+
+Who teaches Java Programming?
+Mr. R. Giridharan.
+
+Who teaches Ethical Hacking?
+Dr. A. Sarfaraz Ahmed.
+
+Who teaches Computer Networks?
+Dr. N. Kumareshan.
+
+Who teaches Software Engineering?
+Dr. S. K. Hari Karthik.
+
+============================================================
+KEYWORDS
+============================================================
+
+PAC
+Programme Assessment Committee
+Programme Assessment Committee CSE
+UG PAC
+PAC Coordinator
+Department of Computer Science and Engineering
+Computer Science Department
+CSE
+Outcome Based Education
+OBE
+Programme Outcomes
+Academic Quality
+Curriculum Delivery
+BoS
+Board of Studies
+HOD
+Head of Department
+Module Coordinator
+Course Coordinator
+Faculty Coordinator
+Events Coordinator
+Placement Coordinator
+Industrial Visit
+IV Coordinator
+NPTEL
+Examination Cell
+Database Management Systems
+DBMS
+DAA
+Cloud Computing
+Java Programming
+Artificial Intelligence
+Machine Learning
+AIML
+Computer Networks
+Ethical Hacking
+Cryptography and Network Security
+Software Project Management
+Discrete Mathematics
+Automata Theory and Compiler Design
+Digital Principles and Computer Organization
+Principles of Management
