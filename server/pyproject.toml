@@ -13,6 +13,7 @@ dependencies = [
     "langchain-core==0.3.68",
     "langchain-groq==0.2.5",
     "langchain-huggingface==0.1.2",
+    "langchain-openai>=0.3.28",
     "langchain-text-splitters==0.3.8",
     "numpy==2.4.6",
     "pydantic==2.13.4",

@@ -192,14 +192,10 @@ async def main_async():
             logger.error(f"Failed to process file {filename}: {e}")
 
     if all_new_chunks:
-        # 6. Enrich chunks using LLM
-        try:
-            enricher = LLMEnricher()
-            enriched_chunks = await enricher.enrich_all_chunks(all_new_chunks, cache)
-        except Exception as e:
-            logger.error(f"Knowledge enrichment failed: {e}")
-            logger.info("Proceeding without semantic enrichment...")
-            enriched_chunks = all_new_chunks
+        # 6. Skip LLM enrichment — knowledge files are pre-structured with
+        #    keywords, aliases, and user questions baked in directly.
+        logger.info(f"Skipping LLM enrichment. Using {len(all_new_chunks)} pre-structured chunks directly.")
+        enriched_chunks = all_new_chunks
 
         # 7. Deduplicate new chunks
         cleaned_chunks = deduplicate_chunks(enriched_chunks, embeddings)

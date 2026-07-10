@@ -1,12 +1,13 @@
 import asyncio
+import time
 import json
 from typing import List, Dict, Any, Optional
 from pydantic import BaseModel, Field
 from langchain_core.documents import Document
-from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from cache_manager import IncrementalCache
-from config import GROQ_API_KEY, ENRICHMENT_MODEL, ENRICHMENT_TEMPERATURE
+from config import OPENROUTER_API_KEY, OPENROUTER_BASE_URL, ENRICHMENT_MODEL, ENRICHMENT_TEMPERATURE
 
 
 class ChunkEnrichment(BaseModel):
@@ -34,18 +35,23 @@ class ChunkEnrichment(BaseModel):
     )
 
 class LLMEnricher:
-    """Uses Groq LLM to enrich documents with semantic search context."""
+    """Uses OpenRouter LLM (free tier) to enrich documents with semantic search context."""
     
-    def __init__(self, api_key: str = GROQ_API_KEY):
+    def __init__(self, api_key: str = OPENROUTER_API_KEY):
         if not api_key:
-            raise ValueError("GROQ_API_KEY is not configured.")
+            raise ValueError("OPENROUTER_API_KEY is not configured in .env")
         
-        self.llm = ChatGroq(
-            model_name=ENRICHMENT_MODEL,
-            groq_api_key=api_key,
-            temperature=ENRICHMENT_TEMPERATURE
+        # OpenRouter is OpenAI-compatible — just swap base_url and api_key
+        self.llm = ChatOpenAI(
+            model=ENRICHMENT_MODEL,
+            api_key=api_key,
+            base_url=OPENROUTER_BASE_URL,
+            temperature=ENRICHMENT_TEMPERATURE,
+            default_headers={
+                "HTTP-Referer": "https://github.com/CSE-bot",
+                "X-Title": "CSE-bot RAG Enricher"
+            }
         )
-        # Configure LLM to output structured JSON matching the Pydantic schema
         self.structured_llm = self.llm.with_structured_output(ChunkEnrichment)
         
         self.prompt = ChatPromptTemplate.from_messages([
@@ -66,50 +72,56 @@ class LLMEnricher:
         ])
         self.chain = self.prompt | self.structured_llm
 
-    async def enrich_chunk(self, doc: Document, cache: IncrementalCache, semaphore: asyncio.Semaphore) -> Document:
+    async def enrich_chunk(self, doc: Document, cache: IncrementalCache) -> Document:
         """Enriches a single chunk using Groq LLM, leveraging cache if available."""
         original_content = doc.metadata.get("original_content", doc.page_content)
         content_hash = cache.compute_hash(original_content)
         
-        # Check cache first
+        # Check cache first — cached chunks never hit the API
         cached_data = cache.get_cached_enrichment(content_hash)
         if cached_data:
             return self._apply_enrichment(doc, cached_data)
-            
-        async with semaphore:
-            for attempt in range(3): # Simple retry logic
-                try:
-                    # Run the LangChain chain in an executor since invoke is synchronous
-                    loop = asyncio.get_event_loop()
-                    enrichment: ChunkEnrichment = await loop.run_in_executor(
-                        None, 
-                        lambda: self.chain.invoke({
-                            "doc_title": doc.metadata.get("doc_title", "Unknown"),
-                            "section_title": doc.metadata.get("section_title", "Unknown"),
-                            "chunk_content": original_content
-                        })
-                    )
-                    
-                    enrichment_dict = enrichment.model_dump()
-                    cache.set_cached_enrichment(content_hash, enrichment_dict)
-                    return self._apply_enrichment(doc, enrichment_dict)
-                except Exception as e:
-                    print(f"Error enriching chunk (Attempt {attempt + 1}/3): {e}")
-                    if attempt < 2:
-                        await asyncio.sleep(2 ** attempt) # Exponential backoff
-                    else:
-                        print(f"Failed to enrich chunk after 3 attempts. Falling back to default metadata.")
-            
-            # Fallback when LLM calls fail
-            fallback_dict = {
-                "expanded_acronyms": {},
-                "synonyms_and_alternate_terms": {},
-                "hypothetical_user_queries": [],
-                "summary": doc.metadata.get("section_title", "Section detail"),
-                "extracted_keywords": [],
-                "category": "General"
-            }
-            return self._apply_enrichment(doc, fallback_dict)
+
+        # Not cached — call Groq with retry + backoff
+        for attempt in range(3):
+            try:
+                loop = asyncio.get_event_loop()
+                # Truncate content on late attempts if model is struggling with input size
+                processing_content = original_content if attempt < 2 else original_content[:1500]
+                
+                enrichment: ChunkEnrichment = await loop.run_in_executor(
+                    None,
+                    lambda: self.chain.invoke({
+                        "doc_title": doc.metadata.get("doc_title", "Unknown"),
+                        "section_title": doc.metadata.get("section_title", "Unknown"),
+                        "chunk_content": processing_content
+                    })
+                )
+                enrichment_dict = enrichment.model_dump()
+                cache.set_cached_enrichment(content_hash, enrichment_dict)
+                return self._apply_enrichment(doc, enrichment_dict)
+            except Exception as e:
+                error_msg = str(e)
+                is_empty_err = "model output must contain either output text or tool calls" in error_msg
+                wait = 10 if is_empty_err else 5 * (attempt + 1)
+                
+                print(f"Error enriching chunk (Attempt {attempt + 1}/3): {e}")
+                if attempt < 2:
+                    print(f"  Waiting {wait}s before retry...")
+                    await asyncio.sleep(wait)
+                else:
+                    print("Failed to enrich chunk after 3 attempts. Using fallback metadata.")
+
+        # Fallback when all LLM attempts fail
+        fallback_dict = {
+            "expanded_acronyms": {},
+            "synonyms_and_alternate_terms": {},
+            "hypothetical_user_queries": [],
+            "summary": doc.metadata.get("section_title", "Section detail"),
+            "extracted_keywords": [],
+            "category": "General"
+        }
+        return self._apply_enrichment(doc, fallback_dict)
 
     def _apply_enrichment(self, doc: Document, enrichment: Dict[str, Any]) -> Document:
         """Appends semantic context to page_content and updates metadata."""
@@ -148,11 +160,37 @@ class LLMEnricher:
         return doc
 
     async def enrich_all_chunks(self, chunks: List[Document], cache: IncrementalCache, max_concurrency: int = 5) -> List[Document]:
-        """Runs the enrichment in parallel with a concurrency throttle."""
-        semaphore = asyncio.Semaphore(max_concurrency)
-        tasks = [self.enrich_chunk(chunk, cache, semaphore) for chunk in chunks]
+        """Enriches chunks sequentially with a token-budget delay to stay within Groq TPM limits.
         
-        print(f"Enriching {len(chunks)} chunks with Groq LLM (Concurrency limit: {max_concurrency})...")
-        enriched_chunks = await asyncio.gather(*tasks)
-        print("All chunks enriched successfully.")
+        Groq free tier: 12,000 TPM. Each chunk costs ~800-1100 tokens.
+        A 5-second gap between API calls keeps us safely under the limit.
+        Cached chunks skip the API call entirely and have no delay.
+        """
+        enriched_chunks = []
+        api_call_count = 0
+        cached_count = 0
+        total = len(chunks)
+
+        print(f"Enriching {total} chunks with Groq LLM (sequential, rate-limited)...")
+
+        for i, chunk in enumerate(chunks):
+            original_content = chunk.metadata.get("original_content", chunk.page_content)
+            content_hash = cache.compute_hash(original_content)
+            is_cached = cache.get_cached_enrichment(content_hash) is not None
+
+            if is_cached:
+                cached_count += 1
+            else:
+                # Throttle: wait 5s before each real API call to stay under 12K TPM
+                if api_call_count > 0:
+                    await asyncio.sleep(5)
+                api_call_count += 1
+
+            enriched = await self.enrich_chunk(chunk, cache)
+            enriched_chunks.append(enriched)
+
+            status = "(cached)" if is_cached else f"(API call #{api_call_count})"
+            print(f"  [{i + 1}/{total}] {chunk.metadata.get('section_title', 'chunk')[:60]} {status}")
+
+        print(f"Enrichment complete. {cached_count} cached, {api_call_count} API calls made.")
         return enriched_chunks

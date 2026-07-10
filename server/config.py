@@ -16,9 +16,12 @@ CACHE_FILE = os.path.join(BASE_DIR, "indexing_cache.json")
 EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 EMBEDDING_DEVICE = "cpu" # Change to "cuda" if GPU is available
 
-# LLM Configuration for Knowledge Enrichment
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-ENRICHMENT_MODEL = "llama-3.3-70b-versatile"
+# LLM Configuration for Knowledge Enrichment (OpenRouter — free tier, no daily limits)
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")           # kept for reference
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+# Free models on OpenRouter (suffix :free = no cost, no daily cap)
+ENRICHMENT_MODEL = "google/gemma-3-27b-it:free"
 ENRICHMENT_TEMPERATURE = 0.1
 
 # Chunking Configuration
