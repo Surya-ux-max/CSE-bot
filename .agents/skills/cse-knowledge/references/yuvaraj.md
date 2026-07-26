@@ -1,6 +1,4 @@
-============================================================
-DR. S. YUVARAJ — FACULTY PROFILE
-============================================================
+# DR. S. YUVARAJ — FACULTY PROFILE
 
 Category: Faculty Profile
 Department: Computer Science and Engineering (CSE)

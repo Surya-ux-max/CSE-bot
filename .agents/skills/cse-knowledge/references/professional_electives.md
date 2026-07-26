@@ -1,6 +1,4 @@
-============================================================
-PROFESSIONAL ELECTIVES — OVERVIEW
-============================================================
+# PROFESSIONAL ELECTIVES — OVERVIEW
 
 Category: Professional Electives
 Department: Computer Science and Engineering (CSE)
@@ -55,9 +53,7 @@ Specialization Tracks
 4 Electives
 Elective List
 
-============================================================
-PROFESSIONAL ELECTIVE SPECIALIZATION — PROGRAMMING
-============================================================
+## PROFESSIONAL ELECTIVE SPECIALIZATION — PROGRAMMING
 
 Category: Professional Elective — Specialization
 Department: Computer Science and Engineering (CSE)
@@ -104,9 +100,7 @@ Golang
 R Programming
 Programming Electives
 
-============================================================
-PROFESSIONAL ELECTIVE SPECIALIZATION — ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
-============================================================
+## PROFESSIONAL ELECTIVE SPECIALIZATION — ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
 
 Category: Professional Elective — Specialization
 Department: Computer Science and Engineering (CSE)
@@ -158,9 +152,7 @@ Robotics
 Autonomous Systems
 AIML Electives
 
-============================================================
-PROFESSIONAL ELECTIVE SPECIALIZATION — DATA SCIENCE AND ANALYTICS
-============================================================
+## PROFESSIONAL ELECTIVE SPECIALIZATION — DATA SCIENCE AND ANALYTICS
 
 Category: Professional Elective — Specialization
 Department: Computer Science and Engineering (CSE)
@@ -203,9 +195,7 @@ Predictive Analytics
 Statistical Analysis
 Data Visualization
 
-============================================================
-PROFESSIONAL ELECTIVE SPECIALIZATION — CLOUD COMPUTING AND DEVOPS
-============================================================
+## PROFESSIONAL ELECTIVE SPECIALIZATION — CLOUD COMPUTING AND DEVOPS
 
 Category: Professional Elective — Specialization
 Department: Computer Science and Engineering (CSE)
@@ -249,9 +239,7 @@ Cloud Security
 Multi-Cloud
 Infrastructure
 
-============================================================
-PROFESSIONAL ELECTIVE SPECIALIZATION — CYBERSECURITY
-============================================================
+## PROFESSIONAL ELECTIVE SPECIALIZATION — CYBERSECURITY
 
 Category: Professional Elective — Specialization
 Department: Computer Science and Engineering (CSE)
@@ -296,9 +284,7 @@ Incident Response
 Privacy
 Data Protection
 
-============================================================
-PROFESSIONAL ELECTIVE SPECIALIZATION — FULL STACK AND WEB DEVELOPMENT
-============================================================
+## PROFESSIONAL ELECTIVE SPECIALIZATION — FULL STACK AND WEB DEVELOPMENT
 
 Category: Professional Elective — Specialization
 Department: Computer Science and Engineering (CSE)
@@ -350,9 +336,7 @@ Microservices
 API Design
 UI/UX Design
 
-============================================================
-PROFESSIONAL ELECTIVE SPECIALIZATION — INTERNET OF THINGS AND EMBEDDED SYSTEMS
-============================================================
+## PROFESSIONAL ELECTIVE SPECIALIZATION — INTERNET OF THINGS AND EMBEDDED SYSTEMS
 
 Category: Professional Elective — Specialization
 Department: Computer Science and Engineering (CSE)

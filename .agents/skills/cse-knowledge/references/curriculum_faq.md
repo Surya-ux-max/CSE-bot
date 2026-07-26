@@ -1,6 +1,4 @@
-============================================================
-CURRICULUM FAQ — FREQUENTLY ASKED QUESTIONS
-============================================================
+# CURRICULUM FAQ — FREQUENTLY ASKED QUESTIONS
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -43,9 +41,7 @@ CBCS
 163 Credits
 8 Semesters
 
-============================================================
-REGULATION AND FRAMEWORK — CSE CURRICULUM
-============================================================
+## REGULATION AND FRAMEWORK — CSE CURRICULUM
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -89,9 +85,7 @@ CBCS
 163 Credits
 Curriculum Framework
 
-============================================================
-SEMESTER I SUBJECTS — C PROGRAMMING AND MATHEMATICS
-============================================================
+## SEMESTER I SUBJECTS — C PROGRAMMING AND MATHEMATICS
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -131,9 +125,7 @@ Physics
 Application Design
 Engineering Practices Laboratory
 
-============================================================
-SEMESTER II SUBJECTS — PYTHON AND DATA STRUCTURES
-============================================================
+## SEMESTER II SUBJECTS — PYTHON AND DATA STRUCTURES
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -178,9 +170,7 @@ Electronics
 Microprocessors
 Logical Thinking
 
-============================================================
-SEMESTER III SUBJECTS — JAVA, DBMS, AND ALGORITHMS
-============================================================
+## SEMESTER III SUBJECTS — JAVA, DBMS, AND ALGORITHMS
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -230,9 +220,7 @@ Digital Principles Computer Organization
 DPCO
 Universal Human Values
 
-============================================================
-SEMESTER IV SUBJECTS — CLOUD COMPUTING AND FULL STACK
-============================================================
+## SEMESTER IV SUBJECTS — CLOUD COMPUTING AND FULL STACK
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -278,9 +266,7 @@ Probability Statistics
 Full Stack Laboratory
 Cloud Laboratory
 
-============================================================
-SEMESTER V SUBJECTS — AI, ML, AND DATA SCIENCE
-============================================================
+## SEMESTER V SUBJECTS — AI, ML, AND DATA SCIENCE
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -330,9 +316,7 @@ Summer Internship
 Embedded Systems
 Open Elective
 
-============================================================
-SEMESTER VI SUBJECTS — CYBERSECURITY AND PROJECT MANAGEMENT
-============================================================
+## SEMESTER VI SUBJECTS — CYBERSECURITY AND PROJECT MANAGEMENT
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -378,9 +362,7 @@ Principles of Management
 POM
 Cyber Security
 
-============================================================
-SEMESTER VII AND VIII — FINAL YEAR AND PROJECTS
-============================================================
+## SEMESTER VII AND VIII — FINAL YEAR AND PROJECTS
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)
@@ -444,9 +426,7 @@ Final Year Project
 FYP
 Capstone Project
 
-============================================================
-INTERNSHIP AND PROJECT PHASES
-============================================================
+## INTERNSHIP AND PROJECT PHASES
 
 Category: Curriculum FAQ
 Department: Computer Science and Engineering (CSE)

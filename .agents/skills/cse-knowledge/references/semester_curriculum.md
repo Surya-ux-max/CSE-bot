@@ -1,6 +1,4 @@
-============================================================
-SEMESTER I — FOUNDATION OF ENGINEERING AND PROGRAMMING
-============================================================
+# SEMESTER I — FOUNDATION OF ENGINEERING AND PROGRAMMING
 
 Category: Semester Curriculum
 Department: Computer Science and Engineering (CSE)
@@ -63,9 +61,7 @@ Soft Skills
 Heritage of Tamils
 Foundation of Engineering
 
-============================================================
-SEMESTER II — PROGRAMMING AND DATA STRUCTURES
-============================================================
+## SEMESTER II — PROGRAMMING AND DATA STRUCTURES
 
 Category: Semester Curriculum
 Department: Computer Science and Engineering (CSE)
@@ -132,9 +128,7 @@ OOP Laboratory
 Logical Thinking
 Tamils and Technology
 
-============================================================
-SEMESTER III — ALGORITHMS AND DATABASES
-============================================================
+## SEMESTER III — ALGORITHMS AND DATABASES
 
 Category: Semester Curriculum
 Department: Computer Science and Engineering (CSE)
@@ -207,9 +201,7 @@ DBMS Laboratory
 Advanced Logical Thinking
 Universal Human Values
 
-============================================================
-SEMESTER IV — SYSTEMS AND WEB TECHNOLOGIES
-============================================================
+## SEMESTER IV — SYSTEMS AND WEB TECHNOLOGIES
 
 Category: Semester Curriculum
 Department: Computer Science and Engineering (CSE)
@@ -279,9 +271,7 @@ Full Stack Development Laboratory
 Aptitude and Reasoning
 Environmental Science
 
-============================================================
-SEMESTER V — INTELLIGENT SYSTEMS AND DATA
-============================================================
+## SEMESTER V — INTELLIGENT SYSTEMS AND DATA
 
 Category: Semester Curriculum
 Department: Computer Science and Engineering (CSE)
@@ -351,9 +341,7 @@ AI Laboratory
 Data Science Laboratory
 Communication Skills
 
-============================================================
-SEMESTER VI — SECURITY AND ADVANCED COMPUTING
-============================================================
+## SEMESTER VI — SECURITY AND ADVANCED COMPUTING
 
 Category: Semester Curriculum
 Department: Computer Science and Engineering (CSE)
@@ -418,9 +406,7 @@ Professional Elective I
 Cyber Security Laboratory
 Industry Interaction
 
-============================================================
-SEMESTER VII — ADVANCED TOPICS AND PROJECT PHASE I
-============================================================
+## SEMESTER VII — ADVANCED TOPICS AND PROJECT PHASE I
 
 Category: Semester Curriculum
 Department: Computer Science and Engineering (CSE)
@@ -486,9 +472,7 @@ Project Phase I
 Final Year Project
 Pre-final Semester
 
-============================================================
-SEMESTER VIII — FINAL YEAR AND PROJECT PHASE II
-============================================================
+## SEMESTER VIII — FINAL YEAR AND PROJECT PHASE II
 
 Category: Semester Curriculum
 Department: Computer Science and Engineering (CSE)

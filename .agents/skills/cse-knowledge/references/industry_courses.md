@@ -1,6 +1,4 @@
-============================================================
-INDUSTRY ORIENTED COURSES — OVERVIEW
-============================================================
+# INDUSTRY ORIENTED COURSES — OVERVIEW
 
 Category: Industry Oriented Courses
 Department: Computer Science and Engineering (CSE)

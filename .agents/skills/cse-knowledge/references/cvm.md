@@ -1,6 +1,4 @@
-============================================================
-CSE DEPARTMENT — CAREER PROGRESSION, VISION AND MISSION
-============================================================
+# CSE DEPARTMENT — CAREER PROGRESSION, VISION AND MISSION
 
 Category: Career Progression, Vision and Mission
 Department: Computer Science and Engineering (CSE)
@@ -53,9 +51,7 @@ Innovation
 Ethical Values
 Leadership
 
-============================================================
-CAREER PROGRESSION — JOB ROLES AFTER CSE
-============================================================
+## CAREER PROGRESSION — JOB ROLES AFTER CSE
 
 Category: Career Progression
 Department: Computer Science and Engineering (CSE)
@@ -125,9 +121,7 @@ Research Institutions
 Higher Education
 Entrepreneurship
 
-============================================================
-VISION — DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
-============================================================
+## VISION — DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
 
 Category: Department Vision
 Department: Computer Science and Engineering (CSE)
@@ -170,9 +164,7 @@ Ethical Values
 Leadership
 Technology Industry
 
-============================================================
-MISSION — DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
-============================================================
+## MISSION — DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
 
 Category: Department Mission
 Department: Computer Science and Engineering (CSE)

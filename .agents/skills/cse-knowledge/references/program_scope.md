@@ -1,6 +1,4 @@
-============================================================
-PROGRAMME SCOPE — COMPUTER SCIENCE AND ENGINEERING
-============================================================
+# PROGRAMME SCOPE — COMPUTER SCIENCE AND ENGINEERING
 
 Category: Programme Scope
 Department: Computer Science and Engineering (CSE)

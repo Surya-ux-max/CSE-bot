@@ -1,6 +1,4 @@
-============================================================
-CORPORATE ADVISORY BOARD — OVERVIEW
-============================================================
+# CORPORATE ADVISORY BOARD — OVERVIEW
 
 Category: Corporate Advisory Board
 Department: Computer Science and Engineering (CSE)
@@ -52,9 +50,7 @@ Industry Guidance
 Curriculum Development
 Industry Collaboration
 
-============================================================
-MR. SACHIN SHARMA — CORPORATE ADVISORY BOARD MEMBER (MICROSOFT)
-============================================================
+## MR. SACHIN SHARMA — CORPORATE ADVISORY BOARD MEMBER (MICROSOFT)
 
 Category: Corporate Advisory Board Member
 Department: Computer Science and Engineering (CSE)
@@ -92,9 +88,7 @@ SDE
 Corporate Advisory Board Member
 Industry Expert
 
-============================================================
-MR. AKHIL ANAND — CORPORATE ADVISORY BOARD MEMBER (AMAZON)
-============================================================
+## MR. AKHIL ANAND — CORPORATE ADVISORY BOARD MEMBER (AMAZON)
 
 Category: Corporate Advisory Board Member
 Department: Computer Science and Engineering (CSE)
@@ -127,9 +121,7 @@ Amazon
 Corporate Advisory Board Member
 Industry Expert
 
-============================================================
-MR. UMASHANKAR — CORPORATE ADVISORY BOARD MEMBER (1CLOUDHUB)
-============================================================
+## MR. UMASHANKAR — CORPORATE ADVISORY BOARD MEMBER (1CLOUDHUB)
 
 Category: Corporate Advisory Board Member
 Department: Computer Science and Engineering (CSE)
@@ -168,9 +160,7 @@ Corporate Advisory Board Member
 Cloud Computing
 Technology Leadership
 
-============================================================
-MR. VISHNU PRASAD — CORPORATE ADVISORY BOARD MEMBER (ZOHO)
-============================================================
+## MR. VISHNU PRASAD — CORPORATE ADVISORY BOARD MEMBER (ZOHO)
 
 Category: Corporate Advisory Board Member
 Department: Computer Science and Engineering (CSE)

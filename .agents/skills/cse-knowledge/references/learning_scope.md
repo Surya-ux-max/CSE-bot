@@ -1,6 +1,4 @@
-============================================================
-LEARNING SCOPE — COMPUTER SCIENCE AND ENGINEERING
-============================================================
+# LEARNING SCOPE — COMPUTER SCIENCE AND ENGINEERING
 
 Category: Learning Scope
 Department: Computer Science and Engineering (CSE)

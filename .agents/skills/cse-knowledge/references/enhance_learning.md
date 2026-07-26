@@ -1,6 +1,4 @@
-============================================================
-ENHANCED LEARNING — OVERVIEW
-============================================================
+# ENHANCED LEARNING — OVERVIEW
 
 Category: Enhanced Learning
 Department: Computer Science and Engineering (CSE)
@@ -47,9 +45,7 @@ Practical Learning
 Industry Readiness
 CSE Department Facilities
 
-============================================================
-PROGRAMMING LANGUAGES LABORATORY
-============================================================
+## PROGRAMMING LANGUAGES LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -92,9 +88,7 @@ Coding
 Lab
 Practical Programming
 
-============================================================
-DATA STRUCTURES LABORATORY
-============================================================
+## DATA STRUCTURES LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -134,9 +128,7 @@ Sorting
 Searching
 Algorithms
 
-============================================================
-DESIGN AND ANALYSIS OF ALGORITHMS LABORATORY
-============================================================
+## DESIGN AND ANALYSIS OF ALGORITHMS LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -175,9 +167,7 @@ Algorithm Analysis
 Complexity Analysis
 Optimization
 
-============================================================
-SOFTWARE ENGINEERING LABORATORY
-============================================================
+## SOFTWARE ENGINEERING LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -210,9 +200,7 @@ Software Design
 Software Testing
 Project Development
 
-============================================================
-OPERATING SYSTEMS LABORATORY
-============================================================
+## OPERATING SYSTEMS LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -245,9 +233,7 @@ Memory Management
 File Systems
 OS Concepts
 
-============================================================
-DATABASE MANAGEMENT SYSTEMS LABORATORY
-============================================================
+## DATABASE MANAGEMENT SYSTEMS LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -286,9 +272,7 @@ Database Design
 Normalization
 Database Management Systems
 
-============================================================
-FULL STACK DEVELOPMENT LABORATORY
-============================================================
+## FULL STACK DEVELOPMENT LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -325,9 +309,7 @@ APIs
 Web Applications
 Web Development Lab
 
-============================================================
-ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING LABORATORY
-============================================================
+## ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -372,9 +354,7 @@ Neural Networks
 Intelligent Systems
 Semester V
 
-============================================================
-DATA SCIENCE LABORATORY
-============================================================
+## DATA SCIENCE LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -408,9 +388,7 @@ Data Visualization
 Predictive Analytics
 Business Analytics
 
-============================================================
-CLOUD COMPUTING LABORATORY
-============================================================
+## CLOUD COMPUTING LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -444,9 +422,7 @@ Virtualization
 Cloud Deployment
 Cloud Native Applications
 
-============================================================
-CRYPTOGRAPHY AND CYBER SECURITY LABORATORY
-============================================================
+## CRYPTOGRAPHY AND CYBER SECURITY LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -484,9 +460,7 @@ Ethical Hacking
 Penetration Testing
 Secure Software Development
 
-============================================================
-BLOCKCHAIN TECHNOLOGIES LABORATORY
-============================================================
+## BLOCKCHAIN TECHNOLOGIES LABORATORY
 
 Category: Laboratory
 Department: Computer Science and Engineering (CSE)
@@ -519,9 +493,7 @@ Decentralized Applications
 Distributed Ledger
 Blockchain Development
 
-============================================================
-CENTRE OF EXCELLENCE IN FULL STACK APPLICATION DEVELOPMENT
-============================================================
+## CENTRE OF EXCELLENCE IN FULL STACK APPLICATION DEVELOPMENT
 
 Category: Centre of Excellence
 Department: Computer Science and Engineering (CSE)
@@ -568,9 +540,7 @@ Industrial Projects
 Certifications
 Research
 
-============================================================
-CENTRE OF EXCELLENCE IN CLOUD COMPUTING
-============================================================
+## CENTRE OF EXCELLENCE IN CLOUD COMPUTING
 
 Category: Centre of Excellence
 Department: Computer Science and Engineering (CSE)
@@ -612,9 +582,7 @@ Certifications
 Research
 Cloud Architecture
 
-============================================================
-VALUE ADDED COURSES — CSE DEPARTMENT
-============================================================
+## VALUE ADDED COURSES — CSE DEPARTMENT
 
 Category: Value Added Courses
 Department: Computer Science and Engineering (CSE)
@@ -669,9 +637,7 @@ Power BI
 Data Visualization
 Mobile Web Testing
 
-============================================================
-INNOVATIVE TEACHING METHODS — CSE DEPARTMENT
-============================================================
+## INNOVATIVE TEACHING METHODS — CSE DEPARTMENT
 
 Category: Innovative Teaching Methods
 Department: Computer Science and Engineering (CSE)

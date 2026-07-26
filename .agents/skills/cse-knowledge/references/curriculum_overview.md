@@ -1,6 +1,4 @@
-============================================================
-CURRICULUM OVERVIEW — B.E. COMPUTER SCIENCE AND ENGINEERING
-============================================================
+# CURRICULUM OVERVIEW — B.E. COMPUTER SCIENCE AND ENGINEERING
 
 Category: Curriculum Overview
 Department: Computer Science and Engineering (CSE)

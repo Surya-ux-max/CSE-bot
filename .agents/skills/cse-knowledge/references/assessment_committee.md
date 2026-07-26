@@ -1,6 +1,4 @@
-============================================================
-PROGRAMME ASSESSMENT COMMITTEE (PAC) — OVERVIEW
-============================================================
+# PROGRAMME ASSESSMENT COMMITTEE (PAC) — OVERVIEW
 
 Category: Programme Assessment Committee
 Department: Computer Science and Engineering (CSE)
@@ -49,9 +47,7 @@ Continuous Improvement
 2024-2025
 CSE Department
 
-============================================================
-DR. T. SIVAKUMAR — UG PAC COORDINATOR
-============================================================
+## DR. T. SIVAKUMAR — UG PAC COORDINATOR
 
 Category: Programme Assessment Committee
 Department: Computer Science and Engineering (CSE)
@@ -88,9 +84,7 @@ Professor
 Programme Assessment Committee
 OBE Coordinator
 
-============================================================
-MODULE COORDINATOR — DISCRETE MATHEMATICS
-============================================================
+## MODULE COORDINATOR — DISCRETE MATHEMATICS
 
 Category: Module Coordinator
 Department: Mathematics
@@ -126,9 +120,7 @@ Module Coordinator
 Department of Mathematics
 Programme Assessment Committee
 
-============================================================
-MODULE COORDINATOR — DESIGN AND ANALYSIS OF ALGORITHMS (DAA)
-============================================================
+## MODULE COORDINATOR — DESIGN AND ANALYSIS OF ALGORITHMS (DAA)
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -169,9 +161,7 @@ Module Coordinator
 Assistant Professor
 CSE Department
 
-============================================================
-MODULE COORDINATOR — DATABASE MANAGEMENT SYSTEMS (DBMS)
-============================================================
+## MODULE COORDINATOR — DATABASE MANAGEMENT SYSTEMS (DBMS)
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -211,9 +201,7 @@ Module Coordinator
 NPTEL Coordinator
 Semester III
 
-============================================================
-MODULE COORDINATOR — SOFTWARE ENGINEERING
-============================================================
+## MODULE COORDINATOR — SOFTWARE ENGINEERING
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -249,9 +237,7 @@ Module Coordinator
 Associate Professor
 Semester III
 
-============================================================
-MODULE COORDINATOR — DIGITAL PRINCIPLES AND COMPUTER ORGANIZATION (DPCO)
-============================================================
+## MODULE COORDINATOR — DIGITAL PRINCIPLES AND COMPUTER ORGANIZATION (DPCO)
 
 Category: Module Coordinator
 Department: Electronics and Communication Engineering
@@ -288,9 +274,7 @@ Module Coordinator
 ECE Department
 Electronics and Communication Engineering
 
-============================================================
-MODULE COORDINATOR — JAVA PROGRAMMING
-============================================================
+## MODULE COORDINATOR — JAVA PROGRAMMING
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -329,9 +313,7 @@ Module Coordinator
 Assistant Professor
 Semester III
 
-============================================================
-MODULE COORDINATOR — AUTOMATA THEORY AND COMPILER DESIGN (ATCD)
-============================================================
+## MODULE COORDINATOR — AUTOMATA THEORY AND COMPILER DESIGN (ATCD)
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -366,9 +348,7 @@ ATCD
 Module Coordinator
 Associate Professor
 
-============================================================
-MODULE COORDINATOR — CLOUD COMPUTING
-============================================================
+## MODULE COORDINATOR — CLOUD COMPUTING
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -405,9 +385,7 @@ Module Coordinator
 Assistant Professor
 Semester IV
 
-============================================================
-MODULE COORDINATOR — ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING (AIML)
-============================================================
+## MODULE COORDINATOR — ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING (AIML)
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -453,9 +431,7 @@ Assistant Professor
 Events Coordinator
 Semester V
 
-============================================================
-MODULE COORDINATOR — COMPUTER NETWORKS (CN)
-============================================================
+## MODULE COORDINATOR — COMPUTER NETWORKS (CN)
 
 Category: Module Coordinator
 Department: Electronics and Communication Engineering
@@ -492,9 +468,7 @@ Module Coordinator
 Professor
 ECE Department
 
-============================================================
-MODULE COORDINATOR — PRINCIPLES OF MANAGEMENT (POM)
-============================================================
+## MODULE COORDINATOR — PRINCIPLES OF MANAGEMENT (POM)
 
 Category: Module Coordinator
 Department: Mechanical Engineering
@@ -532,9 +506,7 @@ Module Coordinator
 Associate Professor
 Mechanical Engineering
 
-============================================================
-MODULE COORDINATOR — CRYPTOGRAPHY AND NETWORK SECURITY (CNS)
-============================================================
+## MODULE COORDINATOR — CRYPTOGRAPHY AND NETWORK SECURITY (CNS)
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -573,9 +545,7 @@ Network Security
 Module Coordinator
 Semester VI
 
-============================================================
-MODULE COORDINATOR — ETHICAL HACKING
-============================================================
+## MODULE COORDINATOR — ETHICAL HACKING
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -612,9 +582,7 @@ Penetration Testing
 Module Coordinator
 Semester VI
 
-============================================================
-MODULE COORDINATOR — SOFTWARE PROJECT MANAGEMENT (SPM)
-============================================================
+## MODULE COORDINATOR — SOFTWARE PROJECT MANAGEMENT (SPM)
 
 Category: Module Coordinator
 Department: Computer Science and Engineering (CSE)
@@ -649,9 +617,7 @@ SPM
 Module Coordinator
 Assistant Professor
 
-============================================================
-ACADEMIC COORDINATORS — CSE DEPARTMENT
-============================================================
+## ACADEMIC COORDINATORS — CSE DEPARTMENT
 
 Category: Academic Coordinators
 Department: Computer Science and Engineering (CSE)

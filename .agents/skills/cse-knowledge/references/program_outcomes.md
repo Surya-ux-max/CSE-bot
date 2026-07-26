@@ -1,6 +1,4 @@
-============================================================
-PROGRAMME OUTCOMES (POs) — OVERVIEW
-============================================================
+# PROGRAMME OUTCOMES (POs) — OVERVIEW
 
 Category: Programme Outcomes
 Department: Computer Science and Engineering (CSE)
@@ -51,9 +49,7 @@ Graduate Attributes
 Engineering Competencies
 CSE Programme Outcomes
 
-============================================================
-PO1 — ENGINEERING KNOWLEDGE
-============================================================
+## PO1 — ENGINEERING KNOWLEDGE
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -97,9 +93,7 @@ Computer Science
 Analytical Skills
 Technical Foundation
 
-============================================================
-PO2 — PROBLEM ANALYSIS
-============================================================
+## PO2 — PROBLEM ANALYSIS
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -139,9 +133,7 @@ Research Literature
 Critical Thinking
 Engineering Analysis
 
-============================================================
-PO3 — DESIGN AND DEVELOPMENT OF SOLUTIONS
-============================================================
+## PO3 — DESIGN AND DEVELOPMENT OF SOLUTIONS
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -184,9 +176,7 @@ Innovation
 Sustainability
 Real-World Problems
 
-============================================================
-PO4 — INVESTIGATION OF COMPLEX PROBLEMS
-============================================================
+## PO4 — INVESTIGATION OF COMPLEX PROBLEMS
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -227,9 +217,7 @@ Data Analysis
 Data Collection
 Engineering Investigation
 
-============================================================
-PO5 — ENGINEERING TOOL USAGE
-============================================================
+## PO5 — ENGINEERING TOOL USAGE
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -270,9 +258,7 @@ IT Resources
 Software Testing
 Technical Proficiency
 
-============================================================
-PO6 — THE ENGINEER AND SOCIETY
-============================================================
+## PO6 — THE ENGINEER AND SOCIETY
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -314,9 +300,7 @@ Social Responsibility
 Legal Compliance
 Responsible Engineering
 
-============================================================
-PO7 — ETHICS AND PROFESSIONAL RESPONSIBILITY
-============================================================
+## PO7 — ETHICS AND PROFESSIONAL RESPONSIBILITY
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -358,9 +342,7 @@ Inclusiveness
 Ethical Behaviour
 Engineering Standards
 
-============================================================
-PO8 — INDIVIDUAL AND TEAMWORK
-============================================================
+## PO8 — INDIVIDUAL AND TEAMWORK
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -401,9 +383,7 @@ Collaboration
 Interpersonal Skills
 Team Building
 
-============================================================
-PO9 — COMMUNICATION
-============================================================
+## PO9 — COMMUNICATION
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -444,9 +424,7 @@ Presentations
 Written Communication
 Oral Communication
 
-============================================================
-PO10 — PROJECT MANAGEMENT AND FINANCE
-============================================================
+## PO10 — PROJECT MANAGEMENT AND FINANCE
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)
@@ -485,9 +463,7 @@ Leadership
 Planning
 Engineering Management
 
-============================================================
-PO11 — LIFE-LONG LEARNING
-============================================================
+## PO11 — LIFE-LONG LEARNING
 
 Category: Programme Outcome
 Department: Computer Science and Engineering (CSE)

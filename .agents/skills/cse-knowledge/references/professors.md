@@ -1,6 +1,4 @@
-============================================================
-FACULTY OVERVIEW — DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
-============================================================
+# FACULTY OVERVIEW — DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
 
 Category: Faculty Members
 Department: Computer Science and Engineering (CSE)
@@ -60,9 +58,7 @@ Faculty Strength
 Total Faculty
 Teaching Staff
 
-============================================================
-DR. R. SUBHA — HEAD OF DEPARTMENT, CSE
-============================================================
+## DR. R. SUBHA — HEAD OF DEPARTMENT, CSE
 
 Category: Faculty Member — Head of Department
 Department: Computer Science and Engineering (CSE)
@@ -110,9 +106,7 @@ Professor and Head
 CSE Department Head
 HoD of CSE
 
-============================================================
-DR. H. ANANDAKUMAR — PROFESSOR AND ASSOCIATE DEAN
-============================================================
+## DR. H. ANANDAKUMAR — PROFESSOR AND ASSOCIATE DEAN
 
 Category: Faculty Member — Professor
 Department: Computer Science and Engineering (CSE)
@@ -147,9 +141,7 @@ Professor
 Associate Dean
 CSE Faculty
 
-============================================================
-DR. V. S. AKSHAYA — PROFESSOR, CSE
-============================================================
+## DR. V. S. AKSHAYA — PROFESSOR, CSE
 
 Category: Faculty Member — Professor
 Department: Computer Science and Engineering (CSE)
@@ -180,9 +172,7 @@ Akshaya
 Professor
 CSE Faculty
 
-============================================================
-DR. S. SAMPATH KUMAR — ASSOCIATE PROFESSOR, CSE
-============================================================
+## DR. S. SAMPATH KUMAR — ASSOCIATE PROFESSOR, CSE
 
 Category: Faculty Member — Associate Professor
 Department: Computer Science and Engineering (CSE)
@@ -219,9 +209,7 @@ ATCD
 Module Coordinator
 CSE Faculty
 
-============================================================
-DR. S. K. HARIKARTHIK — ASSOCIATE PROFESSOR, CSE
-============================================================
+## DR. S. K. HARIKARTHIK — ASSOCIATE PROFESSOR, CSE
 
 Category: Faculty Member — Associate Professor
 Department: Computer Science and Engineering (CSE)
@@ -258,9 +246,7 @@ Software Engineering
 Module Coordinator
 CSE Faculty
 
-============================================================
-DR. M. SURIYA — ASSOCIATE PROFESSOR, CSE
-============================================================
+## DR. M. SURIYA — ASSOCIATE PROFESSOR, CSE
 
 Category: Faculty Member — Associate Professor
 Department: Computer Science and Engineering (CSE)
@@ -290,9 +276,7 @@ Suriya
 Associate Professor
 CSE Faculty
 
-============================================================
-DR. K. SURESHKUMAR — ASSOCIATE PROFESSOR, CSE
-============================================================
+## DR. K. SURESHKUMAR — ASSOCIATE PROFESSOR, CSE
 
 Category: Faculty Member — Associate Professor
 Department: Computer Science and Engineering (CSE)
@@ -322,9 +306,7 @@ Sureshkumar
 Associate Professor
 CSE Faculty
 
-============================================================
-DR. A. ANANDARAJ — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. A. ANANDARAJ — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -352,9 +334,7 @@ Anandaraj
 Assistant Professor
 CSE Faculty
 
-============================================================
-DR. GOWTHAM CHAKRAVARTHY — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. GOWTHAM CHAKRAVARTHY — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -383,9 +363,7 @@ Gowtham
 Assistant Professor
 CSE Faculty
 
-============================================================
-DR. S. ANANTHI — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. S. ANANTHI — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -423,9 +401,7 @@ Module Coordinator
 CSE Faculty
 Semester IV
 
-============================================================
-DR. A. SARFARAZ AHMED — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. A. SARFARAZ AHMED — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -461,9 +437,7 @@ Ethical Hacking
 Module Coordinator
 CSE Faculty
 
-============================================================
-DR. S. YUVARAJ — ASSISTANT PROFESSOR (SENIOR GRADE), CSE
-============================================================
+## DR. S. YUVARAJ — ASSISTANT PROFESSOR (SENIOR GRADE), CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -528,9 +502,7 @@ Anna University
 6 Patents
 CSE Faculty
 
-============================================================
-DR. J. SREEMATHY — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. J. SREEMATHY — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -558,9 +530,7 @@ Sreemathy
 Assistant Professor
 CSE Faculty
 
-============================================================
-DR. M. PRAVEEN KUMAR — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. M. PRAVEEN KUMAR — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -599,9 +569,7 @@ CNS
 Module Coordinator
 CSE Faculty
 
-============================================================
-DR. N. SARANYA — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. N. SARANYA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -629,9 +597,7 @@ Saranya
 Assistant Professor
 CSE Faculty
 
-============================================================
-DR. V. NIRANJANI — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. V. NIRANJANI — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -674,9 +640,7 @@ Module Coordinator
 Events Coordinator
 CSE Faculty
 
-============================================================
-DR. A. MOHANRAJ — ASSISTANT PROFESSOR, CSE
-============================================================
+## DR. A. MOHANRAJ — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -711,9 +675,7 @@ Placement Coordinator
 CSE Faculty
 Placements
 
-============================================================
-MS. T. M. ISHWARYA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. T. M. ISHWARYA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -741,9 +703,7 @@ Ishwarya
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. S. SARADHA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. S. SARADHA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -771,9 +731,7 @@ Saradha
 Assistant Professor
 CSE Faculty
 
-============================================================
-MR. R. GIRIDHARAN — ASSISTANT PROFESSOR, CSE
-============================================================
+## MR. R. GIRIDHARAN — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -810,9 +768,7 @@ Java
 Module Coordinator
 CSE Faculty
 
-============================================================
-MS. M. KALAISELVI — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. M. KALAISELVI — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -840,9 +796,7 @@ Kalaiselvi
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. N. GAYATHRI — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. N. GAYATHRI — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -884,9 +838,7 @@ NPTEL Coordinator
 Module Coordinator
 CSE Faculty
 
-============================================================
-MS. B. GOMATHI — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. B. GOMATHI — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -914,9 +866,7 @@ Gomathi
 Assistant Professor
 CSE Faculty
 
-============================================================
-MR. B. SARAVANAN — ASSISTANT PROFESSOR, CSE
-============================================================
+## MR. B. SARAVANAN — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -951,9 +901,7 @@ Industrial Visit Coordinator
 IV Coordinator
 CSE Faculty
 
-============================================================
-MS. J. KEERTHIKA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. J. KEERTHIKA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -981,9 +929,7 @@ Keerthika
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. D. MOHANAPRIYA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. D. MOHANAPRIYA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1011,9 +957,7 @@ Mohanapriya
 Assistant Professor
 CSE Faculty
 
-============================================================
-MR. V. LAKSHMANAN — ASSISTANT PROFESSOR, CSE
-============================================================
+## MR. V. LAKSHMANAN — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1041,9 +985,7 @@ Lakshmanan
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. K. AGALYA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. K. AGALYA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1071,9 +1013,7 @@ Agalya
 Assistant Professor
 CSE Faculty
 
-============================================================
-MR. M. KARTHICK RAJA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MR. M. KARTHICK RAJA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1101,9 +1041,7 @@ Karthick Raja
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. E. SARANYA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. E. SARANYA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1131,9 +1069,7 @@ E Saranya
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. A. SUGANYAMAHALAKSHMI — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. A. SUGANYAMAHALAKSHMI — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1163,9 +1099,7 @@ Suganya
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. M. ABINAYA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. M. ABINAYA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1202,9 +1136,7 @@ SPM
 Module Coordinator
 CSE Faculty
 
-============================================================
-MR. P. ARUN PRAKASH — ASSISTANT PROFESSOR, CSE
-============================================================
+## MR. P. ARUN PRAKASH — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1238,9 +1170,7 @@ Examination Cell Coordinator
 Exam Coordinator
 CSE Faculty
 
-============================================================
-MS. N. PRIYANKA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. N. PRIYANKA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1268,9 +1198,7 @@ Priyanka
 Assistant Professor
 CSE Faculty
 
-============================================================
-MR. R. KIRUBAKARAN — ASSISTANT PROFESSOR, CSE
-============================================================
+## MR. R. KIRUBAKARAN — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1298,9 +1226,7 @@ Kirubakaran
 Assistant Professor
 CSE Faculty
 
-============================================================
-MR. K. SABARIGIRIVASON — ASSISTANT PROFESSOR, CSE
-============================================================
+## MR. K. SABARIGIRIVASON — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1328,9 +1254,7 @@ Sabarigirivason
 Assistant Professor
 CSE Faculty
 
-============================================================
-MR. R. KARTHICK — ASSISTANT PROFESSOR, CSE
-============================================================
+## MR. R. KARTHICK — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1358,9 +1282,7 @@ Karthick
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. N. LAVANYA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. N. LAVANYA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1388,9 +1310,7 @@ Lavanya
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. SOWBARNIKA — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. SOWBARNIKA — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1417,9 +1337,7 @@ Sowbarnika
 Assistant Professor
 CSE Faculty
 
-============================================================
-MS. R. RAJESWARI — ASSISTANT PROFESSOR, CSE
-============================================================
+## MS. R. RAJESWARI — ASSISTANT PROFESSOR, CSE
 
 Category: Faculty Member — Assistant Professor
 Department: Computer Science and Engineering (CSE)
@@ -1447,9 +1365,7 @@ Rajeswari
 Assistant Professor
 CSE Faculty
 
-============================================================
-MR. V. CHANDRAN — PROFESSOR OF PRACTICE, CSE
-============================================================
+## MR. V. CHANDRAN — PROFESSOR OF PRACTICE, CSE
 
 Category: Faculty Member — Professor of Practice
 Department: Computer Science and Engineering (CSE)
@@ -1481,9 +1397,7 @@ Professor of Practice
 CSE Faculty
 Industry Expert
 
-============================================================
-MR. A. JEEVA — PROFESSOR OF PRACTICE, CSE
-============================================================
+## MR. A. JEEVA — PROFESSOR OF PRACTICE, CSE
 
 Category: Faculty Member — Professor of Practice
 Department: Computer Science and Engineering (CSE)

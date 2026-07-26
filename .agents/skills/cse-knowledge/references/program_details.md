@@ -1,6 +1,4 @@
-============================================================
-PROGRAMME EDUCATIONAL OBJECTIVES (PEOs) — OVERVIEW
-============================================================
+# PROGRAMME EDUCATIONAL OBJECTIVES (PEOs) — OVERVIEW
 
 Category: Programme Educational Objectives
 Department: Computer Science and Engineering (CSE)
@@ -46,9 +44,7 @@ CSE
 Long-term Achievements
 Graduate Outcomes
 
-============================================================
-PEO1 — PROFESSIONAL CAREER DEVELOPMENT
-============================================================
+## PEO1 — PROFESSIONAL CAREER DEVELOPMENT
 
 Category: Programme Educational Objective
 Department: Computer Science and Engineering (CSE)
@@ -96,9 +92,7 @@ Problem Solving
 Industry Readiness
 Professional Competence
 
-============================================================
-PEO2 — LIFELONG LEARNING AND HIGHER EDUCATION
-============================================================
+## PEO2 — LIFELONG LEARNING AND HIGHER EDUCATION
 
 Category: Programme Educational Objective
 Department: Computer Science and Engineering (CSE)
@@ -146,9 +140,7 @@ Adaptability
 Emerging Technologies
 Continuous Learning
 
-============================================================
-PEO3 — INNOVATION AND ETHICAL COMPUTING
-============================================================
+## PEO3 — INNOVATION AND ETHICAL COMPUTING
 
 Category: Programme Educational Objective
 Department: Computer Science and Engineering (CSE)
