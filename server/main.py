@@ -124,9 +124,12 @@ def chat(request: ChatRequest):
     try:
         agent_name, answer = supervisor_router.route_and_execute(question, history)
     except Exception as e:
+        import traceback
         print(f"[API Error] Failed to generate agent response: {e}")
+        print(traceback.format_exc())
         agent_name = "reception_agent"
-        answer = "I apologize, I encountered an error while processing your request. Please try again."
+        answer = "I apologize, I encountered an error while processing your request. Please check if GROQ_API_KEY is configured on Render Dashboard."
+
         
     # Save to history
     history_manager.add_message(session_id, HumanMessage(content=question))

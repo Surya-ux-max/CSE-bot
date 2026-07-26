@@ -99,15 +99,19 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 
+from contextlib import contextmanager
+
 def init_db():
     """Creates all tables defined in Base."""
     Base.metadata.create_all(bind=engine)
 
 
+@contextmanager
 def get_db_session():
-    """Dependency helper to yield DB session."""
+    """Dependency helper to yield DB session as a context manager."""
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
+
