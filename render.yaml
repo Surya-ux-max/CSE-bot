@@ -3,7 +3,7 @@ services:
   - type: web
     name: cse-bot-backend
     env: python
-    region: singapore # Change region if desired (e.g., oregon, frankfurt)
+    region: singapore # Options: singapore, oregon, frankfurt, ohio
     plan: free
     rootDir: server
     buildCommand: pip install -r requirements.txt
@@ -19,10 +19,10 @@ services:
           name: cse-bot-postgres
           property: connectionString
 
-# Render PostgreSQL Managed Database
+# Render Managed PostgreSQL Database
 databases:
   - name: cse-bot-postgres
     plan: free
     region: singapore
-    databaseName: CSE_bot
-    user: postgres
+    databaseName: cse_bot
+    user: cse_bot_user
