@@ -5,7 +5,8 @@ from sqlalchemy import (
     create_engine, Column, Integer, String, Text, Boolean, DateTime, JSON
 )
 from sqlalchemy.orm import declarative_base, sessionmaker
-from config import DATABASE_URL
+from config import config
+
 
 # SQLAlchemy Base
 Base = declarative_base()
@@ -83,7 +84,8 @@ def get_sector_model(table_name: str) -> Type:
 
 
 # Database Engine & Session Initialization
-db_url = DATABASE_URL
+db_url = config.database_url
+
 if db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql://", 1)
 
