@@ -83,8 +83,18 @@ def get_sector_model(table_name: str) -> Type:
 
 
 # Database Engine & Session Initialization
-engine = create_engine(DATABASE_URL, pool_pre_ping=True)
+db_url = DATABASE_URL
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
+
+# Add SSL connect_args if connecting to remote PostgreSQL (e.g. Render, Supabase, Neon)
+engine_kwargs = {"pool_pre_ping": True}
+if "localhost" not in db_url and "127.0.0.1" not in db_url:
+    engine_kwargs["connect_args"] = {"sslmode": "require"}
+
+engine = create_engine(db_url, **engine_kwargs)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
 
 
 def init_db():

@@ -29,6 +29,28 @@ app.add_middleware(
 )
 
 
+@app.on_event("startup")
+def on_startup():
+    """Automatic DB initialization and seeding check on deployment startup."""
+    try:
+        from db import init_db, get_db_session, KnowledgeRegistry
+        from seed_db import seed_database
+        
+        print("[Render Startup] Initializing PostgreSQL database tables...")
+        init_db()
+        
+        with get_db_session() as session:
+            count = session.query(KnowledgeRegistry).count()
+            if count == 0:
+                print("[Render Startup] Database is empty. Seeding all 15 sector tables...")
+                seed_database()
+            else:
+                print(f"[Render Startup] Database ready with {count} sector tables initialized.")
+    except Exception as e:
+        print(f"[Render Startup Warning] Database auto-seed check skipped/error: {e}")
+
+
+
 # ==========================================================
 # Thread-Safe Session History Manager
 # ==========================================================

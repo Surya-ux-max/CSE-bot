@@ -16,12 +16,19 @@ class AppConfig:
     def _initialize(self):
         load_dotenv()
         self.groq_api_key: str = os.getenv("GROQ_API_KEY", "")
-        self.database_url: str = os.getenv("DATABASE_URL", "postgresql://postgres:root@localhost:5432/CSE_bot")
+        raw_db_url: str = os.getenv("DATABASE_URL", "postgresql://postgres:root@localhost:5432/CSE_bot")
+        
+        # Render PostgreSQL URL sanitization (postgres:// -> postgresql://)
+        if raw_db_url.startswith("postgres://"):
+            raw_db_url = raw_db_url.replace("postgres://", "postgresql://", 1)
+
+        self.database_url: str = raw_db_url
         
         if not self.groq_api_key:
-            raise ValueError("GROQ_API_KEY not found in environment settings!")
+            print("[WARNING] GROQ_API_KEY not found in environment settings. Please set GROQ_API_KEY on Render!")
 
         self._llm: Optional[ChatGroq] = None
+
 
     @property
     def llm(self) -> ChatGroq:
