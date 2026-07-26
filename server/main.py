@@ -1,47 +1,28 @@
 import os
-import re
-import json
 import threading
 from typing import Dict, List, Optional
 
-from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage
-from langchain_groq import ChatGroq
-
-# ==========================================================
-# Load Environment Variables
-# ==========================================================
-
-load_dotenv()
-
-groq_api_key = os.getenv("GROQ_API_KEY")
-
-if not groq_api_key:
-    raise ValueError("GROQ_API_KEY not found in .env")
-
+from config import config
+from services.supervisor import supervisor_router
 
 # ==========================================================
-# FastAPI App
+# FastAPI App Initialization
 # ==========================================================
 
 app = FastAPI(
     title="CSE-BOT API",
-    description="Official AI Assistant for Computer Science and Engineering Department at Sri Eshwar College of Engineering",
-    version="2.0.0"
+    description="Production Multi-Agent Engine for Department of Computer Science & Engineering, SECE",
+    version="2.1.0"
 )
-
-
-# ==========================================================
-# CORS
-# ==========================================================
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],      # Change later if needed
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -49,20 +30,7 @@ app.add_middleware(
 
 
 # ==========================================================
-# LLM Initialization
-# ==========================================================
-
-print("Loading Groq LLM...")
-llm = ChatGroq(
-    model_name="llama-3.3-70b-versatile",
-    groq_api_key=groq_api_key,
-    temperature=0.3
-)
-print("LLM Loaded")
-
-
-# ==========================================================
-# Session Memory Manager
+# Thread-Safe Session History Manager
 # ==========================================================
 
 class SessionHistoryManager:
@@ -83,7 +51,6 @@ class SessionHistoryManager:
             if session_id not in self.history:
                 self.history[session_id] = []
             self.history[session_id].append(message)
-            # Limit history to self.max_history_turns turns (each turn has User + AI messages)
             limit = self.max_history_turns * 2
             if len(self.history[session_id]) > limit:
                 self.history[session_id] = self.history[session_id][-limit:]
@@ -94,29 +61,6 @@ class SessionHistoryManager:
                 del self.history[session_id]
 
 history_manager = SessionHistoryManager(max_history_turns=6)
-
-
-# ==========================================================
-# System Prompts & Agent Core
-# ==========================================================
-
-AGENT_SYSTEM_PROMPT = (
-    "You are CSE-BOT, the official AI assistant for the Department of Computer Science and Engineering "
-    "at Sri Eshwar College of Engineering (SECE).\n"
-    "Provide clear, informative, accurate, and professional responses to academic, technical, and general departmental queries.\n"
-    "Be supportive, encouraging, and authoritative. Provide code examples when asked, and assist students, "
-    "faculty, and visitors effectively."
-)
-
-
-def get_agent_response(question: str, chat_history: List[BaseMessage]) -> str:
-    messages = [
-        SystemMessage(content=AGENT_SYSTEM_PROMPT)
-    ] + chat_history + [
-        HumanMessage(content=question)
-    ]
-    response = llm.invoke(messages)
-    return response.content.strip()
 
 
 # ==========================================================
@@ -140,7 +84,8 @@ class ClearSessionRequest(BaseModel):
 def home():
     return {
         "status": "running",
-        "message": "CSE-BOT API (Agent Engine) is running successfully."
+        "service": "CSE-BOT Production Multi-Agent Engine",
+        "version": "2.1.0"
     }
 
 
@@ -150,14 +95,15 @@ def chat(request: ChatRequest):
     question = request.question.strip()
     
     if not question:
-        return {"answer": "Please ask a question."}
+        return {"answer": "Please ask a question.", "agent_name": "reception_agent"}
         
     history = history_manager.get_history(session_id)
     
     try:
-        answer = get_agent_response(question, history)
+        agent_name, answer = supervisor_router.route_and_execute(question, history)
     except Exception as e:
-        print(f"Error generating agent response: {e}")
+        print(f"[API Error] Failed to generate agent response: {e}")
+        agent_name = "reception_agent"
         answer = "I apologize, I encountered an error while processing your request. Please try again."
         
     # Save to history
@@ -165,7 +111,8 @@ def chat(request: ChatRequest):
     history_manager.add_message(session_id, AIMessage(content=answer))
     
     return {
-        "answer": answer
+        "answer": answer,
+        "agent_name": agent_name
     }
 
 
@@ -176,18 +123,3 @@ def clear_session(request: ClearSessionRequest):
         "status": "success",
         "message": f"Session history cleared for {request.session_id}"
     }
-
-
-# ==========================================================
-# Run Server
-# ==========================================================
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(
-        "main:app",
-        host="127.0.0.1",
-        port=8000,
-        reload=True
-    )

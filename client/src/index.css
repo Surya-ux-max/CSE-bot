@@ -238,32 +238,71 @@ body {
   animation: underlineGrow 0.3s ease forwards;
 }
 
-/* ─── CHAT BRAND TOKENS (legacy compat) ──────────────────────── */
-.bg-brand-bg    { background-color: var(--color-brand-bg); }
-.bg-brand-dark  { background-color: var(--color-brand-dark); }
-.bg-brand-light { background-color: var(--color-brand-light); }
-.border-brand-border { border-color: var(--color-brand-border); }
-.text-accent-yellow  { color: var(--color-accent-yellow); }
-.bg-accent-yellow    { background-color: var(--color-accent-yellow); }
-.bg-accent-yellow-dark { background-color: var(--color-accent-yellow-dark); }
+/* ─── CSS VARIABLE THEME TOKENS ──────────────────────────────── */
+:root, .dark {
+  color-scheme: dark;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-card: #18181b;
+  --bg-input: #1f1f23;
+  --border-color: #27272a;
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --heading-gold: #fbbf24;
+  --heading-cyan: #38bdf8;
+  --bold-amber: #fde047;
+  --code-bg: #09090b;
+  --code-header: #141417;
+  --grid-line: rgba(255, 255, 255, 0.04);
+  --formula-color: #fbbf24;
+  --formula-opacity: 0.16;
+  
+  --color-brand-bg: #0a0a0a;
+  --color-brand-dark: #121212;
+  --color-brand-light: #18181b;
+  --color-brand-border: #27272a;
+}
 
-/* ─── LIGHT THEME OVERRIDES ─────────────────────────────────── */
 .light {
   color-scheme: light;
-  --color-brand-bg:      #f9fafb;
-  --color-brand-dark:    #f3f4f6;
-  --color-brand-light:   #ffffff;
-  --color-brand-mid:     #e5e7eb;
-  --color-brand-border:  #e5e7eb;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-input: #f1f5f9;
+  --border-color: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --heading-gold: #d97706;
+  --heading-cyan: #0284c7;
+  --bold-amber: #b45309;
+  --code-bg: #0f172a;
+  --code-header: #1e293b;
+  --grid-line: rgba(0, 0, 0, 0.05);
+  --formula-color: #d97706;
+  --formula-opacity: 0.18;
   
-  background-color: #f9fafb;
-  color: #1f2937;
+  --color-brand-bg: #f8fafc;
+  --color-brand-dark: #ffffff;
+  --color-brand-light: #ffffff;
+  --color-brand-border: #e2e8f0;
+  
+  background-color: #f8fafc;
+  color: #0f172a;
 }
 
 .light body {
-  background-color: #f9fafb;
-  color: #1f2937;
+  background-color: #f8fafc;
+  color: #0f172a;
 }
+
+/* ─── CHAT BRAND TOKENS ─────────────────────────────────────── */
+.bg-brand-bg    { background-color: var(--bg-primary); }
+.bg-brand-dark  { background-color: var(--bg-secondary); }
+.bg-brand-light { background-color: var(--bg-card); }
+.border-brand-border { border-color: var(--border-color); }
+
 
 /* Light mode selection */
 .light ::selection {
@@ -295,4 +334,34 @@ body {
 .light .nav-glass {
   background: rgba(255, 255, 255, 0.85);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ─── VIRTUAL ROBOT ANIMATIONS ───────────────────────────────── */
+@keyframes roboFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.8deg); }
+}
+
+@keyframes roboGlowPulse {
+  0%, 100% { box-shadow: 0 0 25px rgba(255, 193, 7, 0.25), 0 0 50px rgba(6, 182, 212, 0.15); }
+  50% { box-shadow: 0 0 45px rgba(255, 193, 7, 0.45), 0 0 90px rgba(6, 182, 212, 0.35); }
+}
+
+@keyframes roboScanLine {
+  0% { top: 0%; opacity: 0; }
+  15% { opacity: 0.8; }
+  85% { opacity: 0.8; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.animate-roboFloat {
+  animation: roboFloat 5s ease-in-out infinite;
+}
+
+.animate-roboGlow {
+  animation: roboGlowPulse 3s ease-in-out infinite;
+}
+
+.animate-roboScan {
+  animation: roboScanLine 2.5s ease-in-out infinite;
 }
