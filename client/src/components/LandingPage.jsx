@@ -41,35 +41,35 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
       {/* ═══════════════════════════════════════════════════════════════
          1. GOOGLE MATERIAL 3 GLASS HEADER
       ═══════════════════════════════════════════════════════════════ */}
-      <header className="relative z-20 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <header className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between gap-3">
         
         {/* Brand Logo & College Badge */}
-        <div className="flex items-center gap-3.5 cursor-pointer group" onClick={onStartChat}>
-          <div className="w-11 h-11 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center p-2 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform">
-            <svg className="w-6 h-6 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+        <div className="flex items-center gap-2.5 sm:gap-3.5 cursor-pointer group min-w-0" onClick={onStartChat}>
+          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center p-1.5 sm:p-2 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform shrink-0">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2zm-4 7H6v3h2V9zm10 0h-2v3h2V9zm-5 5h-2v2h2v-2z" />
             </svg>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-black tracking-tight font-sans" style={{ color: 'var(--text-primary)' }}>CSE-</span>
-              <span className="text-2xl font-black tracking-tight text-amber-400 font-sans">Bot</span>
-              <span className="px-2 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-[10px] font-mono text-amber-400 font-semibold">
+          <div className="min-w-0">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <span className="text-xl sm:text-2xl font-black tracking-tight font-sans" style={{ color: 'var(--text-primary)' }}>CSE-</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-amber-400 font-sans">Bot</span>
+              <span className="px-1.5 sm:px-2 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-[9px] sm:text-[10px] font-mono text-amber-400 font-semibold">
                 v2.1 AI
               </span>
             </div>
-            <p className="text-[11px] font-medium" style={{ color: 'var(--text-secondary)' }}>
-              Sri Eshwar College of Engineering
+            <p className="text-[10px] sm:text-[11px] font-medium truncate" style={{ color: 'var(--text-secondary)' }}>
+              Sri Eshwar College of Eng.
             </p>
           </div>
         </div>
 
         {/* Right CTA & Theme Toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <button
             onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
-            className="p-2.5 rounded-xl border border-brand-border bg-brand-light hover:border-amber-400/50 transition-all shadow-md"
+            className="p-2 sm:p-2.5 rounded-xl border border-brand-border bg-brand-light hover:border-amber-400/50 transition-all shadow-md"
             style={{ color: 'var(--text-secondary)' }}
             title="Toggle Theme"
           >
@@ -78,10 +78,11 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
 
           <button
             onClick={onStartChat}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-sm shadow-lg shadow-amber-400/25 hover:shadow-amber-400/40 transition-all transform hover:scale-105 active:scale-95"
+            className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-400/25 hover:shadow-amber-400/40 transition-all transform hover:scale-105 active:scale-95"
           >
-            <Sparkles className="w-4 h-4 fill-slate-950" />
-            <span>Launch Assistant</span>
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-slate-950" />
+            <span className="hidden xs:inline">Launch Assistant</span>
+            <span className="inline xs:hidden">Launch</span>
           </button>
         </div>
 
@@ -90,77 +91,75 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
       {/* ═══════════════════════════════════════════════════════════════
          2. HERO SECTION (GOOGLE DEEPMIND AI STYLE)
       ═══════════════════════════════════════════════════════════════ */}
-      <main className="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 lg:py-12 flex-1 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <main className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6 lg:py-12 flex-1 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         
         {/* Left Hero Text Content */}
-        <div className="w-full lg:w-7/12 space-y-8 text-left">
+        <div className="w-full lg:w-7/12 space-y-5 sm:space-y-8 text-left">
           
           {/* Department Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-xs font-mono text-amber-400 font-semibold shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-[11px] sm:text-xs font-mono text-amber-400 font-semibold shadow-sm">
             <Sparkles className="w-3.5 h-3.5 animate-pulse" />
             Official Department Multi-Agent Intelligence
           </div>
 
           {/* Headline */}
           <div className="space-y-2">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
               <span className="block" style={{ color: 'var(--text-primary)' }}>Welcome to</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
                 CSE-Bot AI
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl font-bold tracking-tight mt-2" style={{ color: 'var(--text-primary)' }}>
+            <p className="text-lg sm:text-2xl font-bold tracking-tight mt-2" style={{ color: 'var(--text-primary)' }}>
               Your Intelligent Assistant for <span className="text-amber-400">Computer Science & Engineering</span>
             </p>
           </div>
 
           {/* Subtitle Description */}
-          <p className="text-base sm:text-lg max-w-2xl leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+          <p className="text-sm sm:text-lg max-w-2xl leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
             Ask anything about faculty, semester course syllabi, algorithms, and placement preparation. Powered by 5 specialized AI agents and official PostgreSQL department records.
           </p>
 
           {/* Call-to-Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
             <button
               onClick={onStartChat}
-              className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-base shadow-xl shadow-amber-400/30 hover:shadow-amber-400/50 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-sm sm:text-base shadow-xl shadow-amber-400/30 hover:shadow-amber-400/50 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <MessageSquare className="w-5 h-5 fill-slate-950" />
+              <MessageSquare className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-slate-950" />
               <span>Start Assistant</span>
             </button>
 
             <button
               onClick={onStartChat}
-              className="flex items-center gap-2.5 px-7 py-4 rounded-2xl border border-brand-border bg-brand-light/70 hover:border-amber-400/50 font-bold text-base transition-all hover:bg-brand-light"
+              className="flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl border border-brand-border bg-brand-light/70 hover:border-amber-400/50 font-bold text-sm sm:text-base transition-all hover:bg-brand-light"
               style={{ color: 'var(--text-primary)' }}
             >
               <span>Explore 5 AI Agents</span>
-              <ArrowRight className="w-4.5 h-4.5 text-amber-400" />
+              <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-amber-400" />
             </button>
           </div>
 
-
-
         </div>
 
-        {/* Right Hero Graphic: Seamless Blended Origami Plane (image2.png) */}
+        {/* Right Hero Graphic: Seamless Blended Origami Plane */}
         <div className="w-full lg:w-5/12 flex items-center justify-center relative">
-          <div className="relative w-full max-w-md flex items-center justify-center p-2 animate-roboFloat">
+          <div className="relative w-full max-w-sm sm:max-w-md flex items-center justify-center p-2 animate-roboFloat">
             
             {/* Ambient Golden Cyber Glow */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/20 via-amber-400/10 to-amber-500/20 blur-3xl opacity-80" />
             
             {/* Glass Container Blending image2.png */}
-            <div className="relative w-full rounded-3xl overflow-hidden border border-amber-400/30 bg-black/40 backdrop-blur-xl p-3 shadow-2xl shadow-amber-500/20 group cursor-pointer" onClick={onStartChat}>
+            <div className="relative w-full rounded-3xl overflow-hidden border border-amber-400/30 bg-black/40 backdrop-blur-xl p-2.5 sm:p-3 shadow-2xl shadow-amber-500/20 group cursor-pointer" onClick={onStartChat}>
               <img
                 src={origamImg}
                 alt="CSE-Bot Origami Graphic"
-                className="w-full h-auto max-h-[380px] object-contain transform group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-auto max-h-[260px] sm:max-h-[380px] object-contain transform group-hover:scale-105 transition-transform duration-500"
                 style={{ mixBlendMode: 'lighten' }}
               />
 
               {/* Overlay Badge */}
-              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-brand-light/90 border border-brand-border/80 backdrop-blur-md flex items-center justify-between">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-2.5 sm:p-3 rounded-2xl bg-brand-light/90 border border-brand-border/80 backdrop-blur-md flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-xs font-mono font-semibold" style={{ color: 'var(--text-primary)' }}>CSE-Bot AI Active</span>
@@ -177,22 +176,22 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
       {/* ═══════════════════════════════════════════════════════════════
          3. MULTI-AGENT SHOWCASE CARDS (Interactive Showcase)
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="relative z-10 w-full max-w-7xl mx-auto px-6 py-8 border-t border-brand-border/60">
-        <div className="text-center mb-6">
+      <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 border-t border-brand-border/60">
+        <div className="text-center mb-5 sm:mb-6">
           <h3 className="text-xs font-mono font-semibold text-amber-400 uppercase tracking-widest">
             Specialized Multi-Agent System
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {agentShowcases.map((item, idx) => (
             <div
               key={idx}
               onClick={onStartChat}
-              className="p-5 rounded-2xl border border-brand-border bg-brand-light/40 hover:border-amber-400/60 hover:bg-brand-light/90 transition-all group cursor-pointer space-y-3 shadow-md"
+              className="p-4 sm:p-5 rounded-2xl border border-brand-border bg-brand-light/40 hover:border-amber-400/60 hover:bg-brand-light/90 transition-all group cursor-pointer space-y-3 shadow-md active:scale-[0.98]"
             >
               <div className="flex items-center justify-between">
-                <div className="p-2.5 rounded-xl bg-amber-400/10 border border-amber-400/20 group-hover:scale-110 transition-transform">
+                <div className="p-2 sm:p-2.5 rounded-xl bg-amber-400/10 border border-amber-400/20 group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
                 <span className="text-[10px] font-mono text-amber-400 px-2 py-0.5 rounded-md bg-amber-400/10 border border-amber-400/20">
