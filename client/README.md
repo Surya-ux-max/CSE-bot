@@ -1,18 +1,30 @@
-# React + Vite
+# CSE-Bot Frontend Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend web application for **CSE-Bot** — an AI-powered academic assistant for the Computer Science & Engineering department at Sri Eshwar College of Engineering.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📚 Client Documentation
 
-## React Compiler
+Full developer documentation is located in the **[client_documentation/](file:///d:/CSE-bot/client_documentation/README.md)** directory:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+1. 📂 **[Code Structure & Paths](file:///d:/CSE-bot/client_documentation/01_code_structure_and_paths.md)**
+2. 🏛️ **[OOP Concepts & Design Patterns](file:///d:/CSE-bot/client_documentation/02_oops_concepts_and_patterns.md)**
+3. 📱 **[Code Functions & Components](file:///d:/CSE-bot/client_documentation/03_code_functions_and_components.md)**
+4. 🎨 **[UI Elements & Design System](file:///d:/CSE-bot/client_documentation/04_ui_elements_and_design_system.md)**
+5. ⚙️ **[Developer Usage & Configuration Guide](file:///d:/CSE-bot/client_documentation/05_developer_usage_and_configuration_guide.md)**
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## ⚡ Quick Start
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
+
+# Start local dev server
+npm run dev
+
+# Build for production
+npm run build
+```
