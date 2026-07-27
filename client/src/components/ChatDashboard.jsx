@@ -128,8 +128,8 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
             <div className="h-full flex flex-col justify-center max-w-xl mx-auto space-y-4 sm:space-y-6 animate-fade-in py-4">
               <div className="text-center space-y-2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-mono text-amber-500 font-semibold">
-                  <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-                  Multi-Agent AI Active
+                  <Bot className="w-3.5 h-3.5" />
+                  MULTI-AGENT ENGINE
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
@@ -183,7 +183,8 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
                   {msg.role === 'assistant' && (
                     <div className="mb-2">
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[11px] font-mono font-semibold bg-amber-400/10 text-amber-500 border border-amber-400/20">
-                        ⚡ {msg.agentName || 'reception_agent'}
+                        <Bot className="w-3 h-3 text-amber-500 shrink-0" />
+                        <span>{msg.agentName || 'reception_agent'}</span>
                       </span>
                     </div>
                   )}

@@ -8,11 +8,12 @@ This document provides a line-by-line detailed functional reference for every Re
 
 **Path**: [client/src/App.jsx](file:///d:/CSE-bot/client/src/App.jsx)
 
-### State Hooks & Lifecycle:
+### Internal Components & State Hooks:
+- `ConfettiCanvas`: 60fps HTML5 Canvas particle engine spawning 130+ randomized celebratory particles (amber, gold, cyan, emerald, magenta, white) with 2D gravity ($g = 0.48$), air resistance ($d = 0.95$), spin rotation, shape variance, and alpha decay upon button navigation.
+- `const [confettiTrigger, setConfettiTrigger] = useState(null)`: Stores exact click coordinates `(x, y)` to fire randomized particle eruption.
 - `const [theme, setTheme] = useState('dark')`: Tracks global UI theme (`'dark'` or `'light'`).
 - `const [currentPage, setCurrentPage] = useState('landing')`: Manages active screen view (`'landing'` or `'chat'`).
-- `useEffect(() => { ... }, [])`: Restores theme preference from `SessionManager.getSavedTheme()` on component mount and clears stale local storage sessions.
-- `useEffect(() => { ... }, [theme])`: Updates `document.documentElement.classList` (`'dark'` / `'light'`) and sets `style.colorScheme` for native scrollbar sync.
+- `handleNavigate(targetPage, event)`: Triggers spring button feedback, confetti explosion at origin click coordinates, and Clip Wipe screen transition curtain.
 
 ---
 
@@ -36,8 +37,9 @@ This document provides a line-by-line detailed functional reference for every Re
 
 ### UI Sections:
 1. **Material 3 Header**: Compact brand logo, `v2.1 Robot` badge, theme toggle button, and responsive *"Launch Chitti"* CTA button.
-2. **Hero Section**: Responsive typography (`text-3xl sm:text-6xl lg:text-7xl`), department multi-agent badge, description, interactive CTA buttons, and high-res blended artwork container.
-3. **Scroll Text & Reveal Showcase**: Mobile-responsive vertical stack of cards featuring scroll-triggered headline text reveals, index badges (`01` to `05`), agent tags (`⚡ faculty_agent`), sample query chips, and direct assistant launch triggers.
+2. **Redesigned Hero Section**: DeepMind cyber hybrid layout featuring glowing multi-agent status badge, high-contrast headline typography (`Next-Gen AI for Computer Science`), interactive prompt search input bar with quick try-chips, AnimeJS stagger entry animation, and 3D robot artwork container with floating orbit badges.
+3. **Giant Typography Scroll Showcase**: Giant AnimeJS-powered staggered typography scroll list featuring high-contrast focus animation on agent names (`text-4xl` to `text-8xl`).
+4. **CTA & Footer Section**: High-impact footer featuring giant translucent **`SECE`** background typography watermark (`text-[25vw]`), bold **`WE CSE.`** headline text, rounded pill assistant trigger button, and center attribution pill (*"CRAFTED WITH ❤️ BY SECE CSE"*).
 
 ---
 
