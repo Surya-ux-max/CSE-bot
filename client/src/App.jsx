@@ -23,7 +23,7 @@ export default function App() {
     localStorage.setItem('cse_bot_theme', theme)
   }, [theme])
 
-  // Trigger Clip Wipe Transition
+  // Trigger Clip Wipe Transition (Speedy & Smooth)
   const handleNavigate = (targetPage) => {
     if (targetPage === currentPage || transitionState !== 'idle') return
 
@@ -32,11 +32,11 @@ export default function App() {
     setTimeout(() => {
       setCurrentPage(targetPage)
       setTransitionState('wiping_out')
-    }, 280)
+    }, 200)
 
     setTimeout(() => {
       setTransitionState('idle')
-    }, 580)
+    }, 400)
   }
 
   return (

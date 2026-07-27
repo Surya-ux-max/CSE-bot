@@ -1,34 +1,96 @@
-import React from 'react'
-import { MessageSquare, ArrowRight, Sun, Moon, GraduationCap, Zap, Shield, Sparkles, Users, BookOpen, Terminal, Rocket } from 'lucide-react'
+import React, { useState, useEffect, useRef } from 'react'
+import { MessageSquare, ArrowRight, Sun, Moon, GraduationCap, Zap, Shield, Sparkles, Users, BookOpen, Terminal, Rocket, CheckCircle2, ChevronDown } from 'lucide-react'
+import { animate, stagger } from 'animejs'
 import origamImg from '../reference/image2.png'
 import TechBackground from './TechBackground'
 
+// ─── ANIMEJS V4 STAGGERED GIANT TYPOGRAPHY SCROLL ITEM ─────────────────
+function GiantScrollItem({ agent, idx, onStartChat }) {
+  const [inView, setInView] = useState(false)
+  const containerRef = useRef(null)
+  const textRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting)
+      },
+      { threshold: 0.4, rootMargin: "-10% 0px -10% 0px" }
+    )
+
+    if (containerRef.current) observer.observe(containerRef.current)
+    return () => observer.disconnect()
+  }, [])
+
+  // AnimeJS v4 Staggered Letter Animation Effect
+  useEffect(() => {
+    if (!textRef.current) return
+    const letterElements = textRef.current.querySelectorAll('.anime-char')
+    if (!letterElements || letterElements.length === 0) return
+
+    if (inView) {
+      animate(letterElements, {
+        translateY: [16, 0],
+        opacity: [0.15, 1],
+        color: ['#6b7280', '#fbbf24'],
+        delay: stagger(30),
+        duration: 550,
+        ease: 'outElastic(1, .8)'
+      })
+    } else {
+      animate(letterElements, {
+        translateY: [0, 6],
+        opacity: [1, 0.15],
+        color: ['#fbbf24', '#4b5563'],
+        duration: 350,
+        ease: 'outQuad'
+      })
+    }
+  }, [inView])
+
+  const characters = agent.name.split('')
+
+  return (
+    <div
+      ref={containerRef}
+      onClick={onStartChat}
+      className={`py-3 sm:py-6 cursor-pointer transition-all duration-500 ease-out transform origin-left select-none group flex items-center justify-between gap-4 ${
+        inView
+          ? 'opacity-100 scale-100 font-black'
+          : 'opacity-20 hover:opacity-60 scale-95 font-bold'
+      }`}
+    >
+      <div ref={textRef} className="flex items-center min-w-0 flex-wrap">
+        <span className="text-4xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-none inline-flex flex-wrap">
+          {characters.map((char, charIdx) => (
+            <span
+              key={charIdx}
+              className="anime-char inline-block transition-transform duration-300"
+              style={{ whiteSpace: char === ' ' ? 'pre' : 'normal' }}
+            >
+              {char === ' ' ? '\u00A0' : char}
+            </span>
+          ))}
+        </span>
+      </div>
+
+      {inView && (
+        <span className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-xs sm:text-sm font-mono font-bold text-amber-400 shrink-0 animate-fadeInFast">
+          ⚡ {agent.key}
+          <ArrowRight className="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform" />
+        </span>
+      )}
+    </div>
+  )
+}
+
 export default function LandingPage({ onStartChat, theme, setTheme }) {
   const agentShowcases = [
-    {
-      title: "Faculty Directory",
-      agent: "faculty_agent",
-      icon: <Users className="w-5 h-5 text-amber-400" />,
-      description: "HoD profiles, professor research domains, email contacts & committee leadership."
-    },
-    {
-      title: "Curriculum Advisor",
-      agent: "curriculum_agent",
-      icon: <BookOpen className="w-5 h-5 text-amber-400" />,
-      description: "Semester course syllabi, professional electives, credit requirements & industry tracks."
-    },
-    {
-      title: "CS Coding Tutor",
-      agent: "tutor_agent",
-      icon: <Terminal className="w-5 h-5 text-amber-400" />,
-      description: "Step-by-step algorithms, C++/Java/Python syntax debugging & $O(n \\log n)$ analysis."
-    },
-    {
-      title: "Career & Placements",
-      agent: "placement_agent",
-      icon: <Rocket className="w-5 h-5 text-amber-400" />,
-      description: "Centers of Excellence (CoEs), hackathons, skill development labs & placement preparation."
-    }
+    { name: "Faculty Agent", key: "faculty_agent" },
+    { name: "Curriculum Agent", key: "curriculum_agent" },
+    { name: "Coding Tutor", key: "tutor_agent" },
+    { name: "Placement Coach", key: "placement_agent" },
+    { name: "Virtual Host", key: "reception_agent" }
   ]
 
   return (
@@ -174,42 +236,30 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
       </main>
 
       {/* ═══════════════════════════════════════════════════════════════
-         3. MULTI-AGENT SHOWCASE CARDS (Interactive Showcase)
+         3. GIANT TYPOGRAPHY SCROLL SHOWCASE (Matching Reference Image)
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 border-t border-brand-border/60">
-        <div className="text-center mb-5 sm:mb-6">
-          <h3 className="text-xs font-mono font-semibold text-amber-400 uppercase tracking-widest">
-            Specialized Multi-Agent System
-          </h3>
+      <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-24 border-t border-brand-border/60">
+        
+        {/* Section Label */}
+        <div className="mb-6 sm:mb-12 flex items-center gap-2">
+          <ChevronDown className="w-4 h-4 animate-bounce text-amber-400" />
+          <span className="text-xs font-mono font-semibold text-amber-400 uppercase tracking-widest">
+            Scroll to Explore Multi-Agent System
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          {agentShowcases.map((item, idx) => (
-            <div
+        {/* Stacked Giant Text Lines */}
+        <div className="flex flex-col space-y-2 sm:space-y-4">
+          {agentShowcases.map((agent, idx) => (
+            <GiantScrollItem
               key={idx}
-              onClick={onStartChat}
-              className="p-4 sm:p-5 rounded-2xl border border-brand-border bg-brand-light/40 hover:border-amber-400/60 hover:bg-brand-light/90 transition-all group cursor-pointer space-y-3 shadow-md active:scale-[0.98]"
-            >
-              <div className="flex items-center justify-between">
-                <div className="p-2 sm:p-2.5 rounded-xl bg-amber-400/10 border border-amber-400/20 group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                <span className="text-[10px] font-mono text-amber-400 px-2 py-0.5 rounded-md bg-amber-400/10 border border-amber-400/20">
-                  {item.agent}
-                </span>
-              </div>
-
-              <div>
-                <h4 className="text-sm font-bold group-hover:text-amber-400 transition-colors" style={{ color: 'var(--text-primary)' }}>
-                  {item.title}
-                </h4>
-                <p className="text-xs mt-1 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  {item.description}
-                </p>
-              </div>
-            </div>
+              agent={agent}
+              idx={idx}
+              onStartChat={onStartChat}
+            />
           ))}
         </div>
+
       </section>
 
     </div>

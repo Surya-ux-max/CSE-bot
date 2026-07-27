@@ -269,11 +269,11 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/20 via-cyan-500/15 to-amber-500/20 blur-3xl opacity-80 animate-roboGlow" />
           
           {/* Full Robot Image Display Container */}
-          <div className="relative max-h-[65vh] w-auto max-w-full flex items-center justify-center p-4 animate-roboFloat">
+          <div className="relative max-h-[60vh] w-auto max-w-full flex items-center justify-center p-4 animate-roboFloat">
             <img
               src={roboImg}
               alt="Chitti Robot"
-              className="max-h-[60vh] w-auto object-contain filter drop-shadow-[0_20px_40px_rgba(255,193,7,0.35)]"
+              className="max-h-[55vh] w-auto object-contain filter drop-shadow-[0_20px_40px_rgba(255,193,7,0.35)]"
             />
 
             {/* Laser scanning line when processing */}
@@ -282,15 +282,20 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
             )}
           </div>
 
-          {/* Live Robot State Status Pill */}
-          <div className="mt-6 flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-brand-light/90 border border-brand-border shadow-2xl backdrop-blur-md">
-            <span className={`w-3 h-3 rounded-full ${isTyping ? 'bg-amber-400 animate-ping' : 'bg-emerald-400 animate-pulse'}`} />
-            <span className="text-xs font-mono tracking-wide font-medium" style={{ color: 'var(--text-primary)' }}>
-              {isTyping
-                ? `Reckoning (${callingAgent})...`
-                : 'Chitti the Robot Online'}
-            </span>
-          </div>
+          {/* Big Bold Text With No Borders Below Image */}
+          <h2 className="mt-2 text-2xl sm:text-3xl font-black tracking-wider text-amber-400 text-center select-none">
+            I am Chitti the Robot
+          </h2>
+
+          {/* Live Robot Reckoning Status Pill (only when processing) */}
+          {isTyping && (
+            <div className="mt-4 flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-brand-light/90 border border-brand-border shadow-2xl backdrop-blur-md animate-fadeIn">
+              <span className="w-3 h-3 rounded-full bg-amber-400 animate-ping" />
+              <span className="text-xs font-mono tracking-wide font-medium" style={{ color: 'var(--text-primary)' }}>
+                Reckoning ({callingAgent})...
+              </span>
+            </div>
+          )}
 
         </div>
 
@@ -316,24 +321,30 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
               <p className="text-xs text-amber-400 font-mono">Department Multi-Agent Assistant</p>
             </div>
 
-            <div className="relative w-full h-56 flex items-center justify-center animate-roboFloat">
+            <div className="relative w-full h-48 flex items-center justify-center animate-roboFloat">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/20 via-cyan-500/15 to-amber-500/20 blur-2xl opacity-80" />
               <img
                 src={roboImg}
                 alt="Chitti Robot"
-                className="h-48 w-auto object-contain filter drop-shadow-[0_10px_25px_rgba(255,193,7,0.35)]"
+                className="h-40 w-auto object-contain filter drop-shadow-[0_10px_25px_rgba(255,193,7,0.35)]"
               />
               {isTyping && (
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-400/25 to-transparent animate-roboScan pointer-events-none rounded-2xl" />
               )}
             </div>
 
-            <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-light border border-brand-border shadow-lg">
-              <span className={`w-2.5 h-2.5 rounded-full ${isTyping ? 'bg-amber-400 animate-ping' : 'bg-emerald-400 animate-pulse'}`} />
-              <span className="text-xs font-mono font-medium" style={{ color: 'var(--text-primary)' }}>
-                {isTyping ? `Reckoning (${callingAgent})...` : 'Chitti the Robot Online'}
-              </span>
-            </div>
+            <h2 className="text-xl sm:text-2xl font-black tracking-wider text-amber-400 text-center select-none">
+              I am Chitti the Robot
+            </h2>
+
+            {isTyping && (
+              <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-light border border-brand-border shadow-lg animate-fadeIn">
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping" />
+                <span className="text-xs font-mono font-medium" style={{ color: 'var(--text-primary)' }}>
+                  Reckoning ({callingAgent})...
+                </span>
+              </div>
+            )}
           </div>
         </div>
       )}

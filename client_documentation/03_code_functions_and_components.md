@@ -25,17 +25,19 @@ This document provides a line-by-line detailed functional reference for every Re
 - `theme`: Current active theme string.
 - `setTheme`: Theme toggle state dispatcher.
 
-### Internal Data Structures:
-- `agentShowcases`: Array of 4 specialized agent cards containing title, agent identifier, Lucide icon, and description:
+### Internal Components & Data Structures:
+- `ScrollRevealItem`: Sub-component using browser-native `IntersectionObserver` to trigger a smooth 700ms opacity & vertical translation reveal when scrolling into viewport view (`threshold: 0.15`).
+- `agentShowcases`: Array of 5 specialized agent data objects containing title, agent identifier, Lucide icon, headline text, detailed description, and sample queries:
   - `faculty_agent`: Faculty Directory & Governance Specialist.
-  - `curriculum_agent`: Curriculum, Course & Syllabus Specialist.
+  - `curriculum_agent`: Academic Curriculum & Syllabus Specialist.
   - `tutor_agent`: CS Programming & Algorithm Tutor.
   - `placement_agent`: Career, CoE & Skill Development Specialist.
+  - `reception_agent`: Virtual Host & CVM Specialist.
 
 ### UI Sections:
-1. **Material 3 Header**: Compact brand logo, `v2.1 AI` badge, theme toggle button, and responsive *"Launch Assistant"* CTA button.
-2. **Hero Section**: Responsive typography (`text-3xl sm:text-6xl lg:text-7xl`), department multi-agent badge, description, interactive CTA buttons, and high-res blended origami artwork container.
-3. **Multi-Agent Grid**: 4 interactive card containers routing directly to chat view upon click.
+1. **Material 3 Header**: Compact brand logo, `v2.1 Robot` badge, theme toggle button, and responsive *"Launch Chitti"* CTA button.
+2. **Hero Section**: Responsive typography (`text-3xl sm:text-6xl lg:text-7xl`), department multi-agent badge, description, interactive CTA buttons, and high-res blended artwork container.
+3. **Scroll Text & Reveal Showcase**: Mobile-responsive vertical stack of cards featuring scroll-triggered headline text reveals, index badges (`01` to `05`), agent tags (`⚡ faculty_agent`), sample query chips, and direct assistant launch triggers.
 
 ---
 
