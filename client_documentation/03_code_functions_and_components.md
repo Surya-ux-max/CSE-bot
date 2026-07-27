@@ -36,10 +36,11 @@ This document provides a line-by-line detailed functional reference for every Re
   - `reception_agent`: Virtual Host & CVM Specialist.
 
 ### UI Sections:
-1. **Material 3 Header**: Compact brand logo, `v2.1 Robot` badge, theme toggle button, and responsive *"Launch Chitti"* CTA button.
-2. **Redesigned Hero Section**: DeepMind cyber hybrid layout featuring glowing multi-agent status badge, high-contrast headline typography (`Next-Gen AI for Computer Science`), interactive prompt search input bar with quick try-chips, AnimeJS stagger entry animation, and 3D robot artwork container with floating orbit badges.
+1. **Floating Frosted Glass Pill Header**: Centered translucent pill bar floating over the viewport featuring brand identity, navigation links (*Home*, *5 AI Agents*, *Faculty*, *Curriculum*, *Placements*), theme toggle button, and rounded pill CTA.
+2. **Cinematic Frosted Glass Hero Section**: Atmospheric layout with italicized serif headline accent (*"Meet your virtual robot today"*), high-blur frosted glass search pill bar with circular action button, quick-prompt filter chips, and 3D robot artwork container with floating orbit badges.
 3. **Giant Typography Scroll Showcase**: Giant AnimeJS-powered staggered typography scroll list featuring high-contrast focus animation on agent names (`text-4xl` to `text-8xl`).
 4. **CTA & Footer Section**: High-impact footer featuring giant translucent **`SECE`** background typography watermark (`text-[25vw]`), bold **`WE CSE.`** headline text, rounded pill assistant trigger button, and center attribution pill (*"CRAFTED WITH ❤️ BY SECE CSE"*).
+5. **Floating Circular Assistant Action Widget**: Fixed bottom-right circular button (`💬`) allowing instant assistant invocation from anywhere on the landing screen.
 
 ---
 
@@ -51,13 +52,16 @@ This document provides a line-by-line detailed functional reference for every Re
 - `onBackToHome`: Function callback returning to landing screen.
 - `theme`, `setTheme`: Theme state and updater.
 
-### State Hooks:
+### State Hooks & Animations:
 - `messages`: Array of `ChatMessage` instances representing conversation history.
 - `input`: Controlled string state for text input field.
 - `isTyping`: Boolean flag indicating backend request status.
-- `callingAgent`: String tracking the current active agent.
-- `showMobileRobot`: Boolean controlling mobile drawer modal visibility on `< lg` screens.
+- `selectedAgent`: State string filtering quick prompt cards by specialized agent (`'all'`, `'faculty_agent'`, `'curriculum_agent'`, `'tutor_agent'`, `'placement_agent'`).
 - `sessionId`: Unique session string initialized once per mount via `SessionManager.generateSessionId()`.
+- **Structural Separation of Header & Chat Interface**: Top navigation bar (`<header>`) is rendered as a standalone fixed top bar (`w-full border-b border-brand-border bg-brand-light/95 backdrop-blur-md`). Below the header, the chat workspace is housed inside a dedicated rounded glass container box (`rounded-3xl border border-brand-border/80 bg-brand-light/30 backdrop-blur-md shadow-2xl overflow-hidden`).
+- **Colorful Floating Tilted Cards Welcome View**: When `messages.length === 0`, displays 4 colorful tilted cards (`01 Faculty`, `02 Curriculum`, `03 Code Tutor`, `04 Placements`) in emerald, rose, amber, and fuchsia floating around the **"What's Next Big Idea!"** headline inside the chat container. All floating cards vanish completely once conversation begins.
+- **60FPS Hardware-Accelerated Performance**: Optimized `backdrop-blur-md` layers, one-shot `animejs` mount execution (`hasAnimatedRef`), and eliminated GPU compositing overhead for ultra-smooth responsiveness.
+- **100% Theme Adaptive Text Colors**: All typography elements dynamically respond to theme toggles via CSS variables (`var(--text-primary)`, `var(--text-secondary)`).
 
 ### Core Functions & Handlers:
 - `handleSend(textToSend = input)`:

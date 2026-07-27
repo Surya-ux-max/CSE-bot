@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Send, Sun, Moon, Sparkles, RotateCcw, ArrowLeft, Bot, X } from 'lucide-react'
+import { Send, Sun, Moon, Sparkles, RotateCcw, ArrowLeft, Bot, X, Users, BookOpen, Terminal, Rocket, CheckCircle2 } from 'lucide-react'
+import { animate, stagger } from 'animejs'
 import roboImg from '../reference/robo.png'
 import TechBackground from './TechBackground'
 import { useFormatContent } from './FormatContent'
@@ -12,10 +13,13 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
   const [input, setInput] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   const [callingAgent, setCallingAgent] = useState('agent')
+  const [selectedAgent, setSelectedAgent] = useState('all')
   const [showMobileRobot, setShowMobileRobot] = useState(false)
   const [sessionId] = useState(() => SessionManager.generateSessionId())
   
   const messagesEndRef = useRef(null)
+  const dashboardRef = useRef(null)
+  const hasAnimatedRef = useRef(false)
   const formatContent = useFormatContent()
 
   // Auto-scroll to bottom of messages
@@ -23,12 +27,55 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, isTyping])
 
-  const quickPrompts = [
-    { category: 'Faculty & Governance', query: 'Who is the Head of the Department?' },
-    { category: 'Curriculum & Syllabus', query: 'Syllabus details for Cloud Computing?' },
-    { category: 'CS Programming Tutor', query: 'Explain quicksort algorithm in C++' },
-    { category: 'Career & Placements', query: 'What hackathons & CoE labs are available?' }
+  // AnimeJS Initial Staggered Mount Animation (Runs ONLY ONCE for GPU smoothness)
+  useEffect(() => {
+    if (!dashboardRef.current || hasAnimatedRef.current) return
+    hasAnimatedRef.current = true
+    const elements = dashboardRef.current.querySelectorAll('.anime-dash-item')
+    if (elements.length > 0) {
+      animate(elements, {
+        translateY: [14, 0],
+        opacity: [0, 1],
+        delay: stagger(50),
+        duration: 450,
+        ease: 'outQuart'
+      })
+    }
+  }, [])
+
+  // AnimeJS Message Bubble Elastic Spring Animation on New Message
+  useEffect(() => {
+    if (messages.length === 0 || !dashboardRef.current) return
+    const latestBubble = dashboardRef.current.querySelector('.anime-latest-msg')
+    if (latestBubble) {
+      animate(latestBubble, {
+        translateY: [12, 0],
+        scale: [0.98, 1],
+        opacity: [0.3, 1],
+        duration: 350,
+        ease: 'outQuad'
+      })
+    }
+  }, [messages])
+
+  const agentChips = [
+    { id: 'all', name: 'All Agents', icon: <Bot className="w-3.5 h-3.5" /> },
+    { id: 'faculty_agent', name: 'Faculty', icon: <Users className="w-3.5 h-3.5" /> },
+    { id: 'curriculum_agent', name: 'Curriculum', icon: <BookOpen className="w-3.5 h-3.5" /> },
+    { id: 'tutor_agent', name: 'Coding Tutor', icon: <Terminal className="w-3.5 h-3.5" /> },
+    { id: 'placement_agent', name: 'Career & CoE', icon: <Rocket className="w-3.5 h-3.5" /> },
   ]
+
+  const quickPrompts = [
+    { agentKey: 'faculty_agent', category: 'Faculty Directory', query: 'Who is the Head of the Department?' },
+    { agentKey: 'curriculum_agent', category: 'Curriculum & Syllabus', query: 'Syllabus details for Cloud Computing?' },
+    { agentKey: 'tutor_agent', category: 'CS Programming Tutor', query: 'Explain quicksort algorithm in C++' },
+    { agentKey: 'placement_agent', category: 'Career & Placements', query: 'What hackathons & CoE labs are available?' }
+  ]
+
+  const filteredPrompts = selectedAgent === 'all' 
+    ? quickPrompts 
+    : quickPrompts.filter(p => p.agentKey === selectedAgent)
 
   const handleSend = async (textToSend = input) => {
     const query = textToSend.trim()
@@ -64,291 +111,290 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
   }
 
   return (
-    <div className={`h-dvh w-full overflow-hidden flex relative transition-colors duration-300 ${theme}`}
+    <div ref={dashboardRef} className={`h-dvh w-full overflow-hidden flex flex-col relative transition-colors duration-300 ${theme}`}
       style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
       
       {/* Floating Math Formulas & Grid Background */}
       <TechBackground />
 
       {/* ═══════════════════════════════════════════════════════════════
-         LEFT COLUMN: CHAT & INTERACTIONS STREAM (Full Height Mobile & Desktop)
+         1. STANDALONE TOP HEADER NAVIGATION BAR (Separated from Chat)
       ═══════════════════════════════════════════════════════════════ */}
-      <div className="w-full lg:w-3/5 h-full flex flex-col relative z-10 border-r border-brand-border/60">
+      <header className="anime-dash-item opacity-0 w-full border-b border-brand-border/80 bg-brand-light/95 backdrop-blur-md z-30 flex-shrink-0 px-4 py-2.5 sm:px-8 sm:py-3 shadow-md flex items-center justify-between gap-4">
         
-        {/* Header */}
-        <header className="nav-glass px-3.5 sm:px-6 py-3 sm:py-4 flex items-center justify-between border-b border-brand-border flex-shrink-0">
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-            <button
-              onClick={onBackToHome}
-              className="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 rounded-xl bg-amber-400/10 border border-amber-400/30 text-amber-400 hover:bg-amber-400 hover:text-slate-950 font-bold text-xs transition-all shadow-md shrink-0"
-              title="Return to Landing Page"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Landing Page</span>
-              <span className="inline sm:hidden">Home</span>
-            </button>
-
-            <div className="min-w-0 truncate">
-              <h1 className="font-display text-lg sm:text-xl font-bold tracking-wider truncate" style={{ color: 'var(--text-primary)' }}>
-                CHITTI THE ROBOT
-              </h1>
-              <p className="text-[10px] sm:text-xs truncate" style={{ color: 'var(--text-secondary)' }}>
-                Sri Eshwar College of Engineering • Speed 1 THz
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 shrink-0">
-            {/* Mobile Robot Toggle Button (< lg) */}
-            <button
-              onClick={() => setShowMobileRobot(true)}
-              className="lg:hidden p-2 rounded-xl border border-amber-400/30 bg-amber-400/10 hover:bg-amber-400/20 text-amber-400 transition-all shadow-md relative"
-              title="View Chitti Robot"
-            >
-              <Bot className="w-4 h-4" />
-              {isTyping && <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-amber-400 rounded-full animate-ping" />}
-            </button>
-
-            {/* Theme Toggle */}
-            <button
-              onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-xl border border-brand-border bg-brand-light hover:border-amber-500 text-gray-300 hover:text-amber-500 transition-all shadow-md"
-              style={{ color: 'var(--text-secondary)' }}
-              title="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </button>
-          </div>
-        </header>
-
-        {/* Main Chat Stream */}
-        <main className="flex-1 overflow-y-auto p-3.5 sm:p-6 space-y-4 sm:space-y-6">
-          {messages.length === 0 ? (
-            /* Welcome prompt cards view when stream is empty */
-            <div className="h-full flex flex-col justify-center max-w-xl mx-auto space-y-4 sm:space-y-6 animate-fade-in py-4">
-              <div className="text-center space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-mono text-amber-500 font-semibold">
-                  <Bot className="w-3.5 h-3.5" />
-                  MULTI-AGENT ENGINE
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
-                  Ask <span className="text-amber-400">Chitti the Robot</span>
-                </h3>
-
-                <p className="text-xs text-gray-400 max-w-md mx-auto leading-relaxed px-2">
-                  Click a sample question below or type your query. The system will route your question to the specialized agent.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
-                {quickPrompts.map((item, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleSend(item.query)}
-                    className="p-3.5 rounded-2xl text-left border border-brand-border bg-brand-light hover:border-amber-500/60 transition-all group cursor-pointer active:scale-[0.98]"
-                  >
-                    <span className="text-[11px] font-mono font-semibold text-amber-400 block mb-1">
-                      {item.category}
-                    </span>
-                    <p className="text-xs font-medium group-hover:text-amber-400 transition-colors" style={{ color: 'var(--text-primary)' }}>
-                      "{item.query}"
-                    </p>
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            messages.map(msg => (
-              <div
-                key={msg.id}
-                className={`flex gap-2.5 sm:gap-3.5 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-              >
-                {/* Robot Mini Avatar */}
-                {msg.role === 'assistant' && (
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-400/10 border border-amber-400/30 flex-shrink-0 flex items-center justify-center p-0.5 overflow-hidden shadow-md">
-                    <img src={roboImg} alt="Chitti" className="w-full h-full object-cover rounded-lg" />
-                  </div>
-                )}
-
-                {/* Bubble */}
-                <div
-                  className={`max-w-[92%] sm:max-w-[85%] rounded-2xl p-3.5 sm:p-5 shadow-lg border text-sm leading-relaxed ${
-                    msg.role === 'user'
-                      ? 'bg-amber-400 text-slate-950 font-semibold border-amber-300 rounded-tr-none shadow-amber-500/10'
-                      : 'bg-brand-light border-brand-border rounded-tl-none'
-                  }`}
-                  style={msg.role === 'assistant' ? { color: 'var(--text-primary)' } : {}}
-                >
-                  {msg.role === 'assistant' && (
-                    <div className="mb-2">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[11px] font-mono font-semibold bg-amber-400/10 text-amber-500 border border-amber-400/20">
-                        <Bot className="w-3 h-3 text-amber-500 shrink-0" />
-                        <span>{msg.agentName || 'reception_agent'}</span>
-                      </span>
-                    </div>
-                  )}
-                  {msg.role === 'assistant' ? (
-                    formatContent(msg.content)
-                  ) : (
-                    <p className="whitespace-pre-wrap">{msg.content}</p>
-                  )}
-                </div>
-              </div>
-            ))
-          )}
-
-          {/* Reckoning Tool Loading Indicator */}
-          {isTyping && (
-            <div className="flex items-center gap-2.5 px-2 py-2 animate-fade-in">
-              <Sparkles className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-amber-500 animate-spin" style={{ animationDuration: '3s' }} />
-              <span className="text-xs sm:text-sm font-sans font-medium tracking-wide flex items-center gap-2" style={{ color: 'var(--text-secondary)' }}>
-                Reckoning
-                <span className="text-[11px] sm:text-xs font-mono text-amber-500 font-normal">
-                  ({callingAgent || 'reception_agent'})
-                </span>
-              </span>
-            </div>
-          )}
-
-          <div ref={messagesEndRef} />
-        </main>
-
-        {/* Bottom Input Bar */}
-        <footer className="p-3 sm:p-5 pb-safe border-t border-brand-border bg-brand-dark/90 backdrop-blur-xl flex-shrink-0">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault()
-              handleSend()
-            }}
-            className="flex items-center gap-2 p-1.5 sm:p-2 rounded-2xl bg-brand-light border border-brand-border focus-within:border-amber-400/60 focus-within:ring-2 focus-within:ring-amber-400/20 transition-all shadow-2xl"
+        <div className="flex items-center gap-3 min-w-0">
+          <button
+            onClick={onBackToHome}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 hover:bg-amber-400 hover:text-slate-950 font-bold text-xs transition-all shadow-sm shrink-0 spring-button cursor-pointer"
+            title="Return to Landing Page"
           >
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask Chitti the Robot anything..."
-              className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 bg-transparent text-base sm:text-sm focus:outline-none"
-              style={{ color: 'var(--text-primary)' }}
-            />
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Landing Page</span>
+            <span className="inline sm:hidden">Home</span>
+          </button>
 
-            {messages.length > 0 && (
-              <button
-                type="button"
-                onClick={handleClear}
-                className="p-2 sm:p-2.5 rounded-xl text-gray-400 hover:text-rose-400 hover:bg-rose-500/10 transition-all shrink-0"
-                title="Clear current conversation"
-              >
-                <RotateCcw className="w-4 h-4" />
-              </button>
-            )}
-
-            <button
-              type="submit"
-              disabled={!input.trim() || isTyping}
-              className={`p-2.5 sm:p-3 rounded-xl font-medium transition-all shrink-0 ${
-                input.trim() && !isTyping
-                  ? 'bg-amber-400 text-slate-950 hover:bg-amber-300 shadow-lg shadow-amber-400/20 scale-100'
-                  : 'bg-brand-border text-gray-400 cursor-not-allowed scale-95'
-              }`}
-            >
-              <Send className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
-            </button>
-          </form>
-        </footer>
-
-      </div>
-
-      {/* ═══════════════════════════════════════════════════════════════
-         RIGHT COLUMN: FULL VIRTUAL ROBOT DISPLAY (Desktop Large Viewport)
-      ═══════════════════════════════════════════════════════════════ */}
-      <div className="hidden lg:flex w-2/5 h-full relative z-10 flex-col items-center justify-center p-8 bg-gradient-to-l from-black/20 via-transparent to-transparent">
-        
-        <div className="relative flex flex-col items-center justify-center max-h-[85vh] w-full">
-          
-          {/* Ambient Cyber Aura Glow behind Robo */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/20 via-cyan-500/15 to-amber-500/20 blur-3xl opacity-80 animate-roboGlow" />
-          
-          {/* Full Robot Image Display Container */}
-          <div className="relative max-h-[60vh] w-auto max-w-full flex items-center justify-center p-4 animate-roboFloat">
-            <img
-              src={roboImg}
-              alt="Chitti Robot"
-              className="max-h-[55vh] w-auto object-contain filter drop-shadow-[0_20px_40px_rgba(255,193,7,0.35)]"
-            />
-
-            {/* Laser scanning line when processing */}
-            {isTyping && (
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-400/25 to-transparent animate-roboScan pointer-events-none rounded-3xl" />
-            )}
+          <div className="min-w-0 truncate">
+            <h1 className="font-display text-base sm:text-lg font-extrabold tracking-wider truncate" style={{ color: 'var(--text-primary)' }}>
+              CHITTI <span className="text-amber-400">ROBOT</span>
+            </h1>
+            <p className="text-[10px] sm:text-xs truncate" style={{ color: 'var(--text-secondary)' }}>
+              Sri Eshwar College of Engineering • Speed 1 THz
+            </p>
           </div>
-
-          {/* Big Bold Text With No Borders Below Image */}
-          <h2 className="mt-2 text-2xl sm:text-3xl font-black tracking-wider text-amber-400 text-center select-none">
-            I am Chitti the Robot
-          </h2>
-
-          {/* Live Robot Reckoning Status Pill (only when processing) */}
-          {isTyping && (
-            <div className="mt-4 flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-brand-light/90 border border-brand-border shadow-2xl backdrop-blur-md animate-fadeIn">
-              <span className="w-3 h-3 rounded-full bg-amber-400 animate-ping" />
-              <span className="text-xs font-mono tracking-wide font-medium" style={{ color: 'var(--text-primary)' }}>
-                Reckoning ({callingAgent})...
-              </span>
-            </div>
-          )}
-
         </div>
 
-      </div>
+        <div className="flex items-center gap-2 shrink-0">
+          {/* Clear History Button (when active chat) */}
+          {messages.length > 0 && (
+            <button
+              type="button"
+              onClick={handleClear}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white font-mono text-xs transition-all shadow-sm spring-button cursor-pointer"
+              title="Clear conversation"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Clear Chat</span>
+            </button>
+          )}
+
+          {/* Theme Toggle */}
+          <button
+            onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
+            className="p-2 rounded-full border border-brand-border bg-brand-light hover:border-amber-400 transition-all shadow-md spring-button"
+            style={{ color: 'var(--text-secondary)' }}
+            title="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+        </div>
+
+      </header>
 
       {/* ═══════════════════════════════════════════════════════════════
-         MOBILE ROBOT DRAWER / MODAL (< lg Viewports)
+         2. DEDICATED CHAT INTERFACE WORKSPACE CONTAINER (Separated)
       ═══════════════════════════════════════════════════════════════ */}
-      {showMobileRobot && (
-        <div className="lg:hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/70 backdrop-blur-md p-4 animate-fadeIn">
-          <div className="relative w-full max-w-md bg-brand-dark border border-brand-border rounded-3xl p-6 flex flex-col items-center shadow-2xl space-y-4">
-            <button
-              onClick={() => setShowMobileRobot(false)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-brand-light text-gray-400 hover:text-white"
-            >
-              <X className="w-5 h-5" />
-            </button>
+      <div className="w-full max-w-5xl flex-1 flex flex-col relative z-10 mx-auto px-2 sm:px-4 py-2 sm:py-4 overflow-hidden">
+        
+        <div className="w-full h-full flex flex-col rounded-3xl border border-brand-border/80 bg-brand-light/30 backdrop-blur-md shadow-2xl overflow-hidden">
+          
+          {/* Specialized Agent Chips Filter Bar inside Chat Container */}
+          <div className="anime-dash-item opacity-0 px-4 sm:px-6 py-2.5 border-b border-brand-border/60 bg-brand-dark/40 flex items-center gap-2 overflow-x-auto scrollbar-none flex-shrink-0">
+            <span className="text-[10px] font-mono uppercase tracking-widest shrink-0 hidden xs:inline" style={{ color: 'var(--text-secondary)' }}>Agents:</span>
+            {agentChips.map((chip) => (
+              <button
+                key={chip.id}
+                onClick={() => setSelectedAgent(chip.id)}
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold transition-all shrink-0 spring-button cursor-pointer backdrop-blur-md ${
+                  selectedAgent === chip.id
+                    ? 'bg-amber-400 text-slate-950 shadow-md shadow-amber-400/20 font-bold'
+                    : 'bg-brand-light border border-brand-border hover:text-amber-400 hover:border-amber-400/40'
+                }`}
+                style={selectedAgent !== chip.id ? { color: 'var(--text-primary)' } : {}}
+              >
+                {chip.icon}
+                <span>{chip.name}</span>
+              </button>
+            ))}
+          </div>
 
-            <div className="text-center space-y-1">
-              <h3 className="font-display text-2xl font-bold tracking-wider" style={{ color: 'var(--text-primary)' }}>
-                CHITTI THE ROBOT
-              </h3>
-              <p className="text-xs text-amber-400 font-mono">Department Multi-Agent Assistant</p>
-            </div>
+          {/* Main Chat Stream (With Proper Spacing & No Card Clipping) */}
+          <main className="flex-1 overflow-y-auto p-3 sm:p-6 space-y-4 sm:space-y-6">
+            {messages.length === 0 ? (
+              /* ─── COLORFUL FLOATING CARDS WELCOME VIEW (Proper Spacing & GPU Fast) ─── */
+              <div className="h-full flex flex-col justify-center items-center text-center space-y-6 py-4 sm:py-8 my-auto relative overflow-hidden">
+                
+                {/* Colorful Tilted Cards Orbiting Welcome Headline */}
+                <div className="relative w-full max-w-4xl flex flex-col items-center justify-center space-y-4 sm:space-y-6 pt-2">
+                  
+                  {/* Floating Colorful Cards Row 1 */}
+                  <div className="w-full flex items-center justify-between gap-3 px-2 sm:px-6 pointer-events-none">
+                    
+                    {/* Card 1: Emerald Green Tilted */}
+                    <div className="anime-dash-item opacity-0 p-3 sm:p-4 rounded-2xl bg-emerald-600 text-white shadow-xl transform -rotate-6 hover:rotate-0 transition-transform duration-300 pointer-events-auto cursor-pointer max-w-[210px] text-left" style={{ willChange: 'transform' }} onClick={() => handleSend("Who is the Head of the Department?")}>
+                      <div className="flex items-center gap-1.5 text-xs font-mono font-bold mb-1">
+                        <Users className="w-4 h-4" />
+                        <span>01 FACULTY</span>
+                      </div>
+                      <p className="text-[11px] font-medium leading-tight">Head of Dept, Professors & Contacts</p>
+                    </div>
 
-            <div className="relative w-full h-48 flex items-center justify-center animate-roboFloat">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/20 via-cyan-500/15 to-amber-500/20 blur-2xl opacity-80" />
-              <img
-                src={roboImg}
-                alt="Chitti Robot"
-                className="h-40 w-auto object-contain filter drop-shadow-[0_10px_25px_rgba(255,193,7,0.35)]"
-              />
-              {isTyping && (
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-400/25 to-transparent animate-roboScan pointer-events-none rounded-2xl" />
-              )}
-            </div>
+                    {/* Card 2: Crimson Red Tilted */}
+                    <div className="anime-dash-item opacity-0 p-3 sm:p-4 rounded-2xl bg-rose-600 text-white shadow-xl transform rotate-6 hover:rotate-0 transition-transform duration-300 pointer-events-auto cursor-pointer max-w-[210px] text-left" style={{ willChange: 'transform' }} onClick={() => handleSend("Syllabus details for Cloud Computing?")}>
+                      <div className="flex items-center gap-1.5 text-xs font-mono font-bold mb-1">
+                        <BookOpen className="w-4 h-4" />
+                        <span>02 CURRICULUM</span>
+                      </div>
+                      <p className="text-[11px] font-medium leading-tight">Semesters, Electives & Syllabi</p>
+                    </div>
 
-            <h2 className="text-xl sm:text-2xl font-black tracking-wider text-amber-400 text-center select-none">
-              I am Chitti the Robot
-            </h2>
+                  </div>
 
+                  {/* Main Headline */}
+                  <div className="anime-dash-item opacity-0 space-y-2 z-10 px-4 max-w-2xl">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/15 border border-amber-400/30 text-xs font-mono text-amber-400 font-extrabold shadow-md">
+                      <Bot className="w-4 h-4" />
+                      <span>SECE CSE • 5 MULTI-AGENTS</span>
+                    </div>
+
+                    <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight" style={{ color: 'var(--text-primary)' }}>
+                      What's Next <span className="text-amber-400 font-serif italic font-normal">Big Idea!</span>
+                    </h2>
+
+                    <p className="text-xs sm:text-base font-medium max-w-lg mx-auto leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                      Ask Chitti anything about faculty, semester course syllabi, algorithm code explanations, and placement prep.
+                    </p>
+                  </div>
+
+                  {/* Floating Colorful Cards Row 2 */}
+                  <div className="w-full flex items-center justify-between gap-3 px-2 sm:px-6 pointer-events-none">
+                    
+                    {/* Card 3: Amber Yellow Tilted */}
+                    <div className="anime-dash-item opacity-0 p-3 sm:p-4 rounded-2xl bg-amber-500 text-slate-950 shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300 pointer-events-auto cursor-pointer max-w-[210px] text-left" style={{ willChange: 'transform' }} onClick={() => handleSend("Explain quicksort algorithm in C++")}>
+                      <div className="flex items-center gap-1.5 text-xs font-mono font-extrabold mb-1">
+                        <Terminal className="w-4 h-4" />
+                        <span>03 CODE TUTOR</span>
+                      </div>
+                      <p className="text-[11px] font-semibold leading-tight">Data Structures & Algo Solutions</p>
+                    </div>
+
+                    {/* Card 4: Magenta Pink Tilted */}
+                    <div className="anime-dash-item opacity-0 p-3 sm:p-4 rounded-2xl bg-fuchsia-600 text-white shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-300 pointer-events-auto cursor-pointer max-w-[210px] text-left" style={{ willChange: 'transform' }} onClick={() => handleSend("What hackathons & CoE labs are available?")}>
+                      <div className="flex items-center gap-1.5 text-xs font-mono font-bold mb-1">
+                        <Rocket className="w-4 h-4" />
+                        <span>04 PLACEMENTS</span>
+                      </div>
+                      <p className="text-[11px] font-medium leading-tight">CoE Labs & Career Highlights</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                {/* Sample Prompt Quick Click Cards */}
+                <div className="anime-dash-item opacity-0 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-2xl pt-2">
+                  {(filteredPrompts.length > 0 ? filteredPrompts : quickPrompts).map((item, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleSend(item.query)}
+                      className="p-3.5 rounded-2xl text-left border border-brand-border bg-brand-light/95 backdrop-blur-md hover:border-amber-400/60 transition-all group cursor-pointer active:scale-[0.98] shadow-md spring-button"
+                    >
+                      <span className="text-[11px] font-mono font-semibold text-amber-400 block mb-1">
+                        {item.category}
+                      </span>
+                      <p className="text-xs sm:text-sm font-medium group-hover:text-amber-400 transition-colors" style={{ color: 'var(--text-primary)' }}>
+                        "{item.query}"
+                      </p>
+                    </button>
+                  ))}
+                </div>
+
+              </div>
+            ) : (
+              /* ─── ACTIVE CHAT STREAM (Floating Cards Vanish) ─── */
+              messages.map((msg, index) => {
+                const isLatest = index === messages.length - 1
+                return (
+                  <div
+                    key={msg.id}
+                    className={`flex gap-2.5 sm:gap-3.5 ${msg.role === 'user' ? 'justify-end' : 'justify-start'} ${isLatest ? 'anime-latest-msg' : ''}`}
+                  >
+                    {/* Assistant Avatar */}
+                    {msg.role === 'assistant' && (
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-amber-400/20 border border-amber-400/40 flex-shrink-0 flex items-center justify-center shadow-md text-amber-400 font-bold">
+                        <Bot className="w-4 h-4" />
+                      </div>
+                    )}
+
+                    {/* Bubble */}
+                    <div
+                      className={`max-w-[92%] sm:max-w-[85%] p-4 sm:p-5 shadow-xl border text-sm leading-relaxed ${
+                        msg.role === 'user'
+                          ? 'bg-amber-400 text-slate-950 font-semibold border-amber-300 rounded-3xl rounded-tr-sm shadow-amber-500/10'
+                          : 'bg-brand-light border-brand-border rounded-3xl rounded-tl-sm'
+                      }`}
+                      style={msg.role === 'assistant' ? { color: 'var(--text-primary)' } : {}}
+                    >
+                      {msg.role === 'assistant' && (
+                        <div className="mb-2">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-amber-400/10 text-amber-400 border border-amber-400/20 shadow-sm">
+                            <Bot className="w-3 h-3 text-amber-400 shrink-0" />
+                            <span>{msg.agentName || 'reception_agent'}</span>
+                          </span>
+                        </div>
+                      )}
+                      {msg.role === 'assistant' ? (
+                        formatContent(msg.content)
+                      ) : (
+                        <p className="whitespace-pre-wrap">{msg.content}</p>
+                      )}
+                    </div>
+                  </div>
+                )
+              })
+            )}
+
+            {/* Reckoning Tool Loading Indicator */}
             {isTyping && (
-              <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-light border border-brand-border shadow-lg animate-fadeIn">
-                <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping" />
-                <span className="text-xs font-mono font-medium" style={{ color: 'var(--text-primary)' }}>
-                  Reckoning ({callingAgent})...
+              <div className="flex items-center gap-2.5 px-4 py-2.5 animate-fade-in bg-amber-400/10 backdrop-blur-md rounded-full border border-amber-400/30 max-w-fit shadow-lg">
+                <Sparkles className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-amber-400 animate-spin" style={{ animationDuration: '2.5s' }} />
+                <span className="text-xs sm:text-sm font-sans font-medium tracking-wide flex items-center gap-2" style={{ color: 'var(--text-secondary)' }}>
+                  Reckoning
+                  <span className="text-[11px] sm:text-xs font-mono text-amber-400 font-bold">
+                    ({callingAgent || 'reception_agent'})
+                  </span>
                 </span>
               </div>
             )}
-          </div>
+
+            <div ref={messagesEndRef} />
+          </main>
+
+          {/* Floating Bottom Input Pill Bar inside Chat Box */}
+          <footer className="anime-dash-item opacity-0 p-3 sm:p-4 pb-safe border-t border-brand-border/60 bg-brand-dark/30 flex-shrink-0">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                handleSend()
+              }}
+              className="relative flex items-center p-2 rounded-full bg-brand-light/95 border border-brand-border shadow-xl transition-all max-w-3xl mx-auto focus-within:border-amber-400/60"
+            >
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Ask Chitti the Robot anything..."
+                className="flex-1 px-4 sm:px-5 py-2.5 sm:py-3 bg-transparent text-sm sm:text-base focus:outline-none placeholder-gray-400"
+                style={{ color: 'var(--text-primary)' }}
+              />
+
+              {messages.length > 0 && (
+                <button
+                  type="button"
+                  onClick={handleClear}
+                  className="p-2.5 rounded-full text-gray-400 hover:text-rose-400 hover:bg-rose-500/10 transition-all shrink-0 spring-button mr-1"
+                  title="Clear conversation"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                </button>
+              )}
+
+              <button
+                type="submit"
+                disabled={!input.trim() || isTyping}
+                className={`w-11 h-11 rounded-full flex items-center justify-center transition-all shrink-0 spring-button ${
+                  input.trim() && !isTyping
+                    ? 'bg-amber-400 text-slate-950 shadow-lg shadow-amber-400/20 scale-105 cursor-pointer'
+                    : 'bg-brand-border text-gray-400 cursor-not-allowed scale-95'
+                }`}
+              >
+                <Send className="w-4.5 h-4.5 text-slate-950" />
+              </button>
+            </form>
+          </footer>
+
         </div>
-      )}
+
+      </div>
 
     </div>
   )

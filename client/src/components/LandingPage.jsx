@@ -125,97 +125,96 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
       <TechBackground />
 
       {/* ═══════════════════════════════════════════════════════════════
-         1. GOOGLE MATERIAL 3 GLASS HEADER
+         1. FLOATING FROSTED GLASS PILL HEADER (Matching Reference UI)
       ═══════════════════════════════════════════════════════════════ */}
-      <header className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between gap-3">
-        
-        {/* Brand Logo & College Badge */}
-        <div className="flex items-center gap-2.5 sm:gap-3.5 cursor-pointer group min-w-0" onClick={onStartChat}>
-          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center p-1.5 sm:p-2 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform shrink-0">
-            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2zm-4 7H6v3h2V9zm10 0h-2v3h2V9zm-5 5h-2v2h2v-2z" />
-            </svg>
-          </div>
-
-          <div className="min-w-0">
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-xl sm:text-2xl font-black tracking-tight font-sans" style={{ color: 'var(--text-primary)' }}>CHITTI</span>
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-amber-400 font-sans">AI</span>
+      <header className="relative z-30 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6">
+        <div className="w-full rounded-full border border-white/20 dark:border-white/10 bg-white/10 dark:bg-black/40 backdrop-blur-2xl shadow-2xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-3">
+          
+          {/* Left Brand Logo */}
+          <div className="flex items-center gap-2 cursor-pointer group shrink-0" onClick={onStartChat}>
+            <div className="w-8 h-8 rounded-full bg-amber-400/20 border border-amber-400/40 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
+              <svg className="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2zm-4 7H6v3h2V9zm10 0h-2v3h2V9zm-5 5h-2v2h2v-2z" />
+              </svg>
             </div>
-            <p className="text-[10px] sm:text-[11px] font-medium truncate" style={{ color: 'var(--text-secondary)' }}>
-              Sri Eshwar College of Eng.
-            </p>
+            <span className="text-lg font-black tracking-tight" style={{ color: 'var(--text-primary)' }}>Chitti <span className="text-amber-400">AI</span></span>
           </div>
+
+          {/* Center Links */}
+          <nav className="hidden md:flex items-center gap-6 text-xs font-mono font-medium text-gray-300">
+            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Home</span>
+            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>5 AI Agents</span>
+            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Faculty</span>
+            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Curriculum</span>
+            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Placements</span>
+          </nav>
+
+          {/* Right Action Buttons */}
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
+              className="p-2 rounded-full border border-brand-border bg-brand-light/80 hover:border-amber-400/50 transition-all shadow-md spring-button"
+              style={{ color: 'var(--text-secondary)' }}
+              title="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+
+            <button
+              onClick={onStartChat}
+              className="px-5 py-2 rounded-full bg-white dark:bg-amber-400 text-slate-950 font-extrabold text-xs shadow-xl shadow-amber-400/20 hover:shadow-amber-400/40 transition-all transform hover:scale-105 active:scale-95 spring-button"
+            >
+              Launch Chitti
+            </button>
+          </div>
+
         </div>
-
-        {/* Right CTA & Theme Toggle */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-          <button
-            onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
-            className="p-2 sm:p-2.5 rounded-xl border border-brand-border bg-brand-light hover:border-amber-400/50 transition-all shadow-md"
-            style={{ color: 'var(--text-secondary)' }}
-            title="Toggle Theme"
-          >
-            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </button>
-
-          <button
-            onClick={onStartChat}
-            className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-400/25 hover:shadow-amber-400/40 transition-all transform hover:scale-105 active:scale-95"
-          >
-            <Bot className="w-4 h-4 text-slate-950" />
-            <span className="hidden xs:inline">Launch Chitti</span>
-            <span className="inline xs:hidden">Launch</span>
-          </button>
-        </div>
-
       </header>
 
       {/* ═══════════════════════════════════════════════════════════════
-         2. REDESIGNED HERO SECTION (DEEPMIND CYBER HYBRID)
+         2. CINEMATIC HERO SECTION (Matching Reference Design)
       ═══════════════════════════════════════════════════════════════ */}
-      <main ref={heroRef} className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8 lg:py-12 flex-1 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+      <main ref={heroRef} className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-12 lg:py-16 flex-1 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         
-        {/* Left Hero Text Content */}
+        {/* Left Hero Content */}
         <div className="w-full lg:w-7/12 space-y-6 sm:space-y-8 text-left">
           
           {/* Department Multi-Agent Badge */}
-          <div className="anime-hero-item opacity-0 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-400/15 via-cyan-400/10 to-amber-400/15 border border-amber-400/30 text-xs font-mono text-amber-400 font-semibold shadow-md">
+          <div className="anime-hero-item opacity-0 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 dark:bg-black/30 border border-white/20 dark:border-white/10 text-xs font-mono text-amber-400 font-semibold backdrop-blur-xl shadow-md">
             <Bot className="w-3.5 h-3.5 text-amber-400" />
-            <span>CHITTI AI • MULTI-AGENT SYSTEM</span>
+            <span>CHITTI AI • MULTI-AGENT ENGINE</span>
           </div>
 
-          {/* Main Headline */}
+          {/* Headline Matching Reference Typography */}
           <div className="anime-hero-item opacity-0 space-y-3">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08]">
-              <span className="block" style={{ color: 'var(--text-primary)' }}>Next-Gen AI for</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
-                Computer Science
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08]">
+              <span className="block" style={{ color: 'var(--text-primary)' }}>Meet your</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 font-serif italic font-normal">
+                virtual robot today
               </span>
             </h1>
-            <p className="text-base sm:text-xl font-medium leading-relaxed max-w-2xl" style={{ color: 'var(--text-secondary)' }}>
-              Speed 1 Terahertz, Memory 1 Zettabyte! Ask anything about faculty, semester course syllabi, algorithms, and placement preparation.
+            <p className="text-base sm:text-xl font-normal leading-relaxed max-w-xl text-gray-400">
+              Speed 1 Terahertz, Memory 1 Zettabyte! Grounded PostgreSQL multi-agent assistance for Computer Science & Engineering.
             </p>
           </div>
 
-          {/* Interactive Hero Search Input Bar */}
-          <form onSubmit={handleHeroSubmit} className="anime-hero-item opacity-0 space-y-3">
-            <div className="relative flex items-center p-2 rounded-2xl bg-brand-light/90 border border-brand-border focus-within:border-amber-400/70 focus-within:ring-2 focus-within:ring-amber-400/20 backdrop-blur-xl shadow-2xl transition-all max-w-2xl">
+          {/* Frosted Glass Search Pill Bar (Matching Reference Interface) */}
+          <form onSubmit={handleHeroSubmit} className="anime-hero-item opacity-0 space-y-4">
+            <div className="relative flex items-center p-2 rounded-full bg-white/10 dark:bg-black/40 border border-white/20 dark:border-white/10 backdrop-blur-2xl shadow-2xl transition-all max-w-xl">
               <input
                 type="text"
                 value={heroSearch}
                 onChange={(e) => setHeroSearch(e.target.value)}
-                placeholder="Ask Chitti... e.g., 'Who is HoD?' or 'Cloud Syllabus'"
-                className="w-full px-4 py-3 bg-transparent text-sm sm:text-base focus:outline-none"
-                style={{ color: 'var(--text-primary)' }}
+                placeholder="Search for faculty, curriculum, code..."
+                className="w-full px-5 py-3 bg-transparent text-sm sm:text-base focus:outline-none text-gray-100 placeholder-gray-400"
               />
 
               <button
                 type="submit"
-                className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-amber-400/25 hover:shadow-amber-400/40 transition-all transform hover:scale-105 shrink-0"
+                className="w-11 h-11 rounded-full bg-white dark:bg-amber-400 text-slate-950 font-bold flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all shrink-0 spring-button cursor-pointer"
+                title="Search with Chitti"
               >
-                <span>Ask Chitti</span>
-                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+                <ArrowRight className="w-5 h-5 text-slate-950 stroke-[2.5]" />
               </button>
             </div>
 
@@ -231,7 +230,7 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
                   key={idx}
                   type="button"
                   onClick={onStartChat}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-brand-light border border-brand-border hover:border-amber-400/50 text-[11px] font-mono transition-all hover:text-amber-400 text-gray-300 cursor-pointer"
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 dark:bg-white/5 border border-white/10 hover:border-amber-400/50 text-[11px] font-mono transition-all hover:text-amber-400 text-gray-300 cursor-pointer spring-button"
                 >
                   {chip.icon}
                   <span>{chip.label}</span>
@@ -242,18 +241,18 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
 
         </div>
 
-        {/* Right Hero Graphic: Blended Glass Container with Orbit Badges */}
+        {/* Right Hero Graphic: Blended Glass Container */}
         <div className="anime-hero-item opacity-0 w-full lg:w-5/12 flex items-center justify-center relative">
           <div className="relative w-full max-w-sm sm:max-w-md flex items-center justify-center p-2 animate-roboFloat">
             
-            {/* Ambient Golden Cyber Glow */}
+            {/* Ambient Golden Glow */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/25 via-cyan-500/15 to-amber-500/25 blur-3xl opacity-90" />
             
             {/* Glass Container Blending image2.png */}
-            <div className="relative w-full rounded-3xl overflow-hidden border border-amber-400/35 bg-black/50 backdrop-blur-2xl p-3 sm:p-4 shadow-2xl shadow-amber-500/20 group cursor-pointer" onClick={onStartChat}>
+            <div className="relative w-full rounded-3xl overflow-hidden border border-white/20 dark:border-white/10 bg-black/50 backdrop-blur-2xl p-4 shadow-2xl shadow-amber-500/20 group cursor-pointer" onClick={onStartChat}>
               
               {/* Floating Top Badge */}
-              <div className="absolute top-3 left-3 z-10 px-3 py-1 rounded-xl bg-slate-950/80 border border-amber-400/30 backdrop-blur-md flex items-center gap-1.5 shadow-lg">
+              <div className="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-slate-950/80 border border-white/15 backdrop-blur-md flex items-center gap-1.5 shadow-lg">
                 <Users className="w-3.5 h-3.5 text-amber-400" />
                 <span className="text-[10px] font-mono text-amber-400 font-bold">5 Specialized Agents</span>
               </div>
@@ -266,10 +265,10 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
               />
 
               {/* Overlay Bottom Badge */}
-              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-2.5 sm:p-3 rounded-2xl bg-brand-light/95 border border-brand-border/80 backdrop-blur-md flex items-center justify-between shadow-xl">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 rounded-2xl bg-slate-950/85 border border-white/15 backdrop-blur-md flex items-center justify-between shadow-xl">
                 <div className="flex items-center gap-2">
                   <Bot className="w-3.5 h-3.5 text-amber-400" />
-                  <span className="text-xs font-mono font-semibold" style={{ color: 'var(--text-primary)' }}>Chitti AI</span>
+                  <span className="text-xs font-mono font-semibold text-gray-200">Chitti AI Engine</span>
                 </div>
                 <span className="text-xs font-mono text-amber-400 font-bold">SECE CSE</span>
               </div>
@@ -371,6 +370,17 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
         </div>
 
       </footer>
+
+      {/* ═══════════════════════════════════════════════════════════════
+         5. FLOATING CIRCULAR ASSISTANT CHAT WIDGET (Matching Reference UI)
+      ═══════════════════════════════════════════════════════════════ */}
+      <button
+        onClick={onStartChat}
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-white dark:bg-amber-400 text-slate-950 shadow-2xl flex items-center justify-center spring-button hover:scale-110 active:scale-95 border-2 border-white/40 cursor-pointer group"
+        title="Open Chitti Assistant"
+      >
+        <MessageSquare className="w-6 h-6 fill-slate-950 group-hover:rotate-12 transition-transform" />
+      </button>
 
     </div>
   )
