@@ -114,3 +114,5 @@ The 3D Virtual Robot avatar (`robo.png`) features custom CSS keyframe animations
 | `-webkit-tap-highlight-color` | `transparent` | Removes dark grey flash during touch taps on mobile. |
 | `text-base sm:text-sm` | `font-size: 16px` on mobile | Prevents iOS Safari from forcing auto-zoom on input focus. |
 | `break-words` | `overflow-wrap: break-word;` | Prevents long text/code from pushing message bubbles out of bounds. |
+| `.animate-clipWipeEnter` | `clip-path: polygon(...)` | Sweeps golden clip wipe curtain across screen upon screen change. |
+| `.animate-clipWipeExit` | `clip-path: polygon(...)` | Sweeps clip wipe curtain off screen to reveal target view. |
