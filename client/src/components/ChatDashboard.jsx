@@ -90,10 +90,10 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
 
             <div className="min-w-0 truncate">
               <h1 className="font-display text-lg sm:text-xl font-bold tracking-wider truncate" style={{ color: 'var(--text-primary)' }}>
-                CSE VIRTUAL ROBOT
+                CHITTI THE ROBOT
               </h1>
               <p className="text-[10px] sm:text-xs truncate" style={{ color: 'var(--text-secondary)' }}>
-                Sri Eshwar College of Engineering
+                Sri Eshwar College of Engineering • Speed 1 THz
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
             <button
               onClick={() => setShowMobileRobot(true)}
               className="lg:hidden p-2 rounded-xl border border-amber-400/30 bg-amber-400/10 hover:bg-amber-400/20 text-amber-400 transition-all shadow-md relative"
-              title="View CSE Robot"
+              title="View Chitti Robot"
             >
               <Bot className="w-4 h-4" />
               {isTyping && <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-amber-400 rounded-full animate-ping" />}
@@ -133,7 +133,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
-                  Ask <span className="text-amber-400">CSE Virtual Robot</span>
+                  Ask <span className="text-amber-400">Chitti the Robot</span>
                 </h3>
 
                 <p className="text-xs text-gray-400 max-w-md mx-auto leading-relaxed px-2">
@@ -167,7 +167,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
                 {/* Robot Mini Avatar */}
                 {msg.role === 'assistant' && (
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-400/10 border border-amber-400/30 flex-shrink-0 flex items-center justify-center p-0.5 overflow-hidden shadow-md">
-                    <img src={roboImg} alt="Bot" className="w-full h-full object-cover rounded-lg" />
+                    <img src={roboImg} alt="Chitti" className="w-full h-full object-cover rounded-lg" />
                   </div>
                 )}
 
@@ -226,7 +226,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask CSE Virtual Robot anything..."
+              placeholder="Ask Chitti the Robot anything..."
               className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 bg-transparent text-base sm:text-sm focus:outline-none"
               style={{ color: 'var(--text-primary)' }}
             />
@@ -272,7 +272,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
           <div className="relative max-h-[65vh] w-auto max-w-full flex items-center justify-center p-4 animate-roboFloat">
             <img
               src={roboImg}
-              alt="Virtual Robot"
+              alt="Chitti Robot"
               className="max-h-[60vh] w-auto object-contain filter drop-shadow-[0_20px_40px_rgba(255,193,7,0.35)]"
             />
 
@@ -288,7 +288,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
             <span className="text-xs font-mono tracking-wide font-medium" style={{ color: 'var(--text-primary)' }}>
               {isTyping
                 ? `Reckoning (${callingAgent})...`
-                : 'CSE Virtual Robot Online'}
+                : 'Chitti the Robot Online'}
             </span>
           </div>
 
@@ -311,7 +311,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
 
             <div className="text-center space-y-1">
               <h3 className="font-display text-2xl font-bold tracking-wider" style={{ color: 'var(--text-primary)' }}>
-                CSE VIRTUAL ROBOT
+                CHITTI THE ROBOT
               </h3>
               <p className="text-xs text-amber-400 font-mono">Department Multi-Agent Assistant</p>
             </div>
@@ -320,7 +320,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/20 via-cyan-500/15 to-amber-500/20 blur-2xl opacity-80" />
               <img
                 src={roboImg}
-                alt="Virtual Robot"
+                alt="Chitti Robot"
                 className="h-48 w-auto object-contain filter drop-shadow-[0_10px_25px_rgba(255,193,7,0.35)]"
               />
               {isTyping && (
@@ -331,7 +331,7 @@ export default function ChatDashboard({ onBackToHome, theme, setTheme }) {
             <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-light border border-brand-border shadow-lg">
               <span className={`w-2.5 h-2.5 rounded-full ${isTyping ? 'bg-amber-400 animate-ping' : 'bg-emerald-400 animate-pulse'}`} />
               <span className="text-xs font-mono font-medium" style={{ color: 'var(--text-primary)' }}>
-                {isTyping ? `Reckoning (${callingAgent})...` : 'CSE Virtual Robot Online'}
+                {isTyping ? `Reckoning (${callingAgent})...` : 'Chitti the Robot Online'}
               </span>
             </div>
           </div>

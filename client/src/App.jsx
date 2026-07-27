@@ -52,7 +52,7 @@ export default function App() {
           <div className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-950/80 border border-amber-300/40 backdrop-blur-md shadow-2xl">
             <span className="w-3 h-3 rounded-full bg-amber-400 animate-ping" />
             <span className="font-display text-2xl font-bold tracking-widest text-amber-400">
-              CSE-BOT AI
+              CHITTI AI
             </span>
           </div>
         </div>

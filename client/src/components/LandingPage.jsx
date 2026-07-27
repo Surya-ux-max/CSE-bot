@@ -53,10 +53,10 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
 
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-xl sm:text-2xl font-black tracking-tight font-sans" style={{ color: 'var(--text-primary)' }}>CSE-</span>
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-amber-400 font-sans">Bot</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight font-sans" style={{ color: 'var(--text-primary)' }}>CHITTI</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-amber-400 font-sans">AI</span>
               <span className="px-1.5 sm:px-2 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-[9px] sm:text-[10px] font-mono text-amber-400 font-semibold">
-                v2.1 AI
+                v2.1 Robot
               </span>
             </div>
             <p className="text-[10px] sm:text-[11px] font-medium truncate" style={{ color: 'var(--text-secondary)' }}>
@@ -81,7 +81,7 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
             className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-400/25 hover:shadow-amber-400/40 transition-all transform hover:scale-105 active:scale-95"
           >
             <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-slate-950" />
-            <span className="hidden xs:inline">Launch Assistant</span>
+            <span className="hidden xs:inline">Launch Chitti</span>
             <span className="inline xs:hidden">Launch</span>
           </button>
         </div>
@@ -99,7 +99,7 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
           {/* Department Badge */}
           <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-[11px] sm:text-xs font-mono text-amber-400 font-semibold shadow-sm">
             <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-            Official Department Multi-Agent Intelligence
+            Official Department Multi-Agent Virtual Robot
           </div>
 
           {/* Headline */}
@@ -107,17 +107,17 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
             <h1 className="text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
               <span className="block" style={{ color: 'var(--text-primary)' }}>Welcome to</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
-                CSE-Bot AI
+                Chitti AI
               </span>
             </h1>
             <p className="text-lg sm:text-2xl font-bold tracking-tight mt-2" style={{ color: 'var(--text-primary)' }}>
-              Your Intelligent Assistant for <span className="text-amber-400">Computer Science & Engineering</span>
+              Your Intelligent Virtual Robot for <span className="text-amber-400">Computer Science & Engineering</span>
             </p>
           </div>
 
           {/* Subtitle Description */}
           <p className="text-sm sm:text-lg max-w-2xl leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-            Ask anything about faculty, semester course syllabi, algorithms, and placement preparation. Powered by 5 specialized AI agents and official PostgreSQL department records.
+            Ask anything about faculty, semester course syllabi, algorithms, and placement preparation. Powered by 5 specialized AI agents and official PostgreSQL department records. Speed 1 Terahertz, Memory 1 Zettabyte!
           </p>
 
           {/* Call-to-Action Buttons */}
@@ -127,7 +127,7 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
               className="flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-sm sm:text-base shadow-xl shadow-amber-400/30 hover:shadow-amber-400/50 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <MessageSquare className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-slate-950" />
-              <span>Start Assistant</span>
+              <span>Talk to Chitti</span>
             </button>
 
             <button
@@ -153,7 +153,7 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
             <div className="relative w-full rounded-3xl overflow-hidden border border-amber-400/30 bg-black/40 backdrop-blur-xl p-2.5 sm:p-3 shadow-2xl shadow-amber-500/20 group cursor-pointer" onClick={onStartChat}>
               <img
                 src={origamImg}
-                alt="CSE-Bot Origami Graphic"
+                alt="Chitti AI Graphic"
                 className="w-full h-auto max-h-[260px] sm:max-h-[380px] object-contain transform group-hover:scale-105 transition-transform duration-500"
                 style={{ mixBlendMode: 'lighten' }}
               />
@@ -162,7 +162,7 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
               <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-2.5 sm:p-3 rounded-2xl bg-brand-light/90 border border-brand-border/80 backdrop-blur-md flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-xs font-mono font-semibold" style={{ color: 'var(--text-primary)' }}>CSE-Bot AI Active</span>
+                  <span className="text-xs font-mono font-semibold" style={{ color: 'var(--text-primary)' }}>Chitti AI Active</span>
                 </div>
                 <span className="text-xs font-mono text-amber-400 font-bold">SECE CSE</span>
               </div>

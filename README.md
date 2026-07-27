@@ -1,10 +1,10 @@
-# CSE-Bot — Intelligent Multi-Agent AI Assistant
+# Chitti AI — Intelligent Multi-Agent Virtual Robot
 
-![CSE-Bot Interface & Architecture](./client/public/readme.png)
+![Chitti AI Interface & Architecture](./client/public/readme.png)
 
 ## Overview & Description
 
-**CSE-Bot** is an intelligent, multi-agent AI assistant designed for the **Department of Computer Science & Engineering (CSE)** at **Sri Eshwar College of Engineering (SECE)**. Powered by React 19, Vite, Tailwind CSS v4, FastAPI, LangChain, Groq (Llama-3.3-70b-versatile), and PostgreSQL, CSE-Bot delivers real-time, context-grounded assistance across department governance, academic planning, programming mentorship, and career development.
+**Chitti AI** (inspired by Superstar Rajinikanth's iconic Enthiran robot — *"Speed 1 Terahertz, Memory 1 Zettabyte!"*) is an intelligent, multi-agent virtual robot assistant designed for the **Department of Computer Science & Engineering (CSE)** at **Sri Eshwar College of Engineering (SECE)**. Powered by React 19, Vite, Tailwind CSS v4, FastAPI, LangChain, Groq (Llama-3.3-70b-versatile), and PostgreSQL, Chitti AI delivers real-time, high-speed, context-grounded assistance across department governance, academic planning, programming mentorship, and career development.
 
 The system utilizes a **Supervisor Router** that inspects incoming user queries and dynamically delegates them to one of **5 specialized domain AI agents**:
 
@@ -12,7 +12,7 @@ The system utilizes a **Supervisor Router** that inspects incoming user queries 
 2. **Curriculum & Syllabus Specialist (`curriculum_agent`)**: Guides students through semester course distributions, course syllabi, professional electives, industry-offered courses, and credit requirements.
 3. **CS Programming & Algorithm Tutor (`tutor_agent`)**: Mentors students in programming syntax (Python, C++, Java, SQL), data structures, algorithm complexities ($O(n \log n)$), and code debugging.
 4. **Career & Placement Coach (`placement_agent`)**: Details Centers of Excellence (CoEs), hackathons, skill development labs, student achievements, placement highlights, and Program Outcomes (POs).
-5. **Multi-Lingual Receptionist (`reception_agent`)**: Handles casual greetings (English, Tamil, Tanglish, Hindi), farewells, department vision and mission explanations, and general pleasantries.
+5. **Multi-Lingual Virtual Robot Host (`reception_agent`)**: Handles casual greetings (English, Tamil, Tanglish, Hindi), farewells, department vision and mission explanations, and iconic Chitti Robot pleasantries.
 
 ---
 
