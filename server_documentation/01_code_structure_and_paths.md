@@ -24,8 +24,10 @@ server/
 ├── main.py                          # FastAPI Application Entry Point & SessionHistoryManager
 ├── pyproject.toml                   # Project metadata & uv dependency configuration
 ├── render.yaml                      # Render Cloud Deployment Blueprint (Web Service + PostgreSQL DB)
-├── requirements.txt                 # Frozen pip dependency requirements file
-└── seed_db.py                       # Automated database populator seeding all 15 department sector tables
+├── section_d_students/              # Section D Student Roster Data Directory
+│   └── d_section.md                 # 72 Student credentials records (Name, Email, Temp Password)
+├── seed_d_section.py                # Automated parser & database populator for d_section_students table
+├── seed_db.py                       # Automated database populator seeding department sector tables
 ```
 
 ---

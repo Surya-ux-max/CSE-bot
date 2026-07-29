@@ -1,14 +1,31 @@
-import os
-import threading
-from typing import Dict, List, Optional
+"""
+main.py — CSE-BOT Production Multi-Agent Engine
+FastAPI application orchestrator. Delegates all route logic to modular route handlers.
+Updated: 2026-07-29 JWT Auth Enabled.
 
+Architecture:
+  routes/chat.py      → /chat, /session/clear, /agents/stats, /agent-messages
+  routes/messages.py  → /messages, /notifications
+  routes/calendar.py  → /events, /academic-events, /calendar/query
+  routes/meetings.py  → /meetings
+  routes/speech.py    → /speech/log
+  login/login.py      → /auth/*
+"""
+
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
+from fastapi.middleware.gzip import GZipMiddleware
 
 from config import config
-from services.supervisor import supervisor_router
+from login.login import router as auth_router
+from routes.chat import router as chat_router
+from routes.messages import router as messages_router
+from routes.calendar import router as calendar_router
+from routes.meetings import router as meetings_router
+from routes.speech import router as speech_router
+from routes.opportunities import router as opportunities_router
+
 
 # ==========================================================
 # FastAPI App Initialization
@@ -17,89 +34,124 @@ from services.supervisor import supervisor_router
 app = FastAPI(
     title="CSE-BOT API",
     description="Production Multi-Agent Engine for Department of Computer Science & Engineering, SECE",
-    version="2.1.0"
+    version="2.4.0"
 )
+
+# ==========================================================
+# CORS Middleware
+# Restricted to known frontend origins only (not wildcard in production).
+# Supports ALLOWED_ORIGIN env var for dynamic production Vercel deployment URLs.
+# ==========================================================
+
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://cse-bot.vercel.app",
+    "https://csebot.vercel.app",
+]
+
+extra_origin = os.environ.get("ALLOWED_ORIGIN")
+if extra_origin:
+    clean_extra = extra_origin.strip().rstrip("/")
+    if clean_extra and clean_extra not in ALLOWED_ORIGINS:
+        ALLOWED_ORIGINS.append(clean_extra)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+
+
+# ==========================================================
+# Register All Route Modules
+# ==========================================================
+
+app.include_router(auth_router)
+app.include_router(chat_router)
+app.include_router(messages_router)
+app.include_router(calendar_router)
+app.include_router(meetings_router)
+app.include_router(speech_router)
+app.include_router(opportunities_router) # Verified Opportunities Router
+
+
+# ==========================================================
+# Global Exception Handler (Security & Stack Trace Protection)
+# ==========================================================
+
+import traceback
+from fastapi import Request
+from fastapi.responses import JSONResponse
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    """
+    Catches all unhandled exceptions globally, logs error traceback,
+    and returns a clean, secure HTTP 500 JSON response without leaking stack details.
+    """
+    print(f"[Global Exception Handler] Error processing {request.method} {request.url.path}: {exc}")
+    traceback.print_exc()
+    return JSONResponse(
+        status_code=500,
+        content={
+            "status": "error",
+            "message": "An internal server error occurred while processing your request. Please try again later."
+        }
+    )
+
+
+# ==========================================================
+# Startup Event
+# Bug Fix B2: Academic Calendar Parser now guarded — only runs
+# when the central DB academic_calendar table is empty.
+# ==========================================================
 
 @app.on_event("startup")
 def on_startup():
-    """Automatic DB initialization and seeding check on deployment startup."""
+    """Automatic DB initialization and conditional seeding on deployment startup."""
     try:
         from db import init_db, get_db_session, KnowledgeRegistry
         from seed_db import seed_database
-        
-        print("[Render Startup] Initializing PostgreSQL database tables...")
+
+        print("[Startup] Initializing database tables...")
         init_db()
-        
+
         with get_db_session() as session:
             count = session.query(KnowledgeRegistry).count()
             if count == 0:
-                print("[Render Startup] Database is empty. Seeding all 15 sector tables...")
+                print("[Startup] Database is empty. Seeding all sector tables...")
                 seed_database()
             else:
-                print(f"[Render Startup] Database ready with {count} sector tables initialized.")
+                print(f"[Startup] Database ready with {count} sector tables initialized.")
+
+        # Academic Calendar Parser — only run when central DB is empty (Bug Fix B2)
+        try:
+            from db import AcademicEvent
+            from services.academic_calendar_parser import parse_academic_calendar_files
+
+            with get_db_session() as session:
+                existing_events = session.query(AcademicEvent).count()
+                if existing_events == 0:
+                    print("[Startup] No academic events found. Running Academic Calendar Parser...")
+                    parse_academic_calendar_files("academic_calendar")
+                else:
+                    print(f"[Startup] Academic Calendar already seeded ({existing_events} events). Skipping parser.")
+        except Exception as err:
+            print(f"[Startup Warning] Academic Calendar Parser error: {err}")
+
     except Exception as e:
-        print(f"[Render Startup Warning] Database auto-seed check skipped/error: {e}")
-
-
-
-# ==========================================================
-# Thread-Safe Session History Manager
-# ==========================================================
-
-class SessionHistoryManager:
-    """Manages thread-safe in-memory session history with a sliding window."""
-    def __init__(self, max_history_turns: int = 6):
-        self.history: Dict[str, List[BaseMessage]] = {}
-        self._lock = threading.Lock()
-        self.max_history_turns = max_history_turns
-
-    def get_history(self, session_id: str) -> List[BaseMessage]:
-        with self._lock:
-            if session_id not in self.history:
-                self.history[session_id] = []
-            return self.history[session_id]
-
-    def add_message(self, session_id: str, message: BaseMessage):
-        with self._lock:
-            if session_id not in self.history:
-                self.history[session_id] = []
-            self.history[session_id].append(message)
-            limit = self.max_history_turns * 2
-            if len(self.history[session_id]) > limit:
-                self.history[session_id] = self.history[session_id][-limit:]
-
-    def clear_history(self, session_id: str):
-        with self._lock:
-            if session_id in self.history:
-                del self.history[session_id]
-
-history_manager = SessionHistoryManager(max_history_turns=6)
+        print(f"[Startup Warning] Database auto-seed check skipped/error: {e}")
 
 
 # ==========================================================
-# Pydantic Request Models
-# ==========================================================
-
-class ChatRequest(BaseModel):
-    question: str
-    session_id: Optional[str] = "default"
-
-
-class ClearSessionRequest(BaseModel):
-    session_id: str
-
-
-# ==========================================================
-# Endpoints
+# Health Check
 # ==========================================================
 
 @app.get("/")
@@ -107,44 +159,5 @@ def home():
     return {
         "status": "running",
         "service": "CSE-BOT Production Multi-Agent Engine",
-        "version": "2.1.0"
-    }
-
-
-@app.post("/chat")
-def chat(request: ChatRequest):
-    session_id = request.session_id or "default"
-    question = request.question.strip()
-    
-    if not question:
-        return {"answer": "Please ask a question.", "agent_name": "reception_agent"}
-        
-    history = history_manager.get_history(session_id)
-    
-    try:
-        agent_name, answer = supervisor_router.route_and_execute(question, history)
-    except Exception as e:
-        import traceback
-        print(f"[API Error] Failed to generate agent response: {e}")
-        print(traceback.format_exc())
-        agent_name = "reception_agent"
-        answer = "I apologize, I encountered an error while processing your request. Please check if GROQ_API_KEY is configured on Render Dashboard."
-
-        
-    # Save to history
-    history_manager.add_message(session_id, HumanMessage(content=question))
-    history_manager.add_message(session_id, AIMessage(content=answer))
-    
-    return {
-        "answer": answer,
-        "agent_name": agent_name
-    }
-
-
-@app.post("/session/clear")
-def clear_session(request: ClearSessionRequest):
-    history_manager.clear_history(request.session_id)
-    return {
-        "status": "success",
-        "message": f"Session history cleared for {request.session_id}"
+        "version": "2.2.0"
     }

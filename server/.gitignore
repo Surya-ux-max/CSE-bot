@@ -1,12 +1,53 @@
-# Python-generated files
+# Python & Bytecode
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+*.so
+.Python
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Virtual environments
-.venv
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment Variables & Secrets
 .env
+*.env
+*.env.local
+
+# Database & Cache Files
 chroma_db/
+indexing_cache.json
+*.sqlite3
+*.db
+*.sqlite
+
+# Logs & Runtime
+logs/
+*.log
+
+# Testing & Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS & Editor Files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.sw?

@@ -3,6 +3,8 @@ import { MessageSquare, ArrowRight, Sun, Moon, GraduationCap, Zap, Shield, Spark
 import { animate, stagger } from 'animejs'
 import origamImg from '../reference/image2.png'
 import TechBackground from './TechBackground'
+import BubbleMenu from './landing/BubbleMenu'
+import ScrollTextLines from './landing/ScrollTextLines'
 
 // ─── ANIMEJS V4 STAGGERED GIANT TYPOGRAPHY SCROLL ITEM ─────────────────
 function GiantScrollItem({ agent, idx, onStartChat }) {
@@ -85,9 +87,83 @@ function GiantScrollItem({ agent, idx, onStartChat }) {
   )
 }
 
-export default function LandingPage({ onStartChat, theme, setTheme }) {
+function ChittiCartoonIllustration() {
+  return (
+    <div className="relative w-full max-w-sm sm:max-w-md flex items-center justify-center p-2">
+      {/* Sunburst radial rays stretching out */}
+      <svg className="absolute w-[130%] h-[130%] pointer-events-none select-none opacity-[0.06]" viewBox="0 0 200 200" style={{ transform: 'rotate(15deg)' }}>
+        <path d="M100 0 L105 100 L200 100 L105 105 L100 200 L95 105 L0 100 L95 100 Z" fill="#000" />
+        <path d="M100 0 L105 100 L200 100 L105 105 L100 200 L95 105 L0 100 L95 100 Z" fill="#ffc815" transform="rotate(45 100 100)" />
+      </svg>
+
+      {/* Main happy Chitti logo container */}
+      <div className="relative w-64 h-64 sm:w-80 sm:h-80 flex items-center justify-center scale-95">
+        {/* Background yellow spike rays */}
+        <svg className="absolute w-full h-full drop-shadow-[5px_5px_0_#000]" viewBox="0 0 100 100">
+          <polygon points="50,5 58,35 88,20 68,42 95,50 68,58 88,80 58,65 50,95 42,65 12,80 32,58 5,50 32,42 12,20 42,35" fill="#ffc815" stroke="#000" strokeWidth="2.5" strokeLinejoin="miter" />
+        </svg>
+
+        {/* Inner smiling face circle */}
+        <div className="absolute w-[68%] h-[68%] rounded-full bg-amber-400 border-4 border-black shadow-[inner_3px_3px_0_rgba(255,255,255,0.4)] flex flex-col items-center justify-center">
+          {/* Eyes & Eyebrows */}
+          <div className="flex gap-8 mb-3">
+            <div className="flex flex-col items-center">
+              <div className="w-6 h-1 bg-black rounded-full mb-1.5 transform rotate-[-10deg]"></div>
+              <div className="w-5 h-5 rounded-full bg-white border-3 border-black flex items-center justify-center">
+                <div className="w-2.5 h-2.5 rounded-full bg-black"></div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-6 h-1 bg-black rounded-full mb-1.5 transform rotate-[10deg]"></div>
+              <div className="w-5 h-5 rounded-full bg-white border-3 border-black flex items-center justify-center">
+                <div className="w-2.5 h-2.5 rounded-full bg-black"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Happy Open Smiling Mouth */}
+          <div className="w-16 h-8 border-4 border-black bg-black rounded-b-full relative overflow-hidden">
+            {/* Tongue */}
+            <div className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2 w-8 h-5 rounded-full bg-[#f05030]" />
+          </div>
+
+          {/* Chitti Name Badge */}
+          <div className="absolute bottom-6 px-4 py-1 rounded-lg bg-[#f05030] border-3 border-black text-white font-black tracking-widest text-xs uppercase shadow-[2.5px_2.5px_0_#000] rotate-[-2deg]">
+            $CHITTI
+          </div>
+        </div>
+      </div>
+
+      {/* POW! GROUNDED IN DB starbadge in top-right */}
+      <div className="absolute top-0 right-[-10px] sm:right-[-20px] w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center transform rotate-[12deg] hover:scale-105 transition-transform duration-300">
+        <svg className="absolute w-full h-full drop-shadow-[4px_4px_0_#000]" viewBox="0 0 100 100">
+          <polygon points="50,5 60,30 85,15 70,40 95,50 70,60 85,85 60,70 50,95 40,70 15,85 30,60 5,50 30,40 15,15 40,30" fill="#f05030" stroke="#000" strokeWidth="2.5" />
+        </svg>
+        <div className="absolute flex flex-col items-center text-center text-white px-2">
+          <span className="text-[10px] font-mono font-black tracking-wider text-amber-300">POW!</span>
+          <span className="text-[10px] font-black uppercase leading-none tracking-tighter">CSE-BOT ACTIVE!</span>
+        </div>
+      </div>
+
+      {/* Floating K coin badge under it */}
+      <div className="absolute bottom-6 left-12 w-12 h-12 rounded-full bg-amber-400 border-3 border-black flex items-center justify-center shadow-[3px_3px_0_#000] transform rotate-[-15deg] font-display font-black text-xl text-slate-950">
+        C
+      </div>
+    </div>
+  )
+}
+
+export default function LandingPage({ onStartChat, onOpenAuth, theme, setTheme }) {
   const [heroSearch, setHeroSearch] = useState('')
   const heroRef = useRef(null)
+
+  const handleAuthTrigger = (role = 'student') => {
+    if (onOpenAuth) {
+      onOpenAuth(role)
+    } else {
+      onStartChat()
+    }
+  }
 
   const agentShowcases = [
     { name: "Faculty Agent", key: "faculty_agent" },
@@ -114,7 +190,7 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
 
   const handleHeroSubmit = (e) => {
     e?.preventDefault()
-    onStartChat()
+    handleAuthTrigger('student')
   }
 
   return (
@@ -124,196 +200,294 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
       {/* Cyber Grid & Floating Math Background */}
       <TechBackground />
 
-      {/* ═══════════════════════════════════════════════════════════════
-         1. FLOATING FROSTED GLASS PILL HEADER (Matching Reference UI)
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* 1. FLOATING NEUBRUTALIST POP ART HEADER */}
       <header className="relative z-30 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6">
-        <div className="w-full rounded-full border border-white/20 dark:border-white/10 bg-white/10 dark:bg-black/40 backdrop-blur-2xl shadow-2xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-3">
+        <div className="w-full rounded-3xl border-3 border-black panel-theme shadow-[4px_4px_0_0_var(--border-color)] px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-3">
           
-          {/* Left Brand Logo */}
-          <div className="flex items-center gap-2 cursor-pointer group shrink-0" onClick={onStartChat}>
-            <div className="w-8 h-8 rounded-full bg-amber-400/20 border border-amber-400/40 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
-              <svg className="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2zm-4 7H6v3h2V9zm10 0h-2v3h2V9zm-5 5h-2v2h2v-2z" />
-              </svg>
+          {/* Left Brand Identity */}
+          <div className="flex items-center gap-2.5 cursor-pointer shrink-0" onClick={() => handleAuthTrigger('student')}>
+            <div className="w-8 h-8 rounded-full bg-[#ffc815] border-2 border-black flex items-center justify-center font-display font-black text-black text-base shadow-[2.5px_2.5px_0_0_#000]">
+              C
             </div>
-            <span className="text-lg font-black tracking-tight" style={{ color: 'var(--text-primary)' }}>Chitti <span className="text-amber-400">AI</span></span>
+            <span className="font-display font-black text-xl italic text-theme-primary tracking-wider uppercase">
+              CHITTI!
+            </span>
           </div>
 
-          {/* Center Links */}
-          <nav className="hidden md:flex items-center gap-6 text-xs font-mono font-medium text-gray-300">
-            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Home</span>
-            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>5 AI Agents</span>
-            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Faculty</span>
-            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Curriculum</span>
-            <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Placements</span>
-          </nav>
-
-          {/* Right Action Buttons */}
+          {/* Right Action Menu */}
           <div className="flex items-center gap-2 shrink-0">
             <button
-              onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-full border border-brand-border bg-brand-light/80 hover:border-amber-400/50 transition-all shadow-md spring-button"
-              style={{ color: 'var(--text-secondary)' }}
-              title="Toggle Theme"
+              onClick={() => handleAuthTrigger('student')}
+              className="px-4 py-1.5 rounded-full bg-[#ffc815] border-2 border-black text-black font-display font-black text-[11px] uppercase tracking-wider shadow-[2.5px_2.5px_0_0_#000]"
             >
-              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              $CHITTI • PORTALS LIVE
             </button>
-
+            
             <button
-              onClick={onStartChat}
-              className="px-5 py-2 rounded-full bg-white dark:bg-amber-400 text-slate-950 font-extrabold text-xs shadow-xl shadow-amber-400/20 hover:shadow-amber-400/40 transition-all transform hover:scale-105 active:scale-95 spring-button"
+              onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
+              className="p-1.5 rounded-full border-2 border-black panel-theme shadow-[1.5px_1.5px_0_0_var(--border-color)]"
             >
-              Launch Chitti
+              {theme === 'dark' ? <Sun className="w-3.5 h-3.5 text-[#ffc815]" /> : <Moon className="w-3.5 h-3.5 text-[#f05030]" />}
             </button>
           </div>
 
         </div>
       </header>
 
-      {/* ═══════════════════════════════════════════════════════════════
-         2. CINEMATIC HERO SECTION (Matching Reference Design)
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* 2. CINEMATIC HERO SECTION: POP ART REDESIGN */}
       <main ref={heroRef} className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-12 lg:py-16 flex-1 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         
         {/* Left Hero Content */}
         <div className="w-full lg:w-7/12 space-y-6 sm:space-y-8 text-left">
           
-          {/* Department Multi-Agent Badge */}
-          <div className="anime-hero-item opacity-0 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 dark:bg-black/30 border border-white/20 dark:border-white/10 text-xs font-mono text-amber-400 font-semibold backdrop-blur-xl shadow-md">
-            <Bot className="w-3.5 h-3.5 text-amber-400" />
-            <span>CHITTI AI • MULTI-AGENT ENGINE</span>
+          {/* Dialogue Speech Bubble */}
+          <div className="anime-hero-item opacity-0 inline-flex relative p-3 rounded-2xl panel-theme border-3 border-black font-mono font-black text-[10px] sm:text-xs uppercase tracking-wider shadow-[3px_3px_0_var(--border-color)] rotate-[-1deg] max-w-max">
+            <span className="text-theme-primary">HOLY DATABASE, IT'S FINALLY HERE!</span>
+            <div className="absolute bottom-[-13px] left-8 w-0 h-0 border-solid border-t-[10px] border-r-[10px] border-b-0 border-l-0 border-t-black border-r-transparent" />
+            <div className="absolute bottom-[-8px] left-9 w-0 h-0 border-solid border-t-[7px] border-r-[7px] border-b-0 border-l-0 border-t-[var(--bg-card)] border-r-transparent z-10" />
           </div>
 
-          {/* Headline Matching Reference Typography */}
-          <div className="anime-hero-item opacity-0 space-y-3">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08]">
-              <span className="block" style={{ color: 'var(--text-primary)' }}>Meet your</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 font-serif italic font-normal">
-                virtual robot today
-              </span>
+          {/* Headline */}
+          <div className="anime-hero-item opacity-0">
+            <h1 className="text-4xl sm:text-6xl lg:text-[72px] font-black tracking-tight leading-[0.95] uppercase font-display text-theme-primary">
+              THE AI SWARM <br />
+              THAT <span className="text-[#f05030] drop-shadow-[2.5px_2.5px_0_#000]">PUNCHES</span> <br />
+              ABOVE ITS CAP.
             </h1>
-            <p className="text-base sm:text-xl font-normal leading-relaxed max-w-xl text-gray-400">
-              Speed 1 Terahertz, Memory 1 Zettabyte! Grounded PostgreSQL multi-agent assistance for Computer Science & Engineering.
-            </p>
           </div>
 
-          {/* Frosted Glass Search Pill Bar (Matching Reference Interface) */}
-          <form onSubmit={handleHeroSubmit} className="anime-hero-item opacity-0 space-y-4">
-            <div className="relative flex items-center p-2 rounded-full bg-white/10 dark:bg-black/40 border border-white/20 dark:border-white/10 backdrop-blur-2xl shadow-2xl transition-all max-w-xl">
-              <input
-                type="text"
-                value={heroSearch}
-                onChange={(e) => setHeroSearch(e.target.value)}
-                placeholder="Search for faculty, curriculum, code..."
-                className="w-full px-5 py-3 bg-transparent text-sm sm:text-base focus:outline-none text-gray-100 placeholder-gray-400"
-              />
-
-              <button
-                type="submit"
-                className="w-11 h-11 rounded-full bg-white dark:bg-amber-400 text-slate-950 font-bold flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all shrink-0 spring-button cursor-pointer"
-                title="Search with Chitti"
-              >
-                <ArrowRight className="w-5 h-5 text-slate-950 stroke-[2.5]" />
-              </button>
+          {/* Presale Progress Card */}
+          <div className="anime-hero-item opacity-0 p-4 sm:p-5 rounded-2xl panel-theme border-3 border-black shadow-[4px_4px_0_var(--border-color)] max-w-lg space-y-3">
+            <div className="flex justify-between items-center text-xs font-mono font-black text-theme-primary uppercase">
+              <span>ADVISORY ACTIVITY RADAR</span>
+              <span style={{ color: 'var(--accent-red)' }} className="font-black">15,400+ RESOLVED / 20K LIMIT</span>
             </div>
+            
+            <div className="h-8 w-full bg-theme-input border-3 border-black rounded-xl overflow-hidden relative shadow-inner">
+              <div 
+                className="h-full bg-[#f05030] flex items-center justify-center text-white font-mono font-black text-xs tracking-wider" 
+                style={{ 
+                  width: '77%', 
+                  backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.15) 10px, rgba(0,0,0,0.15) 20px)' 
+                }}
+              >
+                77% SYNCED!
+              </div>
+            </div>
+          </div>
 
-            {/* Quick Sample Prompt Chips */}
-            <div className="flex flex-wrap items-center gap-2 pt-1">
+          {/* Countdown & Buy Button */}
+          <div className="anime-hero-item opacity-0 space-y-4 max-w-lg">
+            <span className="text-xs font-mono font-black text-[#f05030] uppercase tracking-wider block">NEXT SYSTEM EVALUATION IN...</span>
+            
+            <div className="flex gap-2">
               {[
-                { icon: <GraduationCap className="w-3.5 h-3.5 text-amber-400" />, label: "HoD & Faculty" },
-                { icon: <BookOpen className="w-3.5 h-3.5 text-amber-400" />, label: "Sem 6 Syllabus" },
-                { icon: <Terminal className="w-3.5 h-3.5 text-amber-400" />, label: "Quicksort Code" },
-                { icon: <Rocket className="w-3.5 h-3.5 text-amber-400" />, label: "Placement Stats" }
-              ].map((chip, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={onStartChat}
-                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 dark:bg-white/5 border border-white/10 hover:border-amber-400/50 text-[11px] font-mono transition-all hover:text-amber-400 text-gray-300 cursor-pointer spring-button"
-                >
-                  {chip.icon}
-                  <span>{chip.label}</span>
-                </button>
+                { val: '03', label: 'DAYS' },
+                { val: '07', label: 'HRS' },
+                { val: '42', label: 'MIN' },
+                { val: '18', label: 'SEC' }
+              ].map((c, i) => (
+                <div key={i} className="flex flex-col items-center">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-[#0a0a0a] border-3 border-black shadow-[3px_3px_0_var(--border-color)] flex items-center justify-center font-display font-black text-2xl sm:text-3xl text-[#ffc815]">
+                    {c.val}
+                  </div>
+                  <span className="text-[9px] font-mono font-black text-theme-secondary mt-1">{c.label}</span>
+                </div>
               ))}
             </div>
-          </form>
+
+            {/* Massive Yellow Buy Button */}
+            <button
+              onClick={() => handleAuthTrigger('student')}
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-amber-400 text-slate-950 font-black text-sm uppercase tracking-wider comic-btn cursor-pointer inline-flex items-center justify-center gap-2"
+            >
+              <span>ACCESS CSE-BOT NOW!</span>
+              <ArrowRight className="w-5 h-5 text-slate-950 stroke-[3]" />
+            </button>
+          </div>
 
         </div>
 
-        {/* Right Hero Graphic: Blended Glass Container */}
+        {/* Right Hero Graphic: Happy Sunburst Chitti Illustration */}
         <div className="anime-hero-item opacity-0 w-full lg:w-5/12 flex items-center justify-center relative">
-          <div className="relative w-full max-w-sm sm:max-w-md flex items-center justify-center p-2 animate-roboFloat">
-            
-            {/* Ambient Golden Glow */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/25 via-cyan-500/15 to-amber-500/25 blur-3xl opacity-90" />
-            
-            {/* Glass Container Blending image2.png */}
-            <div className="relative w-full rounded-3xl overflow-hidden border border-white/20 dark:border-white/10 bg-black/50 backdrop-blur-2xl p-4 shadow-2xl shadow-amber-500/20 group cursor-pointer" onClick={onStartChat}>
-              
-              {/* Floating Top Badge */}
-              <div className="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-slate-950/80 border border-white/15 backdrop-blur-md flex items-center gap-1.5 shadow-lg">
-                <Users className="w-3.5 h-3.5 text-amber-400" />
-                <span className="text-[10px] font-mono text-amber-400 font-bold">5 Specialized Agents</span>
-              </div>
-
-              <img
-                src={origamImg}
-                alt="Chitti AI Graphic"
-                className="w-full h-auto max-h-[280px] sm:max-h-[390px] object-contain transform group-hover:scale-105 transition-transform duration-500"
-                style={{ mixBlendMode: 'lighten' }}
-              />
-
-              {/* Overlay Bottom Badge */}
-              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 rounded-2xl bg-slate-950/85 border border-white/15 backdrop-blur-md flex items-center justify-between shadow-xl">
-                <div className="flex items-center gap-2">
-                  <Bot className="w-3.5 h-3.5 text-amber-400" />
-                  <span className="text-xs font-mono font-semibold text-gray-200">Chitti AI Engine</span>
-                </div>
-                <span className="text-xs font-mono text-amber-400 font-bold">SECE CSE</span>
-              </div>
-            </div>
-
-          </div>
+          <ChittiCartoonIllustration />
         </div>
 
       </main>
 
-      {/* ═══════════════════════════════════════════════════════════════
-         3. GIANT TYPOGRAPHY SCROLL SHOWCASE (Matching Reference Image)
-      ═══════════════════════════════════════════════════════════════ */}
-      <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-24 border-t border-brand-border/60">
+      {/* 3. DUAL PORTAL WORKSPACE GATEWAY (Student vs. Faculty) */}
+      <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 border-t-3 border-black">
         
-        {/* Section Label */}
-        <div className="mb-6 sm:mb-12 flex items-center gap-2">
-          <ChevronDown className="w-4 h-4 animate-bounce text-amber-400" />
-          <span className="text-xs font-mono font-semibold text-amber-400 uppercase tracking-widest">
-            Scroll to Explore Multi-Agent System
-          </span>
+        <div className="text-center space-y-3 mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-2xl bg-[#ffc815] border-2 border-black text-xs font-mono text-black font-black shadow-[2px_2px_0_0_#000]">
+            <Shield className="w-3.5 h-3.5" />
+            <span>ROLE-BASED ACADEMIC ENVIRONMENT</span>
+          </div>
+          <h2 className="text-4xl sm:text-6xl font-black leading-none uppercase tracking-tight text-theme-primary drop-shadow-[2.5px_2.5px_0_#f05030] font-display">
+            Tailored Portals for <span className="text-[#f05030]">Students & Faculty</span>
+          </h2>
+          <p className="text-xs sm:text-sm text-theme-secondary font-black max-w-lg mx-auto">
+            Dedicated AI workspaces customized with specific agents, databases, and permission scopes.
+          </p>
         </div>
 
-        {/* Stacked Giant Text Lines */}
-        <div className="flex flex-col space-y-2 sm:space-y-4">
-          {agentShowcases.map((agent, idx) => (
-            <GiantScrollItem
-              key={idx}
-              agent={agent}
-              idx={idx}
-              onStartChat={onStartChat}
-            />
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          
+          {/* Student Portal Card */}
+          <div className="p-6 sm:p-8 rounded-3xl comic-card panel-theme flex flex-col justify-between space-y-6">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#ffc815] border-2 border-black flex items-center justify-center p-3 text-black shadow-[2px_2px_0_0_#000]">
+                <GraduationCap className="w-6 h-6" />
+              </div>
+
+              <div>
+                <span className="text-xs font-mono text-[#f05030] font-bold uppercase tracking-wider block mb-1">
+                  Student Workspace
+                </span>
+                <h3 className="text-2xl font-black text-theme-primary uppercase font-display">
+                  Intelligent Student Portal
+                </h3>
+              </div>
+
+              <p className="text-xs sm:text-sm text-theme-secondary font-semibold leading-relaxed">
+                Personalized CS Bot, peer & professor AI messaging, semester academic calendar sync, and global hackathon opportunity radar tailored to your section and year.
+              </p>
+
+              <ul className="space-y-2 text-xs font-mono text-theme-primary font-black">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#f05030] shrink-0" />
+                  <span>Interactive CS Programming & Algo Tutor</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#f05030] shrink-0" />
+                  <span>In-App Messages with Thread Summarizer</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#f05030] shrink-0" />
+                  <span>Academic & Personal Calendar Agent</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#f05030] shrink-0" />
+                  <span>Global & Regional Hackathon Opportunities</span>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              onClick={() => handleAuthTrigger('student')}
+              className="w-full py-3.5 rounded-2xl bg-[#ffc815] text-black font-mono font-extrabold text-xs flex items-center justify-center gap-2 comic-btn cursor-pointer"
+            >
+              <span>Student Register / Login</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
+          {/* Faculty Portal Card */}
+          <div className="p-6 sm:p-8 rounded-3xl comic-card panel-theme flex flex-col justify-between space-y-6">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#ffc815] border-2 border-black flex items-center justify-center p-3 text-black shadow-[2px_2px_0_0_#000]">
+                <Users className="w-6 h-6" />
+              </div>
+
+              <div>
+                <span className="text-xs font-mono text-[#f05030] font-bold uppercase tracking-wider block mb-1">
+                  Faculty & Advisor Portal
+                </span>
+                <h3 className="text-2xl font-black text-theme-primary uppercase font-display">
+                  Faculty Advisory Portal
+                </h3>
+              </div>
+
+              <p className="text-xs sm:text-sm text-theme-secondary font-semibold leading-relaxed">
+                Tutor and class advisor tools, academic schedule publisher, student progress analytics, UG PAC governance, and assessment committee oversight.
+              </p>
+
+              <ul className="space-y-2 text-xs font-mono text-theme-primary font-black">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#f05030] shrink-0" />
+                  <span>Class Advisor & Tutor Workspace</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#f05030] shrink-0" />
+                  <span>Academic Schedule & Event Publisher</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#f05030] shrink-0" />
+                  <span>UG PAC & Assessment Committee Records</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#f05030] shrink-0" />
+                  <span>Curriculum & Professional Electives Registry</span>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              onClick={() => handleAuthTrigger('faculty')}
+              className="w-full py-3.5 rounded-2xl bg-[#f05030] text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 comic-btn cursor-pointer"
+            >
+              <span>Faculty Register / Login</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
         </div>
 
       </section>
 
+      {/* 3.5 GSAP BUBBLE MENU — JOY OF LEARNING & PLATFORM NAVIGATION */}
+      <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-12 border-t-3 border-black space-y-6">
+        <div className="text-center space-y-2">
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-2xl bg-[#ffc815] border-2 border-black text-xs font-mono text-black font-bold shadow-[2px_2px_0_0_#000]">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Interactive Joyful Navigation</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-bold leading-none tracking-tight text-theme-primary font-display">
+            Experience the Joy of <span className="text-[#f05030]">CSE-Bot Platform</span>
+          </h2>
+          <p className="text-xs sm:text-sm text-theme-secondary font-normal max-w-xl mx-auto">
+            Click the menu bubble to reveal joyful quick-action navigation pills powered by GSAP animations.
+          </p>
+        </div>
+
+        {/* GSAP Bubble Menu Component */}
+        <BubbleMenu
+          logo={<span className="font-mono font-bold text-xs uppercase text-black flex items-center gap-1"><Sparkles className="w-4 h-4 text-[#f05030]" /> Joy of Learning CSE-Bot</span>}
+          menuAriaLabel="Toggle joyful menu"
+          menuBg="#ffffff"
+          menuContentColor="#111111"
+          useFixedPosition={false}
+          animationEase="back.out(1.5)"
+          animationDuration={0.5}
+          staggerDelay={0.12}
+        />
+      </section>
+
       {/* ═══════════════════════════════════════════════════════════════
-         4. CTA & FOOTER SECTION (SECE WATERMARK + WE CSE.)
+         4. GIANT TYPOGRAPHY SCROLL SHOWCASE (ScrollTextLines Component)
       ═══════════════════════════════════════════════════════════════ */}
-      <footer className="relative z-10 w-full border-t border-brand-border/60 overflow-hidden py-16 sm:py-24 px-4 sm:px-6">
+      <section className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-16 border-t-3 border-black">
+        <ScrollTextLines
+          agents={[
+            { name: "FACULTY", key: "faculty_agent", desc: "Professors & HoD Directory", color: "#ffc815" },
+            { name: "CURRICULUM", key: "curriculum_agent", desc: "Semesters 1-8 Syllabi & Credits", color: "#f05030" },
+            { name: "CODING TUTOR", key: "tutor_agent", desc: "Interactive CS Programming & Algorithm Tutor", color: "#10b981" },
+            { name: "PLACEMENT", key: "placement_agent", desc: "CoE Labs & Corporate Drives Radar", color: "#3b82f6" },
+            { name: "VIRTUAL HOST", key: "reception_agent", desc: "Multi-Lingual Receptionist & Host", color: "#8b5cf6" }
+          ]}
+          onSelectAgent={(key) => handleAuthTrigger('student')}
+        />
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+         5. CTA & FOOTER SECTION (SECE WATERMARK + WE CSE.)
+      ═══════════════════════════════════════════════════════════════ */}
+      <footer className="relative z-10 w-full border-t-3 border-black overflow-hidden py-16 sm:py-24 px-4 sm:px-6">
         
-        {/* Giant SECE Watermark Background Text (High Visibility) */}
+        {/* Giant SECE Watermark Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0">
-          <span className="font-black text-[28vw] sm:text-[24vw] tracking-tighter text-slate-300/80 dark:text-white/15 uppercase leading-none select-none pointer-events-none transition-colors duration-300">
+          <span className="font-black text-[28vw] sm:text-[24vw] tracking-tighter uppercase leading-none select-none pointer-events-none transition-colors duration-300"
+            style={{ color: 'var(--text-primary)', opacity: 0.05 }}>
             SECE
           </span>
         </div>
@@ -323,46 +497,45 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
           
           {/* WE CSE. Headline */}
           <div className="space-y-3">
-            <h2 className="text-4xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-none" style={{ color: 'var(--text-primary)' }}>
-              WE <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">CSE.</span>
+            <h2 className="text-5xl sm:text-8xl font-black tracking-tight leading-none uppercase text-theme-primary drop-shadow-[3px_3px_0_#f05030] font-display">
+              WE <span className="text-[#f05030]">CSE.</span>
             </h2>
-            <p className="text-sm sm:text-lg font-medium text-gray-400 max-w-md mx-auto">
+            <p className="text-sm sm:text-lg font-black text-theme-secondary max-w-md mx-auto">
               Empowering Future Engineers with AI & Multi-Agent Intelligence.
             </p>
           </div>
 
           {/* Floating Pill CTA Button */}
           <button
-            onClick={onStartChat}
-            className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-brand-light/90 border border-brand-border hover:border-amber-400/70 backdrop-blur-xl text-xs sm:text-sm font-mono font-extrabold shadow-2xl transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2.5 group cursor-pointer"
-            style={{ color: 'var(--text-primary)' }}
+            onClick={() => handleAuthTrigger('student')}
+            className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-2xl bg-[#ffc815] border-2 border-black hover:bg-[#f0b500] text-xs sm:text-sm font-mono font-black text-black shadow-[3px_3px_0_0_#000] cursor-pointer hover:translate-y-[-1px] transition-all flex items-center gap-2.5 group comic-btn"
           >
-            <Bot className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
-            <span>Talk to Chitti</span>
-            <ArrowRight className="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform" />
+            <Bot className="w-4 h-4 text-black group-hover:rotate-12 transition-transform" />
+            <span>Enter Department Platform</span>
+            <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
           </button>
 
           {/* Bottom Attribution & Links Row */}
-          <div className="w-full pt-12 sm:pt-16 border-t border-brand-border/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono" style={{ color: 'var(--text-secondary)' }}>
+          <div className="w-full pt-12 sm:pt-16 border-t-2 border-black flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-theme-primary font-black">
             
             {/* Department Identity */}
             <div className="flex items-center gap-2">
-              <Bot className="w-3.5 h-3.5 text-amber-400" />
-              <span>Sri Eshwar College of Engineering</span>
+              <Bot className="w-3.5 h-3.5 text-[#f05030]" />
+              <span>Sri Eshwar College of Engineering • Dept of Computer Science</span>
             </div>
 
             {/* Center Crafted With Heart Pill */}
-            <div className="px-4 py-2 rounded-full bg-brand-light/80 border border-brand-border backdrop-blur-md flex items-center gap-2 shadow-md">
+            <div className="px-4 py-2 rounded-2xl panel-theme border-2 border-black flex items-center gap-2 shadow-[2px_2px_0_0_var(--border-color)] font-black">
               <span className="uppercase text-[11px]">CRAFTED WITH</span>
-              <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 animate-pulse" />
-              <span className="uppercase text-[11px]">BY <strong className="text-amber-400 font-bold">SECE CSE</strong></span>
+              <Heart className="w-3.5 h-3.5 text-[#f05030] fill-[#f05030] animate-pulse" />
+              <span className="uppercase text-[11px]">BY <strong className="text-[#f05030] font-bold">SECE CSE</strong></span>
             </div>
 
             {/* Right Department Links */}
             <div className="flex items-center gap-4 text-[11px]">
-              <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>Department AI</span>
+              <span className="hover:text-[#f05030] cursor-pointer transition-colors" onClick={() => handleAuthTrigger('student')}>Department AI</span>
               <span>|</span>
-              <span className="hover:text-amber-400 cursor-pointer transition-colors" onClick={onStartChat}>SECE Portal</span>
+              <span className="hover:text-[#f05030] cursor-pointer transition-colors" onClick={() => handleAuthTrigger('faculty')}>SECE Portal</span>
             </div>
 
           </div>
@@ -372,11 +545,11 @@ export default function LandingPage({ onStartChat, theme, setTheme }) {
       </footer>
 
       {/* ═══════════════════════════════════════════════════════════════
-         5. FLOATING CIRCULAR ASSISTANT CHAT WIDGET (Matching Reference UI)
+         6. FLOATING CIRCULAR ASSISTANT CHAT WIDGET
       ═══════════════════════════════════════════════════════════════ */}
       <button
-        onClick={onStartChat}
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-white dark:bg-amber-400 text-slate-950 shadow-2xl flex items-center justify-center spring-button hover:scale-110 active:scale-95 border-2 border-white/40 cursor-pointer group"
+        onClick={() => handleAuthTrigger('student')}
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-2xl bg-amber-400 border-3 border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#fff] flex items-center justify-center cursor-pointer group hover:translate-y-[-2px] active:translate-y-[2px]"
         title="Open Chitti Assistant"
       >
         <MessageSquare className="w-6 h-6 fill-slate-950 group-hover:rotate-12 transition-transform" />

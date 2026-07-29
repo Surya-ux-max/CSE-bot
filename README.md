@@ -20,5 +20,6 @@ The system utilizes a **Supervisor Router** that inspects incoming user queries 
 
 Detailed technical documentation suites for developers, maintainers, and system administrators are available in the repository:
 
+- **[Multi-Agent System Architecture & Flowchart](file:///d:/CSE-bot/ARCHITECTURE_DIAGRAM.md)**: Visual Mermaid diagrams showing multi-user role flows, Supervisor Router intent classification, specialized agent swarm execution, RAG pipeline, and PostgreSQL sector table maps.
 - **[Client Documentation Suite](file:///d:/CSE-bot/client_documentation/README.md)**: Architectural breakdown, OOP design patterns, component functions, Material 3 design system, mobile responsive layout fixes, and developer setup guide.
 - **[Server Documentation Suite](file:///d:/CSE-bot/server_documentation/README.md)**: FastAPI backend architecture, Supervisor intent classification, polymorphic agent hierarchy, PostgreSQL knowledge repository, and deployment blueprints (credentials sanitized).

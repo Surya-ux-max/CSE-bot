@@ -29,6 +29,30 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ─── Embedded Systems Build Artifacts & Binaries ─────────
+Embedded_system_codebase/build/
+Embedded_system_codebase/*.exe
+Embedded_system_codebase/build_demo*
+*.o
+*.out
+*.exe
+*.obj
+*.dll
+*.dylib
+*.elf
+*.hex
+*.bin
+
+# ─── Database Files (SQLite & Local Dumps) ────────────────
+*.db
+*.sqlite
+*.sqlite3
+server/*.db
+server/data/*.db
 
 # ─── Legacy Vector DB & Index Caches ──────────────────────
 chroma_db/

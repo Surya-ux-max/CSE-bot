@@ -8,14 +8,81 @@ This document provides a line-by-line detailed functional reference for every Re
 
 **Path**: [client/src/App.jsx](file:///d:/CSE-bot/client/src/App.jsx)
 
-### Internal Components & State Hooks:
-- `ConfettiCanvas`: 60fps HTML5 Canvas particle engine spawning 130+ randomized celebratory particles (amber, gold, cyan, emerald, magenta, white) with 2D gravity ($g = 0.48$), air resistance ($d = 0.95$), spin rotation, shape variance, and alpha decay upon button navigation.
-- `const [confettiTrigger, setConfettiTrigger] = useState(null)`: Stores exact click coordinates `(x, y)` to fire randomized particle eruption.
-- `const [theme, setTheme] = useState('dark')`: Tracks global UI theme (`'dark'` or `'light'`).
-- `const [currentPage, setCurrentPage] = useState('landing')`: Manages active screen view (`'landing'` or `'chat'`).
-- `handleNavigate(targetPage, event)`: Triggers spring button feedback, confetti explosion at origin click coordinates, and Clip Wipe screen transition curtain.
+### React Router DOM Page Routing & State Hooks:
+- **`react-router-dom` Integration**: Installed `react-router-dom` and wrapped the application in `<BrowserRouter>` in `main.jsx` and `<Routes>` in `App.jsx`.
+- **URL Route Mapping**:
+  - `/` $\rightarrow$ Hero & Showcase Landing Page (`<LandingPage />`).
+  - `/auth` $\rightarrow$ Dedicated Authentication Screen (`<AuthPage />`).
+  - `/dashboard/*` $\rightarrow$ Dedicated Student Workspace & Department Hub Launcher (`<StudentDashboard />`).
+- **Browser History & Deep Linking**: Supports browser back/forward buttons, direct bookmarking, and URL deep linking into all pages.
+- `ConfettiCanvas`: 60fps HTML5 Canvas particle engine spawning 160+ randomized celebratory particles (amber, gold, cyan, emerald, magenta, white) with 2D gravity, air resistance, spin rotation, shape variance, and alpha decay upon button navigation.
+- `handleNavigateWithAnimation(targetPath, clickEvent)`: Triggers clip-wipe curtain transition and confetti eruption while pushing URL state via `useNavigate()`.
 
 ---
+
+## 🔐 1.5 `auth.jsx` (Dedicated Authentication Screen)
+
+**Path**: [client/src/auth/auth.jsx](file:///d:/CSE-bot/client/src/auth/auth.jsx)
+
+### Structure & Layout:
+- **Full Dedicated Auth Page**: Replaces modal popup with a dedicated, full-screen glassmorphic authentication page complete with floating background glow particles and top header navigation bar (*Return to Platform*, brand identity badge, theme toggle).
+- **Dual Role Selector**:
+  - `Student Portal` vs `Faculty Portal` (Role tab switching with Anime.js animations).
+- **Auth Mode Switcher**:
+  - `Sign In (Login)` vs `Create Account (Register)` (Mode switching tab with staggered field reveals).
+- **Pre-Seeded Account Recognition**:
+---
+
+## 📩 1.9 `MessageHub.jsx` (Gmail-Inspired AI Message Hub)
+
+**Path**: [client/src/components/MessageHub.jsx](file:///d:/CSE-bot/client/src/components/MessageHub.jsx)
+
+### Header & Gmail-Style Navigation:
+- **Dedicated Header**: Displays `"Message Hub"` with student welcome text (`Welcome, Suryaprakash S • AI-Powered Gmail Enterprise Hub`) and active Message Agent status badge. Free of calendar buttons.
+- **Gmail Left Sidebar Menu**: Prominent **Compose AI Message** button, `Inbox` (with unread count badge), `Sent`, `Drafts`, `Starred`, and `Trash`.
+
+### Full-Width Search & Filter Agent:
+- **Full-Width Search Bar**: *"Search messages, recipients, subjects, or AI-generated drafts..."*
+- **Filter Agent Smart Filters**: Directly below search bar (`All`, `Unread`, `Faculty`, `Students`, `Announcements`, `AI Generated`, `Drafts`, `Sent`).
+
+### Message Agent AI Workspace & Email Preview:
+- **Large Prompt Area**: *"Ask the Message Agent to generate, send, edit, summarize, or search messages."*
+- **Quick Example Prompt Chips**: Direct shortcuts (*"Generate an email to all faculty"*, *"Notify III CSE-D students about tomorrow's lab"*, *"Draft an announcement"*).
+- **Professional Gmail Email Preview**: Displays AI generated draft as a formal Gmail email preview awaiting user action.
+- **3 Primary Action Buttons**: **`Send Now`** (dispatches email), **`Edit Draft`** (inline text editor), **`Save Draft`** (saves to Drafts folder).
+
+---
+
+## 📅 2.0 `CalendarHub.jsx` (Swap Card Calendar & AI Scheduler)
+
+**Path**: [client/src/components/CalendarHub.jsx](file:///d:/CSE-bot/client/src/components/CalendarHub.jsx)
+
+### Structure & Layout:
+- **Top Swap Card Pill Selector**: Toggle between **`My Calendar`** (Personal schedule, study blocks, custom tasks) and **`Academic Calendar`** (Official SECE CAT-1/CAT-2 exam timetables, practical reviews, assignment deadlines, holiday schedule).
+- **Interactive Calendar Agent Input Box**: Custom frosted glass bar with interactive placeholder text for AI scheduling queries (*"Ask Calendar Agent (e.g. 'Schedule a 2-hour study block for Compiler Design on Thursday at 4 PM')..."*).
+- **Dedicated Calendar Pages**:
+  - **My Calendar Page**: Personal event cards with quick *"Add Personal Event"* modal.
+  - **Academic Calendar Page**: Official SECE CSE schedule with category filter chips (*Exam*, *Practical Review*, *Submission*, *Holiday*).
+
+---
+
+## 🎓 2.1 `student_dashboard.jsx` (Redesigned App Launcher Cards Grid UX)
+
+**Path**: [client/src/student_dashboard/student_dashboard.jsx](file:///d:/CSE-bot/client/src/student_dashboard/student_dashboard.jsx)
+
+### Architecture & Navigation:
+- **Primary AI Workspace**: **Chitti AI Assistant Swarm** serves as the main home view without confusing persistent sidebars.
+- **Top Right Square Mix App Launcher Button (`LayoutGrid`)**: Allows instant one-click access to the **Department Hubs Cards Page**.
+- **Clean Full-Page Navigation**:
+  - Clicking any Hub card transitions cleanly into a dedicated full-page view (`Message Hub`, `Calendar Hub`, `Hackathon Radar`, `Curriculum`).
+  - Top header provides a **Back to Chitti AI** button and **Department Hubs Launcher (`LayoutGrid`)** icon for effortless switching.
+
+### Department Hub Cards:
+1. 📩 **Message Hub**: Gmail-inspired AI communication hub, email generator & inbox.
+2. 📅 **Calendar Hub**: Swap card personal study scheduler & SECE official exam timetable.
+3. 🚀 **Hackathon Radar**: Live SIH 2026, Google Solution Challenge & CoE Labs tracker.
+4. 📚 **Curriculum & Syllabi**: Overall (Semesters 1-8) course credit distribution, professional electives & syllabus viewer.
+5. 📚 **Curriculum & Syllabi**: Comprehensive course distribution, credit requirements, filter tabs & AI copilot.
 
 ## 🏡 2. `LandingPage.jsx` (Department Hero & Showcase)
 
@@ -36,11 +103,14 @@ This document provides a line-by-line detailed functional reference for every Re
   - `reception_agent`: Virtual Host & CVM Specialist.
 
 ### UI Sections:
-1. **Floating Frosted Glass Pill Header**: Centered translucent pill bar floating over the viewport featuring brand identity, navigation links (*Home*, *5 AI Agents*, *Faculty*, *Curriculum*, *Placements*), theme toggle button, and rounded pill CTA.
-2. **Cinematic Frosted Glass Hero Section**: Atmospheric layout with italicized serif headline accent (*"Meet your virtual robot today"*), high-blur frosted glass search pill bar with circular action button, quick-prompt filter chips, and 3D robot artwork container with floating orbit badges.
-3. **Giant Typography Scroll Showcase**: Giant AnimeJS-powered staggered typography scroll list featuring high-contrast focus animation on agent names (`text-4xl` to `text-8xl`).
-4. **CTA & Footer Section**: High-impact footer featuring giant translucent **`SECE`** background typography watermark (`text-[25vw]`), bold **`WE CSE.`** headline text, rounded pill assistant trigger button, and center attribution pill (*"CRAFTED WITH ❤️ BY SECE CSE"*).
-5. **Floating Circular Assistant Action Widget**: Fixed bottom-right circular button (`💬`) allowing instant assistant invocation from anywhere on the landing screen.
+1. **Floating Frosted Glass Header Pill**: Centered translucent pill bar floating over the viewport featuring `SECE CSE` Intelligent Platform brand identity, navigation links (*Platform Vision*, *Student Portal*, *Faculty Portal*, *AI Agents*, *Research & CoE*), theme toggle button, and rounded `Launch Platform` CTA.
+2. **Dedicated Intelligent Department Hero Section**: Atmospheric layout with italicized serif headline accent (*"The Intelligent Department Platform"*), high-blur frosted glass search pill bar with circular action button, quick-prompt filter chips, and 3D robot artwork container with floating orbit badges.
+3. **Dual Portal Workspace Gateway**: Interactive role-based gateway highlighting:
+   - **Student Workspace**: Interactive CS AI Tutor, In-App Messages with Thread Summarizer, Academic & Personal Calendar Sync, and Global/Regional Hackathon Radar.
+   - **Faculty & Advisor Portal**: Tutor & Advisor tools, Academic Schedule Publisher, UG PAC & Assessment Committee Records, and Curriculum Registry.
+4. **Giant Typography Scroll Showcase**: Giant AnimeJS-powered staggered typography scroll list featuring high-contrast focus animation on agent names (`text-4xl` to `text-8xl`).
+5. **CTA & Footer Section**: High-impact footer featuring giant translucent **`SECE`** background typography watermark (`text-[28vw]`), bold **`WE CSE.`** headline text, rounded pill assistant trigger button, and center attribution pill (*"CRAFTED WITH ❤️ BY SECE CSE"*).
+6. **Floating Circular Assistant Action Widget**: Fixed bottom-right circular button (`💬`) allowing instant assistant invocation from anywhere on the landing screen.
 
 ---
 

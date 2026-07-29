@@ -28,6 +28,24 @@ This document provides an exhaustive function-by-function reference for all back
 
 ---
 
+## 🔐 1.5 `login.py` (Authentication Router & Cross-Role Security)
+
+**Path**: [server/login/login.py](file:///d:/CSE-bot/server/login/login.py)
+
+### Authentication Endpoints:
+1. `POST /auth/student/login`:
+   - Validates student credentials against `d_section_students`.
+   - **Cross-Role Enforcement**: Performs a database check against `faculty_accounts`. If the email is registered under a Faculty account, returns **HTTP 403 FORBIDDEN** (`Role Access Denied`).
+2. `POST /auth/student/register`:
+   - Checks if student account is pre-seeded in `d_section_students`. If pre-seeded, returns `"account_exists"` status directing user to log in.
+3. `POST /auth/faculty/login`:
+   - Validates faculty credentials against `faculty_accounts`.
+   - **Cross-Role Enforcement**: Performs a database check against `d_section_students`. If the email is registered under a Student account, returns **HTTP 403 FORBIDDEN** (`Role Access Denied`).
+4. `POST /auth/faculty/register`:
+   - Checks if faculty account is pre-seeded in `faculty_accounts`. Rejects student emails attempting to register under faculty portal.
+
+---
+
 ## ⚙️ 2. `config.py` (AppConfig & LLM Initialization)
 
 **Path**: [server/config.py](file:///d:/CSE-bot/server/config.py)

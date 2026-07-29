@@ -66,6 +66,48 @@ class KnowledgeRepository:
                     print(f"[KnowledgeRepository] Error querying table '{table_name}': {e}")
                     continue
 
+            # Dynamic search in Placements and Hackathons live tables
+            if not category or category in ["placement"]:
+                try:
+                    from db import Placement, Hackathon
+                    placements = session.query(Placement).filter(Placement.status == "Active").all()
+                    for p in placements:
+                        searchable_text = f"{p.title} {p.company} {p.description}"
+                        score = 0
+                        for token in query_tokens:
+                            if token in searchable_text.lower():
+                                score += 3 if token in p.title.lower() or token in p.company.lower() else 1
+                        if score > 0:
+                            rel = self.calculate_relevance(query, searchable_text)
+                            scored_records.append({
+                                "table": "placements",
+                                "id": p.id,
+                                "section_title": f"{p.title} ({p.company})",
+                                "content": f"Company: {p.company}\nDeadline: {p.deadline}\nDescription: {p.description}\nApply Link: {p.apply_link or 'N/A'}",
+                                "metadata": None,
+                                "score": score + rel
+                            })
+                    
+                    hackathons = session.query(Hackathon).filter(Hackathon.status == "Active").all()
+                    for h in hackathons:
+                        searchable_text = f"{h.title} {h.description}"
+                        score = 0
+                        for token in query_tokens:
+                            if token in searchable_text.lower():
+                                score += 3 if token in h.title.lower() else 1
+                        if score > 0:
+                            rel = self.calculate_relevance(query, searchable_text)
+                            scored_records.append({
+                                "table": "hackathons",
+                                "id": h.id,
+                                "section_title": h.title,
+                                "content": f"Deadline: {h.deadline}\nDescription: {h.description}\nApply Link: {h.apply_link or 'N/A'}",
+                                "metadata": None,
+                                "score": score + rel
+                            })
+                except Exception as dyn_err:
+                    print(f"[KnowledgeRepository] Error searching dynamic opportunities: {dyn_err}")
+
         scored_records.sort(key=lambda x: x["score"], reverse=True)
         top_matches = scored_records[:max_results]
 

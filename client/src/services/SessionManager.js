@@ -16,6 +16,19 @@ export class SessionManager {
     return 'session_' + Math.random().toString(36).substring(2, 9)
   }
 
+  static getSessionId(key = 'default') {
+    try {
+      let session = localStorage.getItem(`cse_session_${key}`)
+      if (!session) {
+        session = this.generateSessionId()
+        localStorage.setItem(`cse_session_${key}`, session)
+      }
+      return session
+    } catch (e) {
+      return this.generateSessionId()
+    }
+  }
+
   static estimateAgent(query) {
     const qLower = query.toLowerCase()
     if (qLower.includes('placement') || qLower.includes('coe') || qLower.includes('hackathon') || qLower.includes('skill')) {

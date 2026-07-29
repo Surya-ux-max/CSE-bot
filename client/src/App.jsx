@@ -1,9 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
-import ChatDashboard from './components/ChatDashboard'
+import AuthPage from './auth/auth'
+import Dashboard from './pages/Dashboard'
+import HubsLauncher from './pages/HubsLauncher'
+import MessageHubPage from './pages/MessageHubPage'
+import CalendarHubPage from './pages/CalendarHubPage'
+import HackathonsPage from './pages/HackathonsPage'
+import CurriculumPage from './pages/CurriculumPage'
+import MeetingHubPage from './pages/MeetingHubPage'
+import ProtectedRoute from './components/ProtectedRoute'
+import ErrorBoundary from './components/ErrorBoundary'
+import { AuthProvider, useAuth } from './context/AuthContext'
 import './App.css'
 
-// ─── HIGH-PERFORMANCE SHINING CELEBRATORY CONFETATION CANVAS ENGINE ───────
+// ─── HIGH-PERFORMANCE SHINING CELEBRATORY CONFETTI CANVAS ENGINE ───────
 function ConfettiCanvas({ triggerBurst }) {
   const canvasRef = useRef(null)
 
@@ -28,7 +39,7 @@ function ConfettiCanvas({ triggerBurst }) {
       let rot = (Math.PI / 2) * 3
       let x = cx
       let y = cy
-      const step = Math.PI / spikes
+      let step = Math.PI / spikes
 
       ctx.beginPath()
       ctx.moveTo(cx, cy - outerRadius)
@@ -45,164 +56,258 @@ function ConfettiCanvas({ triggerBurst }) {
       }
       ctx.lineTo(cx, cy - outerRadius)
       ctx.closePath()
-      ctx.fill()
     }
 
     for (let i = 0; i < particleCount; i++) {
       const angle = Math.random() * Math.PI * 2
-      const speed = Math.random() * 22 + 9
+      const speed = Math.random() * 16 + 4
       particles.push({
         x: originX,
         y: originY,
         vx: Math.cos(angle) * speed,
-        vy: Math.sin(angle) * speed - Math.random() * 8,
-        width: Math.random() * 12 + 10,   // Larger particle sizes (10px to 22px)
-        height: Math.random() * 14 + 8,
-        size: Math.random() * 10 + 6,
+        vy: Math.sin(angle) * speed - (Math.random() * 4 + 2), // initial upward pop
         color: colors[Math.floor(Math.random() * colors.length)],
+        size: Math.random() * 8 + 4,
         rotation: Math.random() * Math.PI * 2,
-        spin: (Math.random() - 0.5) * 0.35,
-        opacity: 1,
-        shape: Math.random() > 0.6 ? 'star' : (Math.random() > 0.3 ? 'rect' : 'circle')
+        rotSpeed: (Math.random() - 0.5) * 0.2,
+        shape: Math.random() > 0.6 ? 'star' : Math.random() > 0.3 ? 'circle' : 'rect',
+        alpha: 1,
+        gravity: 0.28,
+        drag: 0.985
       })
     }
 
-    let animId
+    let animationFrameId
+    const startTime = Date.now()
+
     const render = () => {
+      const elapsed = Date.now() - startTime
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      let activeCount = 0
 
       particles.forEach(p => {
-        if (p.opacity <= 0) return
-        activeCount++
+        p.vx *= p.drag
+        p.vy = p.vy * p.drag + p.gravity
         p.x += p.vx
         p.y += p.vy
-        p.vy += 0.38 // Smooth gravity
-        p.vx *= 0.965 // Air drag
-        p.opacity -= 0.010 // Extended lifespan for cinematic display
-        p.rotation += p.spin
+        p.rotation += p.rotSpeed
+        p.alpha = Math.max(0, 1 - elapsed / 1800)
 
         ctx.save()
-        ctx.globalAlpha = Math.max(0, p.opacity)
+        ctx.globalAlpha = p.alpha
+        ctx.fillStyle = p.color
         ctx.translate(p.x, p.y)
         ctx.rotate(p.rotation)
-        
-        // Shining bold glow effect
-        ctx.shadowBlur = 12
-        ctx.shadowColor = p.color
-        ctx.fillStyle = p.color
 
-        if (p.shape === 'rect') {
-          // 3D Ribbon twist effect
-          const scaleY = Math.sin(p.rotation)
-          ctx.scale(1, scaleY)
-          ctx.fillRect(-p.width / 2, -p.height / 2, p.width, p.height)
-        } else if (p.shape === 'star') {
+        if (p.shape === 'star') {
           drawStar(ctx, 0, 0, 5, p.size, p.size / 2)
-        } else {
-          ctx.beginPath()
-          ctx.arc(0, 0, p.size / 1.5, 0, Math.PI * 2)
           ctx.fill()
+        } else if (p.shape === 'circle') {
+          ctx.beginPath()
+          ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2)
+          ctx.fill()
+        } else {
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size)
         }
         ctx.restore()
       })
 
-      if (activeCount > 0) {
-        animId = requestAnimationFrame(render)
+      if (elapsed < 1800) {
+        animationFrameId = requestAnimationFrame(render)
       } else {
         ctx.clearRect(0, 0, canvas.width, canvas.height)
       }
     }
 
     render()
-    return () => cancelAnimationFrame(animId)
+
+    return () => {
+      cancelAnimationFrame(animationFrameId)
+    }
   }, [triggerBurst])
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-[60] pointer-events-none"
+      className="fixed inset-0 pointer-events-none z-40"
     />
   )
 }
 
-export default function App() {
-  const [theme, setTheme] = useState('dark')
-  const [currentPage, setCurrentPage] = useState('landing') // 'landing' | 'chat'
-  const [transitionState, setTransitionState] = useState('idle') // 'idle' | 'wiping_in' | 'wiping_out'
+function MainApp() {
+  const navigate = useNavigate()
+  const { currentUser, login, theme, setTheme } = useAuth()
+  const [authRole, setAuthRole] = useState('student')
   const [confettiTrigger, setConfettiTrigger] = useState(null)
 
-  // Clean UI local storage on mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('cse_bot_theme') || 'dark'
-    setTheme(savedTheme)
-    localStorage.removeItem('cse_bot_sessions')
-  }, [])
+  const handleNavigateWithAnimation = (targetPath, clickEvent) => {
+    const origin = clickEvent ? { x: clickEvent.clientX, y: clickEvent.clientY } : { x: window.innerWidth / 2, y: window.innerHeight / 2 }
+    setConfettiTrigger(origin)
+    navigate(targetPath)
+  }
 
-  // Apply theme class to HTML element
-  useEffect(() => {
-    document.documentElement.classList.remove('light', 'dark')
-    document.documentElement.classList.add(theme)
-    document.documentElement.style.colorScheme = theme
-    localStorage.setItem('cse_bot_theme', theme)
-  }, [theme])
+  const handleOpenAuth = (role = 'student', e) => {
+    setAuthRole(role)
+    handleNavigateWithAnimation('/auth', e)
+  }
 
-  // Trigger Clip Wipe Transition + Confetti Particle Explosion (Graceful Cinematic Pace)
-  const handleNavigate = (targetPage, e) => {
-    if (targetPage === currentPage || transitionState !== 'idle') return
-
-    const clickX = e?.clientX || window.innerWidth / 2
-    const clickY = e?.clientY || window.innerHeight / 2
-    setConfettiTrigger({ id: Date.now(), x: clickX, y: clickY })
-
-    setTransitionState('wiping_in')
-
-    setTimeout(() => {
-      setCurrentPage(targetPage)
-      setTransitionState('wiping_out')
-    }, 420)
-
-    setTimeout(() => {
-      setTransitionState('idle')
-    }, 850)
+  const handleAuthSuccess = (userProfile) => {
+    login(userProfile)
+    handleNavigateWithAnimation('/dashboard')
   }
 
   return (
-    <div className="w-full h-full min-h-screen relative overflow-hidden">
+    <div className={`w-full h-full min-h-screen relative overflow-hidden ${theme === 'dark' ? 'bg-slate-950 text-white' : 'bg-[#f0ebd8] text-slate-950'}`}>
       
       {/* ─── CELEBRATORY CONFETTI EXPLOSION LAYER ─────────────────── */}
       <ConfettiCanvas triggerBurst={confettiTrigger} />
 
-      {/* ─── CLIP WIPE OVERLAY CURTAIN ───────────────────────────── */}
-      {transitionState !== 'idle' && (
-        <div
-          className={`fixed inset-0 z-50 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 flex flex-col items-center justify-center pointer-events-none shadow-2xl ${
-            transitionState === 'wiping_in' ? 'animate-clipWipeEnter' : 'animate-clipWipeExit'
-          }`}
-        >
-          <div className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-950/80 border border-amber-300/40 backdrop-blur-md shadow-2xl scale-105 transition-transform">
-            <span className="w-3 h-3 rounded-full bg-amber-400 animate-ping" />
-            <span className="font-display text-2xl font-bold tracking-widest text-amber-400">
-              CHITTI AI
-            </span>
-          </div>
-        </div>
-      )}
+      {/* ─── REACT ROUTER DOM URL PAGE ROUTES ─────────────────────── */}
+      <Routes>
+        {/* Landing Page */}
+        <Route
+          path="/"
+          element={
+            <LandingPage
+              onStartChat={(e) => handleNavigateWithAnimation('/dashboard', e)}
+              onOpenAuth={(role, e) => handleOpenAuth(role, e)}
+              theme={theme}
+              setTheme={setTheme}
+            />
+          }
+        />
 
-      {/* ─── ACTIVE SCREEN ────────────────────────────────────────── */}
-      {currentPage === 'landing' ? (
-        <LandingPage
-          onStartChat={(e) => handleNavigate('chat', e)}
-          theme={theme}
-          setTheme={setTheme}
+        {/* Auth Page */}
+        <Route
+          path="/auth"
+          element={
+            <AuthPage
+              onBackToHome={(e) => handleNavigateWithAnimation('/', e)}
+              initialRole={authRole}
+              onAuthSuccess={handleAuthSuccess}
+              theme={theme}
+              setTheme={setTheme}
+            />
+          }
         />
-      ) : (
-        <ChatDashboard
-          onBackToHome={(e) => handleNavigate('landing', e)}
-          theme={theme}
-          setTheme={setTheme}
+
+        {/* Chitti AI Dashboard Home */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard
+                onBackToHome={(e) => handleNavigateWithAnimation('/', e)}
+                theme={theme}
+                setTheme={setTheme}
+                currentUser={currentUser}
+              />
+            </ProtectedRoute>
+          }
         />
-      )}
+
+        {/* Department Hubs Launcher Cards Page */}
+        <Route
+          path="/hubs"
+          element={
+            <ProtectedRoute>
+              <HubsLauncher
+                onBackToHome={(e) => handleNavigateWithAnimation('/', e)}
+                theme={theme}
+                setTheme={setTheme}
+                currentUser={currentUser}
+              />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Dedicated Message Hub Route */}
+        <Route
+          path="/hubs/messages"
+          element={
+            <ProtectedRoute>
+              <MessageHubPage
+                onBackToHome={(e) => handleNavigateWithAnimation('/', e)}
+                theme={theme}
+                setTheme={setTheme}
+                currentUser={currentUser}
+              />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Dedicated Calendar Hub Route */}
+        <Route
+          path="/hubs/calendar"
+          element={
+            <ProtectedRoute>
+              <CalendarHubPage
+                onBackToHome={(e) => handleNavigateWithAnimation('/', e)}
+                theme={theme}
+                setTheme={setTheme}
+                currentUser={currentUser}
+              />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Dedicated Meeting Hub Route */}
+        <Route
+          path="/hubs/meeting"
+          element={
+            <ProtectedRoute>
+              <MeetingHubPage
+                onBackToHome={(e) => handleNavigateWithAnimation('/', e)}
+                theme={theme}
+                setTheme={setTheme}
+                currentUser={currentUser}
+              />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Dedicated Hackathons Radar Route */}
+        <Route
+          path="/hubs/hackathons"
+          element={
+            <ProtectedRoute>
+              <HackathonsPage
+                onBackToHome={(e) => handleNavigateWithAnimation('/', e)}
+                theme={theme}
+                setTheme={setTheme}
+                currentUser={currentUser}
+              />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Dedicated Curriculum Syllabi Route */}
+        <Route
+          path="/hubs/curriculum"
+          element={
+            <ProtectedRoute>
+              <CurriculumPage
+                onBackToHome={(e) => handleNavigateWithAnimation('/', e)}
+                theme={theme}
+                setTheme={setTheme}
+                currentUser={currentUser}
+              />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Fallback Catch-All Route */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <AuthProvider>
+        <MainApp />
+      </AuthProvider>
+    </ErrorBoundary>
   )
 }

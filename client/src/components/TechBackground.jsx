@@ -1,48 +1,42 @@
 import React from 'react'
 
-export default function TechBackground() {
+export default function TechBackground({ theme }) {
   const elements = [
-    { text: 'E = mc²',         x: '62%', y: '16%', size: 22, delay: '0s',   dur: '14s' },
-    { text: '∇·E = ρ/ε₀',     x: '48%', y: '68%', size: 18, delay: '2s',   dur: '18s' },
-    { text: 'a² + b² = c²',    x: '88%', y: '56%', size: 16, delay: '4s',   dur: '12s' },
-    { text: '∫ f(x)dx',        x: '54%', y: '80%', size: 24, delay: '1s',   dur: '16s' },
-    { text: '1010 0011',       x: '82%', y: '14%', size: 14, delay: '0.5s', dur: '20s' },
-    { text: '0110 1101',       x: '82%', y: '19%', size: 14, delay: '1.5s', dur: '20s' },
-    { text: '</>',             x: '92%', y: '24%', size: 28, delay: '1.5s', dur: '11s' },
-    { text: 'int main() {',    x: '88%', y: '34%', size: 13, delay: '2.5s', dur: '17s' },
-    { text: '  return 0;',     x: '90%', y: '39%', size: 13, delay: '2.5s', dur: '17s' },
-    { text: '}',               x: '88%', y: '44%', size: 13, delay: '2.5s', dur: '17s' },
-    { text: '[1  0  0]',       x: '78%', y: '83%', size: 12, delay: '3.5s', dur: '13s' },
-    { text: '[0  1  0]',       x: '78%', y: '87%', size: 12, delay: '3.5s', dur: '13s' },
-    { text: '[0  0  1]',       x: '78%', y: '91%', size: 12, delay: '3.5s', dur: '13s' },
-    { text: 'O(n log n)',      x: '15%', y: '35%', size: 14, delay: '5s',   dur: '15s' },
-    { text: 'σ(x)=1/(1+e⁻ˣ)', x: '25%', y: '62%', size: 13, delay: '3s',   dur: '19s' },
+    { text: 'POW!',     x: '12%', y: '16%', size: 36, delay: '0s',   dur: '10s', color: '#f05030' },
+    { text: 'ZAP!',     x: '52%', y: '24%', size: 28, delay: '2s',   dur: '12s', color: '#ffc815' },
+    { text: 'KAPOW!',   x: '85%', y: '14%', size: 32, delay: '1s',   dur: '14s', color: '#2a7be4' },
+    { text: 'BOOM!',    x: '72%', y: '68%', size: 40, delay: '3s',   dur: '11s', color: '#f05030' },
+    { text: 'BAM!',     x: '24%', y: '78%', size: 24, delay: '0.5s', dur: '13s', color: '#ffc815' },
+    { text: 'CHITTI!',  x: '48%', y: '82%', size: 30, delay: '1.5s', dur: '15s', color: '#2a7be4' },
+    { text: 'SECE!',    x: '90%', y: '56%', size: 26, delay: '4s',   dur: '16s', color: '#f05030' },
+    { text: 'CSE!',     x: '8%',  y: '60%', size: 34, delay: '2.5s', dur: '12s', color: '#ffc815' }
   ]
 
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" style={{ zIndex: 0 }}>
-      {/* Grid Overlay */}
-      <div className="absolute inset-0" style={{
-        backgroundImage: `linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-                          linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px)`,
-        backgroundSize: '55px 55px',
-      }} />
+    <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0 halftone-bg">
+      {/* Dynamic Pop Art Sunburst rays background overlay (extremely faint) */}
+      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,rgba(255,200,21,0.25)_0,transparent_60%)]" />
 
-      {/* Radial Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-radial-vignette opacity-70 pointer-events-none" />
-
-      {/* Floating Math Formulas */}
+      {/* Floating Cartoon Exclamations */}
       {elements.map((el, i) => (
-        <span key={i} className="absolute font-mono font-medium"
+        <span
+          key={i}
+          className="absolute font-display font-black tracking-widest uppercase select-none pointer-events-none"
           style={{
-            left: el.x, top: el.y, fontSize: el.size,
-            color: 'var(--formula-color)', opacity: 'var(--formula-opacity)', letterSpacing: '0.04em',
-            animation: `drift ${el.dur} ease-in-out infinite`, animationDelay: el.delay
-          }}>
+            left: el.x,
+            top: el.y,
+            fontSize: el.size,
+            color: el.color,
+            textShadow: '3px 3px 0px #000',
+            WebkitTextStroke: '1.5px #000',
+            animation: `drift ${el.dur} ease-in-out infinite`,
+            animationDelay: el.delay,
+            transform: 'rotate(-8deg)'
+          }}
+        >
           {el.text}
         </span>
       ))}
-      <div className="scan-line" />
     </div>
   )
 }
