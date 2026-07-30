@@ -52,15 +52,17 @@ ALLOWED_ORIGINS = [
     "https://csebot.vercel.app",
 ]
 
-extra_origin = os.environ.get("ALLOWED_ORIGIN")
+extra_origin = os.environ.get("ALLOWED_ORIGIN") or os.environ.get("ALLOWED_ORIGINS")
 if extra_origin:
-    clean_extra = extra_origin.strip().rstrip("/")
-    if clean_extra and clean_extra not in ALLOWED_ORIGINS:
-        ALLOWED_ORIGINS.append(clean_extra)
+    for orig in extra_origin.split(","):
+        clean_extra = orig.strip().rstrip("/")
+        if clean_extra and clean_extra not in ALLOWED_ORIGINS:
+            ALLOWED_ORIGINS.append(clean_extra)
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=r"https://.*\.vercel\.app|https://.*\.onrender\.com",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

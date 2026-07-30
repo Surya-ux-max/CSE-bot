@@ -529,7 +529,7 @@ export class ApiClient {
       console.warn(`[ApiClient] Primary endpoint failed (${primaryUrl}):`, e)
     }
 
-    if (this.baseUrl.includes('8000') || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    if (this.baseUrl.includes('8000') || this.baseUrl.includes('127.0.0.1') || this.baseUrl.includes('localhost')) {
       const fallbackUrl = `http://127.0.0.1:8005${endpoint}`
       console.log(`[ApiClient] Trying fallback server on port 8005: ${fallbackUrl}`)
       return await fetch(fallbackUrl, options)
