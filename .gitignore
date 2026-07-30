@@ -80,6 +80,9 @@ lerna-debug.log*
 .vscode/*
 !.vscode/extensions.json
 .idea/
+.agents/
+.gemini/
+.antigravity/
 .DS_Store
 .DS_Store?
 ._*

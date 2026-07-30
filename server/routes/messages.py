@@ -155,38 +155,14 @@ def process_message_agent_command(payload: MessageAgentRequest):
                 sender_name = faculty.name
 
     # 2. LLM parses intent → action/recipient/subject/content
-    copilot_prompt = f"""You are the conversational AI Message Agent for the CSE-bot platform at SECE.
-    Your task is to analyze the user's request and determine:
-    1. The target action:
-       - "send": If the user explicitly asks to send or dispatch a message/email.
-       - "draft": If the user explicitly asks to draft/save a message without sending.
-       - "compose": If the user just wants to write/prepare a message in the editor (default).
-    2. The recipient's email:
-       - Parse the email from the prompt if specified.
-       - If they say "all students", "everyone", "all staff", or use "@all", resolve this to "@all".
-       - If they mention a name, try to resolve it. Hint: tamilselvan is "tamilselvan.d@csebot.edu", suryaprakash is "suryaprakash.s.d@csebot.edu".
-       - If not specified, leave empty.
-    3. The subject line.
-    4. The detailed message content/body (written professionally from {sender_name} ({sender_role})).
-    5. A short conversational explanation to the user.
-
-    SENDER INFO:
-    - Name: {sender_name}
-    - Email: {sender_email}
-    - Role: {sender_role}
-
-    USER PROMPT: "{user_prompt}"
-
-    Output strictly as a JSON object:
-    {{
-      "action": "send" or "draft" or "compose",
-      "recipient": "...",
-      "subject": "...",
-      "content": "...",
-      "explanation": "..."
-    }}
-
-    Do NOT output markdown blocks, backticks, or any explanation besides raw JSON."""
+    from services.prompt_loader import render_prompt
+    copilot_prompt = render_prompt(
+        "mail_agent",
+        sender_name=sender_name,
+        sender_email=sender_email,
+        sender_role=sender_role,
+        user_prompt=user_prompt
+    )
 
     try:
         res = config.llm.invoke([SystemMessage(content=copilot_prompt)])

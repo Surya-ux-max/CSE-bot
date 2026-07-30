@@ -5,6 +5,8 @@ from typing import List, Dict, Any, Optional
 from langchain_core.messages import SystemMessage
 from config import config
 
+from services.prompt_loader import render_prompt
+
 logger = logging.getLogger("AGENT_MESSAGE_BUS")
 
 class CalendarAgent:
@@ -20,33 +22,12 @@ class CalendarAgent:
         """
         Uses LLM NLP extraction to parse structured event/deadline details from message text.
         """
-        prompt = f"""You are the Calendar Agent NLP Extractor for SECE Computer Science Department.
-Analyze the following inter-agent message content and extract event details.
-
-MESSAGE SUBJECT: "{subject}"
-MESSAGE BODY:
-"{content}"
-
-Today's Date Context: {datetime.utcnow().strftime('%Y-%m-%d')}
-
-Extract:
-1. "event_title": Short clear title (e.g., "Amazon Placement Drive", "Smart India Hackathon Deadline", "Project Review Meeting")
-2. "event_date": Date string formatted as "YYYY-MM-DD". If relative (e.g. "tomorrow", "next Monday"), calculate the exact YYYY-MM-DD date based on today's date context.
-3. "event_time": Time string (e.g., "10:00 AM", "02:30 PM", "Full Day")
-4. "category": EXACTLY ONE of ["Exam/Assessment", "Placement Drive", "Hackathon Deadline", "Meeting", "General Academic"]
-5. "target_audience": "@all", "d_section", "faculty", or target email.
-6. "description": Brief 1-2 sentence description summarizing key instructions.
-
-Output strictly as a raw JSON object:
-{{
-  "event_title": "...",
-  "event_date": "YYYY-MM-DD",
-  "event_time": "...",
-  "category": "...",
-  "target_audience": "...",
-  "description": "..."
-}}
-Do NOT include markdown formatting or backticks."""
+        prompt = render_prompt(
+            "calendar_agent",
+            subject=subject,
+            content=content,
+            today_date=datetime.utcnow().strftime('%Y-%m-%d')
+        )
 
         try:
             res = self.llm.invoke([SystemMessage(content=prompt)])

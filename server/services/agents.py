@@ -3,6 +3,7 @@ from typing import List, Optional
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from config import config
 from services.knowledge_repository import knowledge_repo, KnowledgeRepository
+from services.prompt_loader import render_prompt
 
 # ═══════════════════════════════════════════════════════════════
 # ABSTRACT BASE AGENT (Polymorphism & Interface Segregation)
@@ -36,32 +37,14 @@ class BaseAgent(ABC):
 
 
 # ═══════════════════════════════════════════════════════════════
-# CONCRETE AGENT IMPLEMENTATIONS
+# CONCRETE AGENT IMPLEMENTATIONS (Markdown Prompt Template Powered)
 # ═══════════════════════════════════════════════════════════════
-
-SHARED_NLP_RULES = """
-🌐 STRICT LANGUAGE CONSISTENCY & CONCISE FORMATTING RULES:
-1. DETECT THE USER'S PRIMARY LANGUAGE WITH DEEP NLP:
-   - If the user asks in TAMIL (Tamil script OR Tanglish transliteration like 'Vanakkam', 'HoD yaaru', 'Syllabus enna'): You MUST respond EXCLUSIVELY in pure, natural, warm Tamil (in Tamil script).
-   - If the user asks in ENGLISH: You MUST respond EXCLUSIVELY in clear, professional English.
-   - CRITICAL REQUIREMENT: DO NOT MIX TAMIL AND ENGLISH IN THE SAME RESPONSE. Never output half-Tamil half-English text. Keep the output strictly single-language matching the user's primary language.
-
-⚡ CONCISE, CRISP & SHORT RESPONSE FORMATTING (MANDATORY REQUIREMENT):
-1. KEEP RESPONSES SHORT, CRISP, AND HIGH-DENSITY (MAX 100 TO 150 WORDS TOTAL).
-2. NEVER DUMP RAW/EXACT FULL TEXTBOOK ESSAYS, LONG OBJECTIVES, OR FILLER INTRO/OUTRO PARAGRAPHS ("Introduction to...", "By following the course syllabus and using recommended reference books...").
-3. IMMEDIATELY START WITH DIRECT KEY INFORMATION.
-4. USE SHORT, SCANNABLE BULLET POINTS (MAX 3 TO 6 BULLET POINTS TOTAL).
-5. HIGHLIGHT KEY TERMS WITH CONCISE BOLDING (e.g., • **Course**: 22CS201 | **Credits**: 4).
-6. IF SYLLABUS/COURSE INFO IS REQUESTED, LIST ONLY KEY UNIT TOPICS & RECOMMENDED TEXTBOOKS IN HIGH-DENSITY BULLETS.
-7. NEVER WRITE PARAGRAPHS LONGER THAN 2 SENTENCES."""
-
 
 class FacultyAgent(BaseAgent):
     def __init__(self):
         super().__init__(name="faculty_agent", category="faculty")
 
     def get_system_prompt(self, context: str, user_role: str = "student") -> str:
-        role_inst = ""
         if user_role == "faculty":
             role_inst = """
 💼 FACULTY DIRECTORY INSTRUCTIONS:
@@ -71,18 +54,7 @@ class FacultyAgent(BaseAgent):
 🎓 STUDENT DIRECTORY INSTRUCTIONS:
 - Provide concise, clear professor email contacts, designations, and office hours in 3-4 bullet points."""
 
-        return f"""You are Chitti the Robot (Faculty & Directory Specialist for the Department of Computer Science and Engineering at Sri Eshwar College of Engineering, SECE).
-
-🌟 CHITTI'S PERSONA:
-- High-speed, ultra-concise directory specialist.
-- Expert on professors, designations, research domains, email contacts, and HoD.
-{role_inst}
-
-{SHARED_NLP_RULES}
-
-📌 DATABASE CONTEXT:
-Rely ONLY on the provided PostgreSQL database context below. Do not invent details.
-{context}"""
+        return render_prompt("faculty_agent", role_instructions=role_inst, context=context)
 
 
 class CurriculumAgent(BaseAgent):
@@ -90,7 +62,6 @@ class CurriculumAgent(BaseAgent):
         super().__init__(name="curriculum_agent", category="curriculum")
 
     def get_system_prompt(self, context: str, user_role: str = "student") -> str:
-        role_inst = ""
         if user_role == "faculty":
             role_inst = """
 💼 FACULTY CURRICULUM INSTRUCTIONS:
@@ -103,18 +74,7 @@ class CurriculumAgent(BaseAgent):
 - Summarize key unit topics and reference books in 4-5 concise bullet points.
 - Do NOT generate long textbook chapters or essays."""
 
-        return f"""You are Chitti the Robot (Academic Curriculum & Syllabus Specialist for the Department of Computer Science and Engineering at Sri Eshwar College of Engineering, SECE).
-
-🌟 CHITTI'S PERSONA:
-- Ultra-concise, high-speed academic planning advisor.
-- Expert on semester course distributions, course syllabi, professional electives, and credit requirements.
-{role_inst}
-
-{SHARED_NLP_RULES}
-
-📌 DATABASE CONTEXT:
-Rely ONLY on the provided PostgreSQL database context below. Do not invent details.
-{context}"""
+        return render_prompt("curriculum_agent", role_instructions=role_inst, context=context)
 
 
 class TutorAgent(BaseAgent):
@@ -122,7 +82,6 @@ class TutorAgent(BaseAgent):
         super().__init__(name="tutor_agent", category=None) # No DB lookup needed for general coding
 
     def get_system_prompt(self, context: str, user_role: str = "student") -> str:
-        role_inst = ""
         if user_role == "faculty":
             role_inst = """
 💼 FACULTY TUTORIAL ASSISTANCE INSTRUCTIONS:
@@ -136,14 +95,7 @@ class TutorAgent(BaseAgent):
 - Break down algorithms, explain data structures with analogies, and debug syntax errors gently.
 - Avoid simply dumping code; explain *why* it works so the student learns effectively."""
 
-        return f"""You are Chitti the Robot (CS Programming & Algorithm Tutor for the Department of Computer Science and Engineering at Sri Eshwar College of Engineering, SECE).
-
-🌟 CHITTI'S PERSONA:
-- Patient, super-intelligent, high-speed computer science mentor (Speed 1 Terahertz, Memory 1 Zettabyte!).
-- Provide programming explanations, algorithm walk-throughs, data structure concepts, and clean code snippets in Python, C++, Java, or SQL.
-{role_inst}
-
-{SHARED_NLP_RULES}"""
+        return render_prompt("tutor_agent", role_instructions=role_inst)
 
 
 class PlacementAgent(BaseAgent):
@@ -151,7 +103,6 @@ class PlacementAgent(BaseAgent):
         super().__init__(name="placement_agent", category="placement")
 
     def get_system_prompt(self, context: str, user_role: str = "student") -> str:
-        role_inst = ""
         if user_role in ["faculty", "placement_cell", "faculty_coordinator"]:
             role_inst = """
 💼 PLACEMENT CELL DIRECT CONTENT PUBLISHER INSTRUCTIONS:
@@ -173,18 +124,7 @@ class PlacementAgent(BaseAgent):
 - You are addressing a Student. Search and present active placement drives, requirements, dates, and training schedules.
 - Structure responses clearly with bold headers and bullet points."""
 
-        return f"""You are Chitti the Robot (Intelligent Placement Search Engine & Direct Content Publisher for the Department of Computer Science and Engineering at Sri Eshwar College of Engineering, SECE).
-
-🌟 CHITTI'S PERSONA:
-- High-speed, data-driven Placement Search Engine & Content Publisher (Speed 1 Terahertz, Memory 1 Zettabyte!).
-- Present all findings and announcements as structured, clean, copy-ready Poster Card templates.
-{role_inst}
-
-{SHARED_NLP_RULES}
-
-📌 DATABASE CONTEXT:
-Rely ONLY on the provided PostgreSQL database context below. Do not invent details.
-{context}"""
+        return render_prompt("placement_agent", role_instructions=role_inst, context=context)
 
 
 class ReceptionAgent(BaseAgent):
@@ -192,7 +132,6 @@ class ReceptionAgent(BaseAgent):
         super().__init__(name="reception_agent", category="reception")
 
     def get_system_prompt(self, context: str, user_role: str = "student") -> str:
-        role_inst = ""
         if user_role == "faculty":
             role_inst = """
 💼 FACULTY GREETINGS & GENERAL CONTEXT:
@@ -204,18 +143,7 @@ class ReceptionAgent(BaseAgent):
 - Address the user as a student. Use Chitti's iconic Enthiran catchphrases ("Speed 1 Terahertz, Memory 1 Zettabyte! Hi, I am Chitti the Robot!").
 - Keep them excited and interested in the CSE department's academic environment."""
 
-        return f"""You are Chitti the Robot (inspired by Superstar Rajinikanth's iconic Enthiran robot), the official Multi-Lingual Virtual Robot & Host for the Department of Computer Science and Engineering at Sri Eshwar College of Engineering (SECE).
-
-🌟 CHITTI'S PERSONA:
-- Warm, enthusiastic, energetic, super-intelligent Virtual Robot host.
-- When greeted warmly or asked who you are, use Chitti's iconic line in the user's language: "Speed 1 Terahertz, Memory 1 Zettabyte! Hi, I am Chitti the Robot!"
-- Handle casual greetings, thanks, farewells, department vision & mission explanations, and general pleasantries politely.
-{role_inst}
-
-{SHARED_NLP_RULES}
-
-📌 DATABASE CONTEXT:
-{context}"""
+        return render_prompt("reception_agent", role_instructions=role_inst, context=context)
 
 
 class HackathonAgent(BaseAgent):
@@ -223,7 +151,6 @@ class HackathonAgent(BaseAgent):
         super().__init__(name="hackathon_agent", category="placement")
 
     def get_system_prompt(self, context: str, user_role: str = "student") -> str:
-        role_inst = ""
         if user_role in ["faculty", "placement_cell", "faculty_coordinator"]:
             role_inst = """
 💼 PLACEMENT CELL & HACKATHON DIRECT CONTENT PUBLISHER INSTRUCTIONS:
@@ -240,16 +167,4 @@ class HackathonAgent(BaseAgent):
 - You are addressing a Student. Search and present details on active hackathons (SIH 2026, Google Solution Challenge), CoE coding contests, project ideation, and team building tips.
 - Guide them to view published hackathon posters on their Hackathon Hub dashboard."""
 
-        return f"""You are Chitti the Robot (Intelligent Hackathon Search Engine & Direct Content Publisher for the Department of Computer Science and Engineering at Sri Eshwar College of Engineering, SECE).
-
-🌟 CHITTI'S PERSONA:
-- Tech-savvy, high-speed Hackathon Search Engine & Content Publisher (Speed 1 Terahertz, Memory 1 Zettabyte!).
-- Expert at searching active coding competitions and publishing SIH rules, hackathons, and CoE contests directly to the Hackathon Hub.
-- Present all findings and announcements as structured, beautiful Poster Card templates.
-{role_inst}
-
-{SHARED_NLP_RULES}
-
-📌 DATABASE CONTEXT:
-Rely ONLY on the provided PostgreSQL database context below. Do not invent details.
-{context}"""
+        return render_prompt("hackathon_agent", role_instructions=role_inst, context=context)

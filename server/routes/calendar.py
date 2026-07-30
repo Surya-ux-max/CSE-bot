@@ -282,13 +282,13 @@ Do NOT output markdown blocks, backticks, or any explanation besides raw JSON.""
         raw = res.content.strip().replace("```json", "").replace("```", "").strip()
         parsed = json.loads(raw)
 
-        action = parsed.get("action", "none")
+        action = parsed.get("action") or "none"
         event_id = parsed.get("event_id")
-        title = parsed.get("title", "Study Session")
-        event_date = parsed.get("date", today_date_str)
-        event_time = parsed.get("time", "04:00 PM")
-        category = parsed.get("category", "Personal Study")
-        answer = parsed.get("answer", "Calendar updated successfully.")
+        title = parsed.get("title") or "Event"
+        event_date = parsed.get("date") or today_date_str
+        event_time = parsed.get("time") or "Full Day"
+        category = parsed.get("category") or "Personal Study"
+        answer = parsed.get("answer") or "Calendar updated successfully."
         mem_key = parsed.get("memory_fact_key")
         mem_val = parsed.get("memory_fact_value")
 
