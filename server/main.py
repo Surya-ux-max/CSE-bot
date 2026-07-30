@@ -121,9 +121,19 @@ def on_startup():
     try:
         from db import init_db, get_db_session, KnowledgeRegistry
         from seed_db import seed_database
+        from seed_d_section import parse_and_seed_d_section
+        from seed_faculty import parse_and_seed_faculty
+        from login.login import seed_unified_users_if_needed
 
         print("[Startup] Initializing database tables...")
         init_db()
+
+        print("[Startup] Seeding student rosters and faculty accounts...")
+        try:
+            parse_and_seed_d_section()
+            parse_and_seed_faculty()
+        except Exception as seed_err:
+            print(f"[Startup Warning] Could not parse student/faculty markdown rosters: {seed_err}")
 
         with get_db_session() as session:
             count = session.query(KnowledgeRegistry).count()
@@ -133,7 +143,14 @@ def on_startup():
             else:
                 print(f"[Startup] Database ready with {count} sector tables initialized.")
 
-        # Academic Calendar Parser — only run when central DB is empty (Bug Fix B2)
+            # Sync central authentication users table
+            try:
+                seed_unified_users_if_needed(session)
+                print("[Startup] Unified users authentication table synced.")
+            except Exception as auth_err:
+                print(f"[Startup Warning] Unified user sync error: {auth_err}")
+
+        # Academic Calendar Parser — only run when central DB is empty
         try:
             from db import AcademicEvent
             from services.academic_calendar_parser import parse_academic_calendar_files

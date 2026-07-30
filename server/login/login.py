@@ -80,43 +80,55 @@ def sync_to_unified_user(db: Session, name: str, email: str, password: str, role
     return new_user
 
 
-# Seed standard users if users table is empty
+# Seed standard users if users table is empty or missing full roster
 def seed_unified_users_if_needed(db: Session):
-    if db.query(User).count() == 0:
-        print("[Auth Seed] Seeding default accounts into unified users table...")
-        # 1. Student
+    try:
+        from seed_d_section import parse_and_seed_d_section
+        from seed_faculty import parse_and_seed_faculty
+        parse_and_seed_d_section()
+        parse_and_seed_faculty()
+    except Exception as e:
+        print(f"[Auth Seed Warning] Could not run student/faculty seed scripts: {e}")
+
+    # Sync all student accounts to central users table
+    students = db.query(DSectionStudent).all()
+    for s in students:
         sync_to_unified_user(
-            db, 
-            name="Suryaprakash S", 
-            email="suryaprakash.s.d@csebot.edu", 
-            password="CSE@2026#1015", 
-            role="student", 
-            designation="Student", 
-            section="Section D", 
-            year="3rd Year"
+            db,
+            name=s.name,
+            email=s.email,
+            password=s.password,
+            role="student",
+            designation="Student",
+            section=s.section or "Section D",
+            year=s.year or "3rd Year"
         )
-        # 2. Faculty
+
+    # Sync all faculty accounts to central users table
+    faculty = db.query(FacultyAccount).all()
+    for f in faculty:
         sync_to_unified_user(
-            db, 
-            name="Dr. S. Yuvaraj", 
-            email="s.yuvaraj@faculty.csebot.edu", 
-            password="Faculty@2026#2012", 
-            role="faculty", 
-            designation="Assistant Professor", 
-            section="All Sections", 
-            year="All Years"
+            db,
+            name=f.name,
+            email=f.email,
+            password=f.password,
+            role="faculty",
+            designation=f.designation or "Faculty Member",
+            section=f.section or "All Sections",
+            year=f.year or "All Years"
         )
-        # 3. Placement Officer
-        sync_to_unified_user(
-            db, 
-            name="CSE Placement Cell", 
-            email="placements@csebot.edu", 
-            password="Placement@2026#3015", 
-            role="placement_cell", 
-            designation="Placement Coordinator", 
-            section="All Sections", 
-            year="All Years"
-        )
+
+    # Sync Placement Cell account
+    sync_to_unified_user(
+        db, 
+        name="CSE Placement Cell", 
+        email="placements@csebot.edu", 
+        password="Placement@2026#3015", 
+        role="placement_cell", 
+        designation="Placement Coordinator", 
+        section="All Sections", 
+        year="All Years"
+    )
 
 
 # ─── Student Authentication Endpoints ─────────────────────────────────────
